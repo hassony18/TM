@@ -1,0 +1,32 @@
+[
+	"1.1": [
+		"normal": [
+			"Hallo": "Bonjour",
+		],
+		"normal-phrase": [
+			"Hassan ist ein gut Mann.": "Hassan est un bon homme."
+		],
+		"blue": [
+			"Rindfleisch­etikettierungs­überwachungs­aufgaben­übertragungs­gesetz": "loi sur le transfert des obligations de surveillance de l'étiquetage de la viande bovine",
+		],
+		"blue-phrase": [
+			"Das härteste": "la plus difficile",
+		],
+	],
+
+	"1.2": [
+		"normal": [
+			"Hallo": "Bonjour",
+		],
+		"normal-phrase": [
+			"Hassan ist ein gut Mann.": "Hassan est un bon homme."
+		],
+		"blue": [
+			"Rindfleisch­etikettierungs­überwachungs­aufgaben­übertragungs­gesetz": "loi sur le transfert des obligations de surveillance de l'étiquetage de la viande bovine",
+		],
+		"blue-phrase": [
+			"Das härteste": "la plus difficile",
+		],
+	],
+	
+]
