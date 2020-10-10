@@ -17,7 +17,7 @@
 			  <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png"/></a>
 			</div>
 		  </div>
-		  <p>Copyright © 2020 Arfan. All rights reserved</p>
+		  <p>Copyright © 2020 Hassan. All rights reserved</p>
 		</div>
 	  </section>
 </footer>
