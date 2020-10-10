@@ -164,7 +164,8 @@ p {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: crimson;
+ 	color: crimson; 
+	border: 2px solid crimson;
 }
 #header .headerList {
 	height: 60px;
