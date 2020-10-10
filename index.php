@@ -9,7 +9,7 @@
 	  <div>
 		<h1>Apprendre <span></span></h1>
 		<h1>N'a jamais été <span></span></h1>
-		<h1>Facile <span></span></h1>
+		<h1>Si facile <span></span></h1>
 		<a href="#projects" type="button" class="cta">Lancer</a>
 	  </div>
 	</div>
