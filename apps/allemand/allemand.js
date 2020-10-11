@@ -85,6 +85,6 @@ function prepareVocSession() {
 }
 
 function startLearningSession(table) {
-	console.log(table)
+	console.log(table[0])
 }
 
