@@ -21,7 +21,7 @@
 		</div>
 	  </section>
 </footer>
-	<script src="./app.js"></script>
+	<script src="homescript.js"></script>
 	
 
 </body>

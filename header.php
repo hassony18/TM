@@ -22,10 +22,10 @@
 					<div class="nav-list">
 						<div class="headerList"><div class="bar"></div></div>
 						<ul>
-							<li><a href="index.php" data-after="Home">Home</a></li>
-							<li><a href="#services" data-after="Service">Services</a></li>
-							<li><a href="#projects" data-after="Projects">Projects</a></li>
-							<li><a href="#about" data-after="About">About</a></li>
+							<li><a href="index.php">Accueil</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#learn">Apprendre</a></li>
+							<li><a href="#about">Qui sommes-nous</a></li>
 						<?php
  							if (isset($_SESSION["userId"])) {
 								// if logged in, show logout button form

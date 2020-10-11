@@ -10,7 +10,7 @@
 		<h1>Apprendre <span></span></h1>
 		<h1>N'a jamais été <span></span></h1>
 		<h1>Si facile <span></span></h1>
-		<a href="#projects" type="button" class="cta">Lancer</a>
+		<a href="#learn" type="button" class="cta">Lancer</a>
 	  </div>
 	</div>
   </section>
@@ -49,74 +49,74 @@
   </section>
   <!-- End Service Section -->
 
-  <!-- Projects Section -->
-  <section id="projects">
-	<div class="projects container">
-	  <div class="projects-header">
-		<h1 class="section-title">Available <span>Programs</span></h1>
+  <!-- learn Section -->
+  <section id="learn">
+	<div class="learn container">
+	  <div class="learn-header">
+		<h1 class="section-title">Programmes <span>Disponibles</span></h1>
 	  </div>
-	  <div class="all-projects">
-		<div class="project-item">
-		  <div class="project-info">
-			<h1>Project 1</h1>
-			<h2>Coding is Love</h2>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+	  <div class="all-learn">
+		<div class="learn-item">
+		  <div class="learn-info">
+			<h1>Vocabulaire d'Allemand</h1>
+			<h2>"Arbeit macht frei"</h2>
+			<p>As-tu du mal à apprendre ton voc d'allemand? N'arrive tu pas à réussir tes évals non plus? La solution est ici! Appuies ici pour commencer ta session d'apprentissage unique!</p>
 		  </div>
-		  <div class="project-img">
-			<img src="./img/img-1.png" alt="img">
-		  </div>
-		</div>
-		<div class="project-item">
-		  <div class="project-info">
-			<h1>Project 2</h1>
-			<h2>Coding is Love</h2>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-		  </div>
-		  <div class="project-img">
-			<img src="./img/img-1.png" alt="img">
+		  <div class="learn-img">
+			<img src="./styles/img/allemand.png" alt="img">
 		  </div>
 		</div>
-		<div class="project-item">
-		  <div class="project-info">
-			<h1>Project 3</h1>
+		<div class="learn-item">
+		  <div class="learn-info">
+			<h1>Vocabulaire d'Anglais</h1>
 			<h2>Coding is Love</h2>
 			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
 		  </div>
-		  <div class="project-img">
-			<img src="./img/img-1.png" alt="img">
+		  <div class="learn-img">
+			<img src="./styles/img/anglais.png" alt="img">
 		  </div>
 		</div>
-		<div class="project-item">
-		  <div class="project-info">
-			<h1>Project 4</h1>
+		<div class="learn-item">
+		  <div class="learn-info">
+			<h1>Vocabulaire d'Italien</h1>
 			<h2>Coding is Love</h2>
 			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
 		  </div>
-		  <div class="project-img">
-			<img src="./img/img-1.png" alt="img">
+		  <div class="learn-img">
+			<img src="./styles/img/italy.png" alt="img">
 		  </div>
 		</div>
-		<div class="project-item">
-		  <div class="project-info">
-			<h1>Project 5</h1>
+		<div class="learn-item">
+		  <div class="learn-info">
+			<h1>Carte mondiale</h1>
 			<h2>Coding is Love</h2>
 			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
 		  </div>
-		  <div class="project-img">
-			<img src="./img/img-1.png" alt="img">
+		  <div class="learn-img">
+			<img src="./styles/img/carte-mondiale.png" alt="img">
+		  </div>
+		</div>
+		<div class="learn-item">
+		  <div class="learn-info">
+			<h1>Drapeaux</h1>
+			<h2>Coding is Love</h2>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+		  </div>
+		  <div class="learn-img">
+			<img src="./styles/img/drapeaux.png" alt="img">
 		  </div>
 		</div>
 	  </div>
 	</div>
   </section>
-  <!-- End Projects Section -->
+  <!-- End learn Section -->
 
   <!-- About Section -->
   <section id="about">
 	<div class="about container">
 	  <div class="col-left">
 		<div class="about-img">
-		  <img src="./img/img-2.png" alt="img">
+		  <img src="./styles/img/img-2.png" alt="img">
 		</div>
 	  </div>
 	  <div class="col-right">
