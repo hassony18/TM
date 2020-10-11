@@ -1,0 +1,55 @@
+{
+    "1.1": {
+        "normal": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	},
+	
+    "1.2": {
+        "normal": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	}
+
+}
+
