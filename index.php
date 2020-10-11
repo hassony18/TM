@@ -60,7 +60,7 @@
 		  <div class="learn-info">
 			<h1>Vocabulaire d'Allemand</h1>
 			<h2>"Arbeit macht frei"</h2>
-			<p>As-tu du mal à apprendre ton voc d'allemand? N'arrive tu pas à réussir tes évals non plus? La solution est ici! Appuies ici pour commencer ta session d'apprentissage unique!</p>
+			<p>As-tu du mal à apprendre ton voc d'allemand? N'arrives tu pas à réussir tes évals non plus? La solution est ici! Appuies ici pour commencer ta session d'apprentissage unique!</p>
 		  </div>
 		  <div class="learn-img">
 			<img src="./styles/img/allemand.png" alt="img">
