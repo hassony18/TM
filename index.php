@@ -80,7 +80,7 @@
 			  <div class="learn-info">
 				<h1>Vocabulaire d'Italien</h1>
 				<h2>"Il segreto per andare avanti è iniziare."</h2>
-				<p>Souhaites-tu connaître la langue de la romance? Enfin, surtout de pouvoir commander vos plats aux pizzerria les plus proches de chez vous de telle sorte à ce que votre commande soit comprise. Si oui, alors utilises ce programme.</p>
+				<p>Souhaites-tu connaître la langue de la romance? Enfin, plutôt la langue qui te permettra d’insulter tout le monde en faisant croire que tu parles normalement et inversement. Si oui, alors utilises ce programme.</p>
 			  </div>
 			  <div class="learn-img">
 				<img src="./styles/img/italy.png" alt="img">
