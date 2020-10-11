@@ -4,6 +4,7 @@
 // Test => Choix Multiples ET ecrire (RANDOM)
 
 
+document.getElementById("maincontainer").style.display = "block"
 var vocTable = false
 
 fetch('../data/allemand.json').then(function(response) {
@@ -32,7 +33,7 @@ function runVocScript(json) {
 	//document.getElementById("test").innerHTML = JSON.stringify(data["1.1"]["normal"]["Hallo"])
 }
 
-function startVocSession() {
+function prepareVocSession() {
 	// radio buttons
 	var isLearning = document.getElementById('apprendreRadio').checked;
 	var isTesting = document.getElementById('testRadio').checked;	
@@ -44,10 +45,7 @@ function startVocSession() {
 	var includePhrases = document.getElementById('normalPhrasesOption').checked;
 	var includeBlue = document.getElementById('blueOption').checked;
 	var includeBluePhrases = document.getElementById('bluePhrasesOption').checked;
-	
-	
 	var localVocTable = [];
-	
     var checkbox = document.getElementsByClassName("vocListCheckboxes");
 	var selectedAnything = false
  	for (var i = 0; i < checkbox.length; i++) {
@@ -61,13 +59,32 @@ function startVocSession() {
 		alert("Tu dois choisir au moins un chapitre.");
 		return false;
 	}
-	startLearningSession(localVocTable, includePhrases, includeBlue, includeBluePhrases)
+	var tableToSend = [];
+	// mix all tables
+	for (key in localVocTable) {
+		for (index in localVocTable[key]) {
+			if (index == "phrase" && includePhrases) {
+				tableToSend.push(localVocTable[key][index]);
+			} else if (index == "blue" && includeBlue) {
+				tableToSend.push(localVocTable[key][index]);
+			} else if (index == "bluePhrases" && includeBluePhrases) {
+				tableToSend.push(localVocTable[key][index]);
+			} else if (index == "normal") {
+				tableToSend.push(localVocTable[key][index]);
+			}
+		}
+	}
+	// create my final table
+	var finalTable = [];
+	for (key in tableToSend) {
+		for (germanWord in tableToSend[key]) {
+			finalTable.push([germanWord, tableToSend[key][germanWord]])
+		}
+	} 
+	startLearningSession(finalTable)
 }
 
-function startLearningSession(table, includePhrases, includeBlue, includeBluePhrases) {
-	
-	for (key in localVocTable) {
-		console.log(localVocTable[key]);
-	}
+function startLearningSession(table) {
+	console.log(table)
 }
 

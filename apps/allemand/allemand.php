@@ -4,10 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="allemand.css">
-	<title></title>
+	<title>test</title>
 </head>
 <body>
 	<!-- Home page -->
+	
+	<div id="maincontainer" class="maincontainer">
+		<div class="thecard">
+			<div class="thefront">
+				<h1>Der Mann</h1>
+			</div>
+			<div class="theback">
+				<h1>L'homme</h1>
+			</div>
+
+		</div>
+    </div>
+	
 	<form action="">
 		<h1>Choisis ton mode d'apprentissage</h1>
 
@@ -27,7 +40,7 @@
 		<input type="checkbox" id="bluePhrasesOption">
 		<label for="bluePhrasesOption">Avec les phrases bleues</label><br>
 		
-		<button onclick="startVocSession()" type="button">On y va!</button>
+		<button onclick="prepareVocSession()" type="button">On y va!</button>
 	</form>
 	
 	<script src="allemand.js"></script>
