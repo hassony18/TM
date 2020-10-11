@@ -2,9 +2,9 @@
 	require "header.php";
 ?>
 
-	<main>
-		<h1>Signup</h1>
-		<form action="backend/signup.backend.php" method="POST">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<h1>S'inscrire</h1>
+		<form action="./backend/signup.backend.php" method="POST">
 			<?php
 				if (isset($_GET["first"])) {
 					$first = $_GET["first"];
@@ -39,8 +39,14 @@
 			<br>
 			<button type="submit" name="signup-submit">Sign up</button>
 		</form>
-	</main>
-	
+		
+		<h1>S'identifier</h1>
+		<form action="./backend/login.backend.php" method="post">
+			<input type="text" name="mailuid" placeholder="Username or E-mail...">
+			<input type="password" name="pwd" placeholder="Username or E-mail...">
+			<button type="submit" name="login-submit">Login</button>
+		</form>
+
 
 <?php
 	if (isset($_GET["signup"])) {

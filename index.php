@@ -3,9 +3,9 @@
 ?>
 
 	<main>
-  <!-- Hero Section  -->
-  <section id="hero">
-	<div class="hero container">
+  <!-- homepage Section  -->
+  <section id="homepage">
+	<div class="homepage container">
 	  <div>
 		<h1>Apprendre <span></span></h1>
 		<h1>N'a jamais été <span></span></h1>
@@ -14,7 +14,7 @@
 	  </div>
 	</div>
   </section>
-  <!-- End Hero Section  -->
+  <!-- End homepage Section  -->
 
   <!-- Service Section -->
   <section id="services">
