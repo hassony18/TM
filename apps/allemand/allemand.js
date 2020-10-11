@@ -2,11 +2,12 @@
 // load voc
 
 fetch('../data/allemand.json').then(function(response) {
-	return response.text();
+	return response.json();
 }).then(function(data){
 	runVocScript(data)
 })
 
-function runVocScript(data) {
-	document.getElementById("test").innerHTML = data
+function runVocScript(json) {
+	var data = json
+	document.getElementById("test").innerHTML = JSON.stringify(data["1.1"]["normal"]["Hallo"])
 }
