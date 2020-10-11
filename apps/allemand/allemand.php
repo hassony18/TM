@@ -20,14 +20,14 @@
 		<label for="testRadio">Test</label><br>
 		
 		<h2>Options:</h2>
-		<input type="checkbox" name="normalPhrasesOption">
+		<input type="checkbox" id="normalPhrasesOption">
 		<label for="normalPhrasesOption">Avec les phrases normales</label><br>
-		<input type="checkbox" name="blueOption">
+		<input type="checkbox" id="blueOption">
 		<label for="blueOption">Avec les bleues</label><br>
-		<input type="checkbox" name="bluePhrasesOption">
+		<input type="checkbox" id="bluePhrasesOption">
 		<label for="bluePhrasesOption">Avec les phrases bleues</label><br>
 		
-		<button type="button">On y va!</button>
+		<button onclick="startVocSession()" type="button">On y va!</button>
 	</form>
 	
 	<script src="allemand.js"></script>
