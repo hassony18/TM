@@ -7,8 +7,29 @@
 	<title></title>
 </head>
 <body>
-	<p id="test"> WELCOME </p>
+	<!-- Home page -->
+	<form action="">
+		<h1>Choisis ton mode d'apprentissage</h1>
 
+		<h2>Choisis un ou plusieurs chapitres:</h2>
+		<div id="vocCheckBoxesList"></div>
+		<h2>Choisis le type d'apprentissage:</h2>
+		<input type="radio" id="apprendreRadio" name="radio">
+		<label for="apprendreRadio">Apprendre</label><br>
+		<input type="radio" id="testRadio" name="radio">
+		<label for="testRadio">Test</label><br>
+		
+		<h2>Options:</h2>
+		<input type="checkbox" name="normalPhrasesOption">
+		<label for="normalPhrasesOption">Avec les phrases normales</label><br>
+		<input type="checkbox" name="blueOption">
+		<label for="blueOption">Avec les bleues</label><br>
+		<input type="checkbox" name="bluePhrasesOption">
+		<label for="bluePhrasesOption">Avec les phrases bleues</label><br>
+		
+		<button type="button">On y va!</button>
+	</form>
+	
 	<script src="allemand.js"></script>
 </body>
 </html>
