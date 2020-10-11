@@ -69,8 +69,8 @@
 			<div class="learn-item">
 			  <div class="learn-info">
 				<h1>Vocabulaire d'Anglais</h1>
-				<h2>Coding is Love</h2>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+				<h2>"Self education is the only kind of education there is."</h2>
+				<p>Veux-tu bien apprendre le vocabulaire qui te permettra de voyager autour de globe? Si oui, alors le programme sera parfait pour t'aider à atteindre le vocabulaire nécessaire à un niveau B2.</p>
 			  </div>
 			  <div class="learn-img">
 				<img src="./styles/img/anglais.png" alt="img">
@@ -79,8 +79,8 @@
 			<div class="learn-item">
 			  <div class="learn-info">
 				<h1>Vocabulaire d'Italien</h1>
-				<h2>Coding is Love</h2>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+				<h2>"Il segreto per andare avanti è iniziare."</h2>
+				<p>Souhaites-tu connaître la langue de la romance? Enfin, plutôt la langue qui te permettra d’insulter tout le monde en faisant croire que tu parles normalement et inversement. Si oui, alors utilises ce programme.</p>
 			  </div>
 			  <div class="learn-img">
 				<img src="./styles/img/italy.png" alt="img">
@@ -89,8 +89,8 @@
 			<div class="learn-item">
 			  <div class="learn-info">
 				<h1>Carte mondiale</h1>
-				<h2>Coding is Love</h2>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+				<h2>"On ne va jamais aussi loin que lorsqu'on ne sait pas où on va."</h2>
+				<p>Souhaites-tu connaître le monde? Enfin, ses pays... et leur position. Si oui, alors utilise cette carte qui te permettra d’apprendre tous les emplacements des 195 pays de ce monde.</p>
 			  </div>
 			  <div class="learn-img">
 				<img src="./styles/img/carte-mondiale.png" alt="img">
@@ -99,8 +99,8 @@
 			<div class="learn-item">
 			  <div class="learn-info">
 				<h1>Drapeaux</h1>
-				<h2>Coding is Love</h2>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+				<h2>Veux-tu différencier le Tchad et la Roumanie?</h2>
+				<p>Es-tu vexillophile ou vexillologue? Si oui, ce programme te permettra de retenir tous les drapeaux(des pays) du monde avec peu d’effort.</p>
 			  </div>
 			  <div class="learn-img">
 				<img src="./styles/img/drapeaux.png" alt="img">
