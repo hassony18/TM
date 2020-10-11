@@ -1,14 +1,12 @@
 
+// load voc
 
+fetch('../data/allemand.json').then(function(response) {
+	return response.text();
+}).then(function(data){
+	runVocScript(data)
+})
 
-document.getElementById("test").innerHTML = getVocTable("1.1")
-
-async function getVocTable(index) {
-	const response = await fetch('../data/allemand.json');
-	const table = await response.json();
-	if (!index) {
-		return table;
-	} else {
-		return table[index];
-	}
+function runVocScript(data) {
+	document.getElementById("test").innerHTML = data
 }
