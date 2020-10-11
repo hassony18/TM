@@ -6,9 +6,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
-	<link rel="stylesheet" href="styles/homepage.css">
-	<link rel="stylesheet" href="styles/signup.css">
+	<title>Swiss Learns</title>
+	<link rel="stylesheet" href="./styles/homepage.css">
+	<link rel="stylesheet" href="./styles/signup.css">
 </head>
 <body>
 	<header>
