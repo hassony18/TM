@@ -23,7 +23,7 @@
 						<div class="headerList"><div class="bar"></div></div>
 						<ul>
 							<li><a href="index.php">Accueil</a></li>
-							<li><a href="#ranking">Classement</a></li>
+							<li><a href="#rankings">Classement</a></li>
 							<li><a href="#learn">Apprendre</a></li>
 							<li><a href="#about">Qui sommes-nous</a></li>
 						<?php
