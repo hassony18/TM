@@ -289,26 +289,28 @@ p {
 
 /* End homepage Section */
 
-/* Services Section */
-#services .services {
+
+
+/* rankings Section */
+#rankings .rankings {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#services .service-top {
+#rankings .ranking-top {
 	max-width: 500px;
 	margin: 0 auto;
 }
-#services .service-bottom {
+#rankings .ranking-bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
-#services .service-item {
+#rankings .ranking-item {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -316,14 +318,14 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./styles/img/img-1.png);
+/* 	background-image: url(./styles/img/img-1.png); */
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
 }
-#services .service-item::after {
+#rankings .ranking-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -334,22 +336,24 @@ p {
 	opacity: .9;
 	z-index: -1;
 }
-#services .service-bottom .icon {
+#rankings .ranking-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
 }
-#services .service-item h2 {
+#rankings .ranking-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
-#services .service-item p {
+#rankings .ranking-item p {
 	color: white;
 	text-align: left;
 }
-/* End Services Section */
+/* End rankings Section */
+
+
 
 /* learn section */
 #learn .learn {
@@ -605,12 +609,12 @@ p {
 	}
 	/* End homepage */
 
-	/* Services Section */
-	#services .service-bottom .service-item {
+	/* rankings Section */
+	#rankings .ranking-bottom .ranking-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End Services Section */
+	/* End rankings Section */
 
 	/* learn */
 	#learn .learn-item {
@@ -718,7 +722,7 @@ p {
 	}
 	/* End header */
 
-	#services .service-bottom .service-item {
+	#rankings .ranking-bottom .ranking-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}

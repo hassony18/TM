@@ -16,38 +16,43 @@
 	  </section>
 	  <!-- End homepage Section  -->
 
-	  <!-- Service Section -->
-	  <section id="services">
-		<div class="services container">
-		  <div class="service-top">
-			<h1 class="section-title">Serv<span>i</span>ces</h1>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum deleniti maiores pariatur assumenda quas magni et, doloribus quod voluptate quasi molestiae magnam officiis dolorum, dolor provident atque molestias voluptatum explicabo!</p>
+	  <!-- Ranking Section -->
+	  <section id="rankings">
+		<div class="rankings container">
+		  <div class="ranking-top">
+			<h1 class="section-title">Cla<span>ss</span>ement</h1>
+			<p>Voici tu trouves les meilleures personnes de chaque programme! Trouves-tu ton pote dans cette liste? Pas de soucis! Tu peux le rattrapper en s'exercicant!</p>
 		  </div>
-		  <div class="service-bottom">
-			<div class="service-item">
+		  <div class="ranking-bottom">
+		  
+			<!-- List a faire -->
+			
+			<div class="ranking-item">
 			  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
 			  <h2>Web Design</h2>
 			  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
 			</div>
-			<div class="service-item">
+			<div class="ranking-item">
 			  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
 			  <h2>Web Design</h2>
 			  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
 			</div>
-			<div class="service-item">
+			<div class="ranking-item">
 			  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
 			  <h2>Web Design</h2>
 			  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
 			</div>
-			<div class="service-item">
+			<div class="ranking-item">
 			  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
 			  <h2>Web Design</h2>
 			  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
 			</div>
+			
+			
 		  </div>
 		</div>
 	  </section>
-	  <!-- End Service Section -->
+	  <!-- End Ranking Section -->
 
 	  <!-- learn Section -->
 	  <section id="learn">

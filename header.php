@@ -23,19 +23,18 @@
 						<div class="headerList"><div class="bar"></div></div>
 						<ul>
 							<li><a href="index.php">Accueil</a></li>
-							<li><a href="#services">Services</a></li>
+							<li><a href="#ranking">Classement</a></li>
 							<li><a href="#learn">Apprendre</a></li>
 							<li><a href="#about">Qui sommes-nous</a></li>
 						<?php
  							if (isset($_SESSION["userId"])) {
 								// if logged in, show logout button form
-								echo '<li><a href="./backend/logout.backend.php" method="post">déconnecter</a></li>';
+								echo '<li><a href="./backend/logout.backend.php" method="post">Se déconnecter</a></li>';
 							} else {
 								// if logged out, show logged in button form
 								echo '<li><a href="signup.php" data-after="Signup">Se connecter</a></li>';
 							} 
 						?>
-							<!-- #contact -->
 						</ul>
 					</div>
 				</div>
