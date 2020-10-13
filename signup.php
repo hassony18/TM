@@ -11,18 +11,18 @@
 			<?php
 				if (isset($_GET["first"])) {
 					$first = $_GET["first"];
-					echo '<input type="text" name="first" placeholder="Firstname" value="'.$first.'">';
+					echo '<input type="text" name="first" placeholder="First name" value="'.$first.'">';
 				} else {
-					echo '<input type="text" name="first" placeholder="Firstname">';
+					echo '<input type="text" name="first" placeholder="First name">';
 				}
 				
 				echo '<br>';
 				
 				if (isset($_GET["last"])) {
 					$last = $_GET["last"];
-					echo '<input type="text" name="last" placeholder="Lastname" value="'.$last.'">';
+					echo '<input type="text" name="last" placeholder="Last name" value="'.$last.'">';
 				} else {
-					echo '<input type="text" name="last" placeholder="Lastname">';
+					echo '<input type="text" name="last" placeholder="Last name">';
 				}
 				
 				echo '<br>';
