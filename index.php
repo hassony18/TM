@@ -21,7 +21,7 @@
 		<div class="rankings container">
 		  <div class="ranking-top">
 			<h1 class="section-title">Cla<span>ss</span>ement</h1>
-			<p>Voici tu trouves les meilleures personnes de chaque programme! Trouves-tu ton pote dans cette liste? Pas de soucis! Tu peux le rattrapper en s'exercicant!</p>
+			<p>Voici l'endroit où tu trouveras les meilleures personnes de chaque programme! Arrives-tu à trouver ton pote dans cette liste? Pas de soucis! Tu peux le rattrapper en t'exerçant!</p>
 		  </div>
 		  <div class="ranking-bottom">
 		  
