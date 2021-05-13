@@ -3,6 +3,10 @@
 if (isset($_POST['login-submit'])) {
 	include_once '../db/config.php';
 	
+	
+	
+
+
 	$mailuid = $_POST["mailuid"];
 	$password = $_POST["pwd"];
 	
@@ -38,8 +42,11 @@ if (isset($_POST['login-submit'])) {
 				} else if ($pwdCheck == true) {
 					// logged in
 					session_start();
+
+					$user_image = $row ['user_image'];
 					$_SESSION['userId'] = $row["id"];
 					$_SESSION['userUid'] = $row["username"];
+					$_SESSION['user_image'] = "styles/img/{$user_image}";
 					
 					header("Location: ../index.php?login=success");
 					exit();

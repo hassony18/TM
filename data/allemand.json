@@ -1,0 +1,278 @@
+{
+    "1.1": {
+        "normal": 
+			{ 
+				"der Mensch, en": "l'homme, l'être humain",
+				"die Leute": "les gens",
+				"die Person, en": "la personne, le personnage",
+				"persönlich": "personnel",
+				"die Persönlichkeit, en": "la personnalité",
+				"die Frau, en": "la femme, l'épouse",
+				"das Fräulein": "la demoiselle, mademoiselle",
+				"das Mädchen": "la jeune fille, la fillette",
+				"weiblich": "féminin",
+				"der Herr, n, en": "le monsieur, le seigneur, le maître",
+				"der Mann, ¨en": "l'homme, le mari",
+				"männlich": "masculin, viril",
+				"das Alter": "l'âge, la vieillesse",
+				"alt": "vieux, âgé",
+				"erwachsen": "adulte",
+				"das Kind, er": "l'enfant",
+	            "die Jugend": "la jeunesse",
+				"jung": "jeune",
+				"der Jugendliche": "le jeune, l'adolescent",
+				"der Junge, n": "le garçon",
+				"die Geburt, en": "la naissance",
+				"der Geburtstag, e": "l'anniversaire( de la naissance)",
+				"geboren": "né",
+				"leben": "vivre",
+				"das Leben": "la vie",
+				"lebendig": "vivant",
+				"werden": "devenir",
+				"sterben": "mourir",
+				"der Tod": "la mort",
+				"tot": "mort",
+				"der Tote, n": "le mort",
+				"töten": "tuer",
+				"heißen": "s'appeler",
+				"der Name, n": "le nom",
+				"der Vorname, n": "le prénom",
+				"die Liste, n": "la liste",
+				"nennen": "nommer, appeler",
+				"jemand": "quelqu'un",
+				"niemand": "personne",
+				"selbst": "(soi-)même",
+				"selber": "(soi-)même"
+			},
+        "phrase": 
+			{ 
+				"Frau Müller": "madame Müller",
+				"im Alter von 41 Jahren": "à l'âge de 41 ans",
+				"Wie alt sind Sie ? - Ich bin 18 Jahre alt.": "Quel âge avez-vous ? - J'ai 18 ans.",
+				"ein Erwachsener": "un adulte",
+				"das Einzelkind, er": "l'enfant unique",
+				"Er ist am 20. Oktober geboren.": "Il est né le 20 octobre.",
+				"Er wurde ein berühmter Arzt.": "Il devint un médecin célèbre.",
+				"Warum ist er rot geworden ?": "Pourquoi a-t-il rougi ?",
+				"Er ist an einer schweren Krankheit gestorben.": "Il est mort d'une grave maladie.",
+				"Wie heißt du mit Vornamen ?": "Quel est ton prénom ?",
+				"Hat sie jemand(en) gesehen ?": "A-t-elle vu quelqu'un ?",
+				"Niemand ander(e)s war da.": "personne d'autre n'était là.",
+				"Du hast es selbst gesagt.": "Tu l'as dit toi-même.",
+				"Das müssen Sie selber wissen.": "C'est à vous de le savoir."
+			},
+			
+        "blue": 
+			{ 
+				"die Hausfrau, en": "la ménagère, la maîtresse de maison",
+				"der Kerl, e": "le type, le gars, le gaillard",
+				"das Schicksal, e": "le destin",
+				"begraben": "enterrer",
+				"das Grab, ¨er": "la tombe",
+				"die Beerdigung, en": "l'enterrement",
+				"der Selbstmord, e": "le suicide"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Er hat Selbstmord begangen.": "Il s'est suicidé."
+			}
+	},
+	
+    "1.2": {
+        "normal": 
+			{ 
+				"die Familie, n": "la famille",
+				"die Eltern": "les parents",
+				"die Mutter, ¨": "la mère",
+				"der Vater, ¨": "le père",
+				"das Baby, s": "le bébé",
+				"die Tochter, ¨": "la fille",
+				"der Sohn, ¨e": "le fils",
+				"die Geschwister": "les frères et soeurs",
+				"die Schwester, n": "la soeur",
+				"der Bruder, ¨": "le frère",
+				"der Zwilling, e": "le jumeau",
+				"die Großmutter, ¨": "la grand-mère",
+				"der Großvater, ¨": "le grand-père",
+				"die Großeltern": "les grands-parents",
+				"der Enkel, -": "le petit-fils",
+				"die Enkelin, -": "la petite-fille",
+				"verwandt (mit + D)": "parent",
+				"die Tante, n": "la tante",
+				"der Onkel, -": "l'oncle",
+				"die Kusine, n": "la cousine",
+				"die Cousine, n": "la cousine",
+				"der Vetter, n": "le cousin",
+				"der Cousin, s": "le cousin",
+				"das Ehepaar, e": "le couple (marié)",
+				"heiraten (+ A)": "épouser, se marier (avec)",
+				"verheiratet (un-)": "marié",
+				"sich scheiden lassen": "divorcer",
+				"gehen (mit + D)": "sortir (avec)",
+				"erziehen": "éduquer, élevé",
+				"die Erziehung, en": "l'éducation",
+				"die Adoption, en": "l'adoption",
+				"adoptieren": "adopter"
+			},
+
+        "phrase": 
+			{ 
+				"Sie sind miteinander verwandt.": "Ils sont parents.",
+				"Herr Lehmann ist ein entfernter Verwandter.": "M. Lehmann est un parent éloigné.",
+				"Sie hat einen Jugendfreund geheiratet.": "Elle a épousé un ami d'enfance.",
+				"Wann haben Sie geheiratet ?": "Quand vous êtes-vous marié ?",
+				"Sie sind drei Jahren verheiratet.": "Ils sont mariés depuis trois ans.",
+				"eine verheiratete Frau": "une femme mariée",
+				"Sie haben sich scheiden lassen.": "ils ont divorcé.",
+				"Sie sind geschieden.": "Ils sont divorcés."
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	},
+
+
+    "1.3": {
+        "normal": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	},
+	
+    "1.4": {
+        "normal": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	},
+
+	
+    "1.5": {
+        "normal": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	},
+
+	
+    "1.6": {
+        "normal": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	},
+
+	
+    "1.7": {
+        "normal": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"Hallo": "Bonjour",
+				"Aufweidersehen": "Au revoir"
+			}
+	}
+
+}

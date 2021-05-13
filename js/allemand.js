@@ -7,7 +7,7 @@
 document.getElementById("maincontainer").style.display = "block"
 var vocTable = false
 
-fetch('../data/allemand.json').then(function(response) {
+fetch('./data/allemand.json').then(function(response) {
 	return response.json();
 }).then(function(data){
 	runVocScript(data)

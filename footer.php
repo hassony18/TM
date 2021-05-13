@@ -22,7 +22,7 @@
 		</div>
 	  </section>
 </footer>
-	<script src="homescript.js"></script>
+	<script src="js/homescript.js"></script>
 	
 
 </body>

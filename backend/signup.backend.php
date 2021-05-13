@@ -6,7 +6,7 @@
 		exit();
 		
 	} else {
-		include_once "config.php";
+		include_once "../db/config.php";
 		// if empty forms
 		
 		$username = $_POST["username"];
@@ -41,11 +41,12 @@
 					$email = mysqli_real_escape_string($conn, $_POST["email"]);
 					$first = mysqli_real_escape_string($conn, $_POST["first"]);
 					$last = mysqli_real_escape_string($conn, $_POST["last"]);
+					$default_img = 'default-user.png';
 					
-					$sql = "INSERT INTO users (username, password, email, first_name, last_name) VALUES (?, ?, ?, ?, ?);";
+					$sql = "INSERT INTO users (username, password, email, first_name, last_name , user_image) VALUES (?, ?, ?, ?, ? , ?);";
 					
 					// execute without parameters
-					mysqli_query($conn, $sql);
+					$a7a_kosk_f_tezk = mysqli_query($conn, $sql);
 					
 					// security 
 					$stmt = mysqli_stmt_init($conn);
@@ -53,7 +54,7 @@
 						echo "SQL ERROR";
 					} else {
 						$password = password_hash($password, PASSWORD_DEFAULT);
-						mysqli_stmt_bind_param($stmt, "sssss", $username, $password, $email, $first, $last);
+						mysqli_stmt_bind_param($stmt, "ssssss", $username, $password, $email, $first, $last, $default_img);
 						mysqli_stmt_execute($stmt);
 					}
 					

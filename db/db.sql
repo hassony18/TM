@@ -5,5 +5,6 @@ create table users (
 	email varchar(1000) not null,
 	first_name varchar(1000) not null,
 	last_name varchar(1000) not null,
+	user_image varchar(1000) not null,
     date datetime not null
 );
