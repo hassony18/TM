@@ -9,8 +9,8 @@ var currentNumberInQueue = 0;
 var correctAnswer = null;
 var language = null;
 
-document.getElementById("learningChoiceContainer").style.display = "block"
-document.getElementById("cardContainer").style.display = "none"
+document.getElementById("learningChoiceContainer").style.display = "block" // block
+document.getElementById("cardContainer").style.display = "none" // none
 document.getElementById("multipleChoicesContainer").style.display = "none"
 document.getElementById("testOptionsContainer").style.display = "none"
 document.getElementById("multipleChoicesOptionsContainer").style.display = "none"
@@ -53,15 +53,22 @@ function runVocScript(json) {
 	for (key in data) {
 		var input = document.createElement("INPUT");
 		var label = document.createElement("LABEL");
+		var span = document.createElement("SPAN");
+		label.setAttribute("class", "checkbox_container_style");
+		label.innerHTML = key;
+		
 		input.setAttribute("type", "checkbox");
 		input.setAttribute("class", "vocListCheckboxes");
 		input.setAttribute("name", key);
-		label.setAttribute("for", key);
-		label.setAttribute("id", "Label: " + key);
+		input.setAttribute("id", key);
+		
+		span.setAttribute("class", "checkbox_checkmark")
+		
+		label.appendChild(input);
+		label.appendChild(span);
 		document.getElementById("vocCheckBoxesList").appendChild(label);
-		document.getElementById("vocCheckBoxesList").appendChild(input);
-		document.getElementById("Label: " + key).innerHTML = key;
 	}
+	
 	
 	vocTable = data
 	//document.getElementById("test").innerHTML = JSON.stringify(data["1.1"]["normal"]["Hallo"])
@@ -164,11 +171,30 @@ function getRandomInteger(min, max) { // trouver un nombre aléatoire entre 2 va
 // testing
 
 function verifyWord_ecrire() {
-	var answer = document.getElementById("textAEcrire").value;
-	var answer1 = correctAnswer.split(",")[0]
-	var answer2 = correctAnswer.split(", ")[1]
-	console.log(language)
-	if (answer == correctAnswer || (answer == answer1) || (answer == answer2 && language == "german") ) {
+	var playerAnswer = document.getElementById("textAEcrire").value;
+	var question = document.getElementById("shownVocText_ecrire").innerHTML;
+	var correctAnswerPart1 = correctAnswer.split(",")[0].replace(/\([^()]*\)/g, '')
+	var correctAnswerPart2 = correctAnswer.split(", ")[1]
+	var correctAnswerPart3 = correctAnswer.split(", ")[2]
+	if (correctAnswerPart2) {
+		correctAnswerPart2 = correctAnswerPart2.replace(/\([^()]*\)/g, '')
+		correctAnswerPart2 = correctAnswerPart2.split(/\s+/).join('')
+	}
+	if (correctAnswerPart3) {
+		correctAnswerPart3 = correctAnswerPart3.replace(/\([^()]*\)/g, '')
+		correctAnswerPart3 = correctAnswerPart3.split(/\s+/).join('')
+	}
+	correctAnswerPart1 = correctAnswerPart1.split(/\s+/).join('')
+	var canPass = false;
+	// search for synonymes
+	for (k in learningTable) {
+		if (learningTable[k][0] == question || learningTable[k][1] == question) {
+			if (learningTable[k][0] == playerAnswer || learningTable[k][1] == playerAnswer) {
+				canPass = true;
+			}
+		}
+	}
+	if (canPass || playerAnswer == correctAnswer || (playerAnswer == correctAnswerPart1) || (playerAnswer == correctAnswerPart2 && language == "german") || (playerAnswer == correctAnswerPart3 && language == "german") ) {
 		alert("GJ")
 		setupEcrire(currentNumberInQueue++)
 	} else {

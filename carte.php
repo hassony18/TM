@@ -10,30 +10,38 @@
 <script src="./js/map_script.js"></script> 
 
 <body>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<div id="choose">
+	<div id="choose">
 		<h2>Bienvenue dans le test qui va te permettre(ou pas) de savoir où sont les pays du monde</h2>
 		<h3>Commençons par définir la manière avec laquelle le jeu se joue.</h3>
 		<p>Tu seras amené face à une carte du monde qui ressemblera à ça:</p>
-		<img src="./styles/img/carte.png" height="480px">
+		<img src="./styles/img/carte.png" height="240px" width="240px">
 		<p>Un pays te sera alors indiqué en bas à gauche de l'écran. Tu pouuras zoomé sur la carte en utilisant la molette de ta souris. Tu pourras également manipuler la carte en utilisant le clique gauche de la souris, puis en déplaçant le curseur. </p>
 		<p>Le but ? C'est à toi de le fixé.</p>
 		<form onsubmit="return false">
 			<fieldset>
 				<legend>Quelle entraînement souhaite-tu ?</legend>
-				<input type="radio" id="testmap" name="difficultopt" value="testmap" required onclick="difficulty('testmap')">
-				<label for="testmap">Test:Tu peux t'habituer aux contrôles ou regarder où sont les divers pays.</label><br>
-				<input type="radio" id="nbPays" name="difficultopt" value="nbPays" onclick="difficulty('nbPays')">
-				<label for="nbPays">Objectif Numéral: Tu dois trouver un certain nombre de pays.</label><br>
-				<input type="radio" id="temps" name="difficultopt" value="temps" onclick="difficulty('temps')">
-				<label for="temps">Objectif Temporel: Tu dois trouver un maximum de pays en un temps donner.</label>
+				
+				<label class="radio_style_container">Test:Tu peux t'habituer aux contrôles ou regarder où sont les divers pays.
+				  <input type="radio" name="difficultopt" id="testmap" value="testmap" required onclick="difficulty('testmap')">
+				  <span class="radio_style_checkmark"></span>
+				</label>
+				<label class="radio_style_container">Objectif Numéral: Tu dois trouver un certain nombre de pays.
+				  <input type="radio" name="difficultopt" id="nbPays" value="nbPays" onclick="difficulty('nbPays')">
+				  <span class="radio_style_checkmark"></span>
+				</label>	
+				<label class="radio_style_container">Objectif Temporel: Tu dois trouver un maximum de pays en un temps donner.
+				  <input type="radio" name="difficultopt" id="temps" value="temps" onclick="difficulty('temps')">
+				  <span class="radio_style_checkmark"></span>
+				</label>				
+				
 			</fieldset>
 			<div id="nbPaysopt"></div>
 			<div id="tempsopt">	</div>
 			<input type="submit" value="Commencer" onclick="launchMap()">
 		</form>
 	</div>
-<div id="test">
+	<div id="test">
+
 <?xml version="1.0"?>
 <!--
 *************Map created by Simplemaps.com********************		

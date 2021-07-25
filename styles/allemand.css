@@ -9,19 +9,228 @@ body {
     background-color: #f8f9fe;
 }
 
+button {
+	border-radius: 25px;
+	background-color: crimson;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+    margin:0 auto;
+    display:block;
+}
+
+button:hover {
+	background-color: transparent;
+	color: crimson;
+}
+
+/* cool white background */
+#learningChoiceContainer, #multipleChoicesContainer, #writingContainer {
+	background-color: white;
+	border-radius: 25px;
+	margin: auto;
+	width: 80%;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
+}
+
+#learningChoiceContainer h1, #cardContainer h2, #multipleChoicesContainer, #writingContainer {
+	justify-content: center;
+	text-align: center;
+}
+
+#multipleChoicesContainer button, #writingContainer button {
+    margin: 10px auto;
+    display:block;
+}
+
+input[type=number]:focus, input[type=text]:focus {
+	border-bottom: 2px solid crimson;
+    outline: none !important;
+}
+
+input[type=number], input[type=text] {
+	background: transparent;
+	color: crimson;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+}
+
+
+#learningChoiceContainer h2, #learningChoiceContainer input {
+	margin: 10px;
+}
+
+  
+#header .nav-list ul li a {
+    font-size: 15px !important;
+}
+
+.header {
+	position: relative;
+}
+  
+#header .header {
+    background-color: rgb(0 0 0 / 100%) !important;
+}
+
 #allemand_apprentissage_container {
 	margin-top: 100px;
 }
 
+
+/* INPUT STYLING */
+
+/* The container */
+.checkbox_container_style {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container_style input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container_style:hover input ~ .checkbox_checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container_style input:checked ~ .checkbox_checkmark {
+  background-color: crimson;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container_style input:checked ~ .checkbox_checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container_style .checkbox_checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* RADIO STYLING */
+
+/* The container */
+.radio_style_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio_style_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio_style_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio_style_container:hover input ~ .radio_style_checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio_style_container input:checked ~ .radio_style_checkmark {
+  background-color: crimson;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio_style_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio_style_container input:checked ~ .radio_style_checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio_style_container .radio_style_checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* CARDS */
 
 /* THE MAINCONTAINER HOLDS EVERYTHING */
 .cardContainer{
 	position: relative;
 	width: 400px;
 	height: 150px;
-	background: none;
-	top: 50%;
 	left: 50%;
+	margin-top: 10%;
+	background: none;
 	transform: translate(-50%, -50%);
 }
 
@@ -91,11 +300,19 @@ body {
 	text-align: center;
 }
 
-.footer{
+#cardContainer h2 {
+	margin: 10px;
+}
 
+#cardContainer button {
+	margin-top: 10px;
+}
+
+
+/* FOOTER */
+
+.footer{
 	padding-top: 4px !important;
 	padding-bottom: 8px !important;
-	margin-top: 173px !important;
-  
-	}
-  
+	margin-top: 360px !important;
+}

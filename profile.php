@@ -28,7 +28,7 @@
 					<div class="imgbarcontainter">
 					  <a href="#">
 					  <form action="" method="post" enctype="multipart/form-data">
-					  <?php echo "<img src='styles/img/{$user_image}' class='rounded-circle'>" ?>
+					  <?php echo "<img src='styles/img/profile_pictures/{$user_image}' class='rounded-circle'>" ?>
 							<label id="changephotobar" class="file btn btn-lg btn-primary">
 								Change Photo
 							<input name="user_image" type="file" name="file"/>

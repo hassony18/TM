@@ -12,43 +12,73 @@
 		
 		<div id="learningChoiceContainer">
 			<form action="">
-				<h1>Choisis ton mode d'apprentissage</h1>
+				<h1>Choix de mode d'apprentissage</h1>
 
-				<h2>Choisis un ou plusieurs chapitres:</h2>
+				<h2 style="color: crimson;">Choisis un ou plusieurs chapitres:</h2>
 				<div id="vocCheckBoxesList"></div>
-				<h2>Choisis le type d'apprentissage:</h2>
-				<input type="radio" id="apprendreRadio" name="radio" onchange="onVocRadioValueChange()">
-				<label for="apprendreRadio">Apprendre</label><br>
-				<input type="radio" id="testRadio" name="radio" onchange="onVocRadioValueChange()">
-				<label for="testRadio">Test</label><br>
+				<h2 style="color: crimson;">Choisis le type d'apprentissage:</h2>
+				
+				<label class="radio_style_container">Apprendre
+				  <input type="radio" name="radio" id="apprendreRadio" onchange="onVocRadioValueChange()">
+				  <span class="radio_style_checkmark"></span>
+				</label>
+				<label class="radio_style_container">Test
+				  <input type="radio" name="radio" id="testRadio" onchange="onVocRadioValueChange()">
+				  <span class="radio_style_checkmark"></span>
+				</label>
+				
+				
 				<div id="testOptionsContainer">
-					-><input type="radio" id="radio_choix_multiple" name="radio2" onchange="onVocRadioValueChange()">
-					<label for="radio_choix_multiple">Choix multiples</label><br>
-					<div id="multipleChoicesOptionsContainer">
-						--><input type="radio" id="radio_cherche_francais" name="radio3">
-						<label for="radio_cherche_francais">Cherche le mot francais</label><br>
-						--><input type="radio" id="radio_cherche_allemand" name="radio3">
-						<label for="radio_cherche_allemand">Cherche le mot allemand</label><br>
-					</div>
-					-><input type="radio" id="radio_ecrire" name="radio2" onchange="onVocRadioValueChange()">
-					<label for="radio_ecrire">Ecrire</label><br>
-					<div id="ecrireOptionsContainer">
-						--><input type="radio" id="radio_ecrire_francais" name="radio3">
-						<label for="radio_ecrire_francais">Ecrire en francais</label><br>
-						--><input type="radio" id="radio_ecrire_allemand" name="radio3">
-						<label for="radio_ecrire_allemand">Ecrire en allemand</label><br>
-					</div>
+				
+					<label class="radio_style_container">Choix multiples
+					  <input type="radio" name="radio2" id="radio_choix_multiple" onchange="onVocRadioValueChange()">
+					  <span class="radio_style_checkmark"></span>
+					</label>
+
+						<div id="multipleChoicesOptionsContainer">
+							<label class="radio_style_container">Cherche le mot francais
+							  <input type="radio" name="radio3" id="radio_cherche_francais">
+							  <span class="radio_style_checkmark"></span>
+							</label>
+							<label class="radio_style_container">Cherche le mot allemand
+							  <input type="radio" name="radio3" id="radio_cherche_allemand">
+							  <span class="radio_style_checkmark"></span>
+							</label>
+						</div>
+					
+					<label class="radio_style_container">Ecrire
+					  <input type="radio" name="radio2" id="radio_ecrire" onchange="onVocRadioValueChange()">
+					  <span class="radio_style_checkmark"></span>
+					</label>
+					
+						<div id="ecrireOptionsContainer">
+							<label class="radio_style_container">Ecrire en francais
+							  <input type="radio" name="radio3" id="radio_ecrire_francais" onchange="onVocRadioValueChange()">
+							  <span class="radio_style_checkmark"></span>
+							</label>
+							<label class="radio_style_container">Ecrire en allemand
+							  <input type="radio" name="radio3" id="radio_ecrire_allemand" onchange="onVocRadioValueChange()">
+							  <span class="radio_style_checkmark"></span>
+							</label>
+						</div>
+						
 				</div>
 				
-				<h2>Options:</h2>
-				<input type="checkbox" id="normalPhrasesOption">
-				<label for="normalPhrasesOption">Avec les phrases normales</label><br>
-				<input type="checkbox" id="blueOption">
-				<label for="blueOption">Avec les bleues</label><br>
-				<input type="checkbox" id="bluePhrasesOption">
-				<label for="bluePhrasesOption">Avec les phrases bleues</label><br>
+				<h2 style="color: crimson;">Options:</h2>
+				<label class="checkbox_container_style">Avec les phrases normales
+					<input id="normalPhrasesOption" type="checkbox">
+					<span class="checkbox_checkmark"></span>
+				</label>
+				<label class="checkbox_container_style">Avec les bleues
+					<input id="blueOption" type="checkbox">
+					<span class="checkbox_checkmark"></span>
+				</label>
+				<label class="checkbox_container_style">Avec les phrases bleues
+					<input id="bluePhrasesOption" type="checkbox">
+					<span class="checkbox_checkmark"></span>
+				</label>
 				
-				<button onclick="prepareVocSession()" type="button">On y va!</button>
+				<button onclick="prepareVocSession()" type="button" id="startSessionButton">On y va!</button>
 			</form>
 		</div>
 		
@@ -61,10 +91,9 @@
 					<h1 id="backText">BACK</h1>
 				</div>
 			</div>
-			<button onclick="nextVoc('next')" type="button"> => </button>
 			<h2 id="words_counter_learning">COUNTER</h2>
-			<button onclick="nextVoc('previous')" type="button"> <= </button>
-			<br>
+			<button onclick="nextVoc('next')" type="button" class="floated"> → </button>
+			<button onclick="nextVoc('previous')" type="button" class="floated"> ← </button>
 			<button onclick="nextVoc('done')" type="button"> Fini! </button>
 		</div>
 		

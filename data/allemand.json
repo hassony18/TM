@@ -2,45 +2,45 @@
     "1.1": {
         "normal": 
 			{ 
-				"der Mensch, en": "l'homme, l'être humain",
+				"der Mensch, en, en": "l'homme, l'être humain",
 				"die Leute": "les gens",
 				"die Person, en": "la personne, le personnage",
 				"persönlich": "personnel",
 				"die Persönlichkeit, en": "la personnalité",
 				"die Frau, en": "la femme, l'épouse",
-				"das Fräulein": "la demoiselle, mademoiselle",
-				"das Mädchen": "la jeune fille, la fillette",
+				"das Fräulein, -": "la demoiselle, mademoiselle",
+				"das Mädchen, -": "la jeune fille, la fillette",
 				"weiblich": "féminin",
 				"der Herr, n, en": "le monsieur, le seigneur, le maître",
-				"der Mann, ¨en": "l'homme, le mari",
+				"der Mann, ¨er": "l'homme, le mari",
 				"männlich": "masculin, viril",
-				"das Alter": "l'âge, la vieillesse",
+				"das Alter, -": "l'âge, la vieillesse",
 				"alt": "vieux, âgé",
 				"erwachsen": "adulte",
 				"das Kind, er": "l'enfant",
-	            "die Jugend": "la jeunesse",
+	            "die Jugend, /": "la jeunesse",
 				"jung": "jeune",
 				"der Jugendliche": "le jeune, l'adolescent",
-				"der Junge, n": "le garçon",
+				"der Junge, n, n": "le garçon",
 				"die Geburt, en": "la naissance",
 				"der Geburtstag, e": "l'anniversaire( de la naissance)",
 				"geboren": "né",
 				"leben": "vivre",
-				"das Leben": "la vie",
+				"das Leben, -": "la vie",
 				"lebendig": "vivant",
 				"werden": "devenir",
-				"sterben": "mourir",
-				"der Tod": "la mort",
+				"sterben (an + D)": "mourir",
+				"der Tod, /": "la mort",
 				"tot": "mort",
 				"der Tote, n": "le mort",
 				"töten": "tuer",
 				"heißen": "s'appeler",
-				"der Name, n": "le nom",
-				"der Vorname, n": "le prénom",
+				"der Name, ns, n": "le nom",
+				"der Vorname, ns, n": "le prénom",
 				"die Liste, n": "la liste",
 				"nennen": "nommer, appeler",
 				"jemand": "quelqu'un",
-				"niemand": "personne",
+				"niemand": "ne ... personne",
 				"selbst": "(soi-)même",
 				"selber": "(soi-)même"
 			},
@@ -57,7 +57,7 @@
 				"Er ist an einer schweren Krankheit gestorben.": "Il est mort d'une grave maladie.",
 				"Wie heißt du mit Vornamen ?": "Quel est ton prénom ?",
 				"Hat sie jemand(en) gesehen ?": "A-t-elle vu quelqu'un ?",
-				"Niemand ander(e)s war da.": "personne d'autre n'était là.",
+				"Niemand ander(e)s war da.": "Personne d'autre n'était là.",
 				"Du hast es selbst gesagt.": "Tu l'as dit toi-même.",
 				"Das müssen Sie selber wissen.": "C'est à vous de le savoir."
 			},
@@ -77,7 +77,7 @@
 			{ 
 				"Er hat Selbstmord begangen.": "Il s'est suicidé."
 			}
-		},
+	},
 	
     "1.2": {
         "normal": 
@@ -97,7 +97,7 @@
 				"der Großvater, ¨": "le grand-père",
 				"die Großeltern": "les grands-parents",
 				"der Enkel, -": "le petit-fils",
-				"die Enkelin, -": "la petite-fille",
+				"die Enkelin": "la petite-fille",
 				"verwandt (mit + D)": "parent",
 				"die Tante, n": "la tante",
 				"der Onkel, -": "l'oncle",
@@ -124,151 +124,958 @@
 				"Wann haben Sie geheiratet ?": "Quand vous êtes-vous marié ?",
 				"Sie sind drei Jahren verheiratet.": "Ils sont mariés depuis trois ans.",
 				"eine verheiratete Frau": "une femme mariée",
-				"Sie haben sich scheiden lassen.": "ils ont divorcé.",
+				"Sie haben sich scheiden lassen.": "Ils ont divorcé.",
 				"Sie sind geschieden.": "Ils sont divorcés."
 			},
 			
         "blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"das Geschlecht, er": "le sexe, le genre",
+				"die Nichte, n": "la nièce",
+				"der Neffe, n, n": "le neveu",
+				"die Schwiegereltern": "les beaux-parents",
+				"der Schwiegervater, ¨": "le beau-père",
+				"die Schwiegermutter, ¨": "la belle-mère",
+				"der Schwager, ¨": "le beau-frère",
+				"die Schwägerin": "la belle-soeur",
+				"das Familienmitglied, er": "le membre de la famille",
+				"die Verwandschaft, /": "la parenté",
+				"die Tagesmutter, ¨": "la maman de jour",
+				"der Erbe, n, n": "l'héritier",
+				"die Erbin": "l'héritière",
+				"erben (von + D)": "hériter (de)",
+				"die Erbschaft, en": "l'héritage"
 			},
 			
-        "phrase-blue": 
-			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
-			}
-		},
-	
+        "phrase-blue": null
+	},
+
+
     "1.3": {
         "normal": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"der Charakter, Charaktere": "le caractère",
+				"aktiv": "actif",
+				"passiv": "passif",
+				"lebhaft": "vif, animé",
+				"die Geduld, /": "la patience",
+				"geduldig (un-)": "patient",
+				"die Ruhe, /": "le calme, la tranquilité, le repos",
+				"ruhig (un-)": "calme, tranquille",
+				"beruhigen": "tranquiliser, rassurer, calmer",
+				"beunruhigen": "inquiéter",
+				"still": "silencieux, tranquille",
+				"bescheiden (un-)": "modeste",
+				"schüchtern": "timide",
+				"fleißig": "appliqué, zélé, travailleur",
+				"faul": "paresseux",
+				"die Faulheit, /": "la paresse",
+				"neugierig": "curieux, avide de savoir",
+				"die Ehre, n": "l'honneur",
+				"ehrlich (un-)": "honnête",
+				"der Ernst, /": "le sérieux",
+				"ernst (un-)": "sérieux, grave",
+				"selbstbewusst": "conscient de sa valeur, sûr de soi",
+				"stolz (auf + A)": "fier (de)",
+				"der Stolz, /": "la fierté",
+				"frech": "insolent",
+				"die Frechheit, /": "l'insolence",
+				"energisch": "énergique",
+				"der Mut, /": "le courage",
+				"mutig": "courageux",
+				"tapfer": "courageux, brave",
+				"spontan": "spontané",
+				"freundlich (un-)": "aimable, amical",
+				"liebenswürdig": "aimable, amical",
+				"fröhlich": "joyeux, gai",
+				"nett": "gentil, aimable, charmant",
+				"lieb": "1. cher  2. gentil",
+				"brav": "gentil, sage",
+				"der Humor, /": "l'humour",
+				"toll": "sensationnel, génial",
+				"treu (un-)": "fidèle",
+				"heiter": "serein, gai",
+				"naiv": "naïf",
+				"schlau": "rusé, fin",
+				"fähig (un-) (zu + D)": "capable (de), apte (à)",
+				"vertrauen (+ D)": "avoir confiance (en)",
+				"das Vertrauen, / (zu + D)": "la confiance (en)",
+				"sich verlassen (auf + A)": "compter (sur), se fier (à)",
+				"das Misstrauen": "la méfiance",
+				"misstrauisch": "méfiant",
+				"kleinlich": "mesquin",
+				"egoistisch": "égoïste",
+				"neidisch (auf + A)": "envieux, jaloux",
+				"streng": "sévàre, strict",
+				"die Härte, /": "la dureté",
+				"hart": "dur"
 			},
 
         "phrase": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"Er verlor die Geduld.": "Il perdit patience.",
+				"Lass mich in Ruhe !": "Fiche-moi la paix !",
+				"Meinst du das im Ernst ?": "Tu dis ça sérieusement ?",
+				"Auf diese Rede wäre ich nicht stolz.": "Je ne serais pas fier de ce discours.",
+				"Sei so nett und schließ die Tür.": "Sois gentil et ferme la porte.",
+				"Ihr seid wirklich zu allem fähig.": "Vous êtes vraiment capable de tout.",
+				"Er ist unfähig, das zu verstehen.": "Il est incapable de comprendre cela.",
+				"Es ist unvorsichtig, seinem Urteil zu vertrauen.": "Il est imprudent de faire confiance à son jugement.",
+				"Ich habe kein Vertrauen zu ihm.": "Je n'ai pas confiance en lui.",
+				"Verlass dich auf mich !": "Compte sur moi !",
+				"Man könnte neidisch auf dich werden: du hast immer Glück.": "On pouurait t'envier: tu as toujours de la chance."
 			},
 			
         "blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"der Zug, ¨e": "le trait",
+				"das Gleichgewicht, /": "l'équilibre",
+				"das Wesen, -": "l'être, l'essence, la nature",
+				"der Fleiß, /": "le zèle, l'assiduité",
+				"demütig": "humble",
+				"die Hemmung, en": "la gêne, l'inhibition, le scrupule",
+				"gehemmt (un-)": "bloqué, inhibé, complexé",
+				"aufrichtig (un-)": "franc, sincère",
+				"selbstständig (un-)": "indépendant",
+				"hochmütig": "orgueilleux, hautain",
+				"der Hochmut, /": "l'orgueil",
+				"arrogant": "arrogant",
+				"eitel": "vaniteux",
+				"kühn": "hardi, audacieux, téméraire",
+				"feig(e)": "lâche",
+				"der Feigling, e": "le lâche",
+				"die Feigheit, /": "la lâcheté",
+				"großzügig": "généreux",
+				"tüchtig (un-)": "capable, bon",
+				"würdig (un-) (+ G)": "digne (de)",
+				"zuverlässig (un-)": "sûr, sur qui l'on peut compter, fiable",
+				"heucheln": "feindre, faire l'hypocrite",
+				"die Eifersucht, /": "la jalousie",
+				"eifersüchtig (auf + A)": "jaloux (de)",
+				"der Neid, /": "l'envie",
+				"nachlässig": "négligent",
+				"leichtsinning": "léger, insouciant",
+				"der Leichtsinn, /": "l'insoucience, l'imprudence",
+				"oberflächlich": "superficiel",
+				"grausam": "cruel",
+				"die Rücksicht, en (auf + A)": "l'égard (pour)",
+				"rücksichtslos": "sans égards, dur",
+				"der Skrupel, -": "le scrupule",
+				"skrupellos": "sans scrupules",
+				"sich an/vertrauen (+ D)": "se confier (à)",
+				"ungezogen": "mal éduqué",
+				"die Eigenschaft, en": "la qualité, le trait de caractère",
+				"die Neugier(de), /": "la curiosité",
+				"eingebildet": "imbu de soi-même",
+				"eigensinnig": "entêté, obstiné",
+				"der Angeber, -": "le crâneur",
+				"die Angeberin": "la crâneuse",
+				"verschlossen": "renfermé, peu communicatif (personne)",
+				"scheinheilig": "hypocrite",
+				"die Scheinheiligkeit, /": "l'hypocrisie"
 			},
 			
         "phrase-blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"der Charakterzug": "le trait de caractère",
+				"der Gesichtzug": "le trait du visage",
+				"Das passt nicht zu seinem Wesen.": "Ce n'est pas dans sa nature.",
+				"das Lebewesen": "l'être vivant",
+				"ein unselbstständiger Mensch": "un homme sans initiative",
+				"Ist er unseres Vertrauens würdig ?": "Est-il digne de notre confiance ?",
+				"Seine Sympathie war geheuchelt.": "Sa sympathie était feinte.",
+				"Sie ist auf ihre Schwester eifersüchtig.": "Elle est jalouse de sa soeur.",
+				"Du könntest Rücksicht auf ihr Alter nehmen.": "Tu pourrais avoir des égards pour son âge.",
+				"Skrupel haben": "avoir des scrupules"
 			}
-		},
+	},
 	
-    "1.2": {
+    "1.4": {
         "normal": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"sich verhalten": "se comporter, se conduire",
+				"sich benehmen": "se comporter, se conduire",
+				"das Verhalten, /": "le comportement",
+				"das Benehmen, /": "le comportement",
+				"die Haltung, en": "l'attitude, la contenance",
+				"die Reaktion, en": "la réaction",
+				"reagieren (auf + A)": "réagir (à)",
+				"diskret (in-)": "discret",
+				"zurückhaltend": "réservé, qui a de la retenue, discret",
+				"anständig (un-)": "convenable, correct",
+				"vornehm": "distingué, noble",
+				"höflich (un-)": "poli",
+				"herzlich": "cordial",
+				"das Gewissen, /": "la conscience (morale)",
+				"gehorchen (+ D)": "obéir (à)",
+				"gehorsam (un-)": "obéissant",
+				"heimlich": "secret, en cachette, en secret",
+				"behandeln": "traiter",
+				"grob": "grossier",
+				"lächerlich": "ridicule",
+				"grotesk": "grotesque",
+				"sich schämen (für + A od. + G)": "avoir honte (de)",
+				"die Scham, /": "la honte, la pudeur",
+				"riskieren": "risquer",
+				"das Risiko, Risiken": "le risque",
+				"riskant": "risqué",
+				"wagen": "oser, risquer",
+				"übertreiben": "exagérer",
+				"die Übertreibung, en": "l'exagération",
+				"beherrschen": "maîtriser, dominer"
 			},
 
         "phrase": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"Wie verhält man sich in dieser Situation ?": "Comment se comporter dans cette situation ?",
+				"die Haltung verlieren": "perdre contenance",
+				"Ich habe noch nicht auf den Brief reagiert.": "Je n'ai pas encore réagi à la lettre.",
+				"etwas auf dem Gewissen haben": "avoir qc sur la conscience",
+				"ein schlechtes Gewissen haben": "avoir mauvaise conscience",
+				"Du solltest dich für diesen Unsinn (dieses Unsinns) schämen.": "Tu devrais avoir honte de cette bêtise.",
+				"Können wir so große Risiken auf uns nehmen ?": "Pouvons-nous prendre de tels risques ?",
+				"Ich wage nicht zu antworten.": "Je n'ose pas répondre."
 			},
 			
         "blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"gewissenhaft": "conscienceux",
+				"nüchtern": "1. sobre, à jeun  2. objectif, réaliste",
+				"tadellos": "impeccable",
+				"gemein": "1. méchant, vulgaire  2. simple, commun, ordinaire",
+				"die Brutalität, en": "la brutalité",
+				"brutal": "brutal",
+				"die List, en": "la ruse",
+				"die Schande, /": "la honte, l'infamie",
+				"minderwertig": "inférieur, d'une valeur inférieur",
+				"das Minderwertigkeitsgefühl, e": "le sentiment d'infériorité",
+				"der Gewissenbiss, e": "le remords",
+				"verwöhnen": "gâter, mal habitué",
+				"sich an/passen (+ D od. an + A)": "s'adapter à",
+				"sich alles (nichts) gefallen lassen": "(ne pas) se laisser faire"
 			},
 			
         "phrase-blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"bei einer Party nüchtern bleiben": "rester sobre lors d'une soirée",
+				"auf nüchternen Magen": "à jeun",
+				"Du bist gemein !": "Tu n'es pas gentil ! (Tu es dégoûtant !)"
 			}
-		},
+	},
+
 	
-    "1.2": {
+    "1.5": {
         "normal": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"wollen": "vouloir",
+				"der Wille, ns, /": "la volonté",
+				"freiwillig": "volontaire, facultatif",
+				"wünschen": "souhaiter désirer",
+				"der Wunsch, ¨e": "le désir, le voeux, le souhait",
+				"die Absicht, en": "l'intention",
+				"absichtlich (un-)": "intentionnel, exprès",
+				"vor/haben (+ A)": "avoir l'intention (de), avoir des projets",
+				"das Projekt, e": "le projet",
+				"der Plan, ¨e": "le plan, le projet",
+				"planen": "projeter, planifier",
+				"die Planung, en": "la planification",
+				"bereit": "prêt",
+				"beschließen": "décider",
+				"der Beschluss, ¨e": "la décision",
+				"sich entschließen (zu + D)": "se décider, se résoudre (à)",
+				"der Entschluss, ¨e": "la décision (difficile), la résolution",
+				"(sich) entscheiden": "(se) décider, trancher",
+				"das Entscheidung, en": "la décision",
+				"das Ziel, e": "le but, l'arrivée",
+				"an/strengen": "fatiguer",
+				"sich an/strengen": "s'efforcer, faire un effort",
+				"sich bemühen": "s'efforcer",
+				"die Mühe, n": "la peine",
+				"wozu ?": "pourquoi ? dans quel but ? à quoi bon ?",
+				"zögern": "hésiter",
+				"(sich) beschränken (auf + A)": "(se) limiter, (se) restreindre (à)",
+				"ab/lehnen": "refuser, écarter, décliner (une offre)",
+				"sich weigern (zu + inf.)": "refuser (de faire qc)"
 			},
 
         "phrase": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"Das habe ich nicht gewollt.": "Je n'ai pas voulu cela.",
+				"Ich wünsche dir Glück.": "Je te souhaite bonne chance.",
+				"Hast du am Samstag schon etwas vor ?": "As-tu déjà des projets pour samedi ?",
+				"einen Beschluss fassen": "prendre une décision",
+				"Sie konnte sich nicht zu dieser Operation entschließen.": "Elle ne voulait pas se résoudre à cette opération.",
+				"einen mutigen Entschluss fassen": "prendre une décision courageuse",
+				"Wir haben uns für das andere Projekt entschieden.": "Nous nous sommes décidés pour l'autre projet.",
+				"Das zweite Tor entschied die Partie.": "Le deuxième but décida de la partie.",
+				"Eine Entscheidung treffen.": "Prendre une décision.",
+				"Die Entscheidung ist gefallen.": "La décision est tombée.",
+				"ans Ziel kommen": "toucher au but",
+				"am Ziel sein": "être au but",
+				"sich (D) ein Ziel setzen": "se fixer un but",
+				"ein anstrengender Tag": "une journée fatiguante",
+				"Es ist nicht der (die) Mühe wert.": "Ça n'en vaut pas la peine.",
+				"Wir müssen uns auf die wichtigsten Punkte beschränken.": "Nous devons nous limiter aux points les plus importants.",
+				"Sie lehnte die Einladung ab.": "Elle refusa l'invitation.",
+				"Sie haben sich geweigert, die Bücher zurückzubringen.": "Ils ont refusé de raproter les livres."
 			},
 			
         "blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"willkürlich": "arbitraire",
+				"unwillkürlich": "involontaire, sans le vouloir",
+				"im Begriff sein": "être sur le point (de)",
+				"der Entwurf, ¨e": "le brouillon, l'esquisse, le projet",
+				"der Zweck, e": "le but, le dessein",
+				"die Anstrengung, en": "l'effort",
+				"der Ehrgeiz, /": "l'ambition",
+				"ehrgeizig": "ambitieux",
+				"sich begnügen (mit + D)": "se contenter, se satisfaire (de)",
+				"verweigern (+ A oblig.)": "refuser (une demande)"
 			},
 			
         "phrase-blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"eine willkürliche Wahl treffen": "faire un choix arbitraire",
+				"Er wandte unwillkürlich den Kopf.": "Il tourna machinalement la tête.",
+				"Er war im Begriff, nach Hause zu gehen.": "Il était sur le point de rentrer.",
+				"Zu welchem Zweck ?": "Dans quel but ?",
+				"Ich begnüge mich mit meiner kleinen Wohnung.": "Je me contente de mon petit appartement.",
+				"Warum verweigert er mir seine Hilfe ?": "Pourquoi me refuse-t-il son aide ?"
 			}
-		},
+	},
+
 	
-    "1.2": {
+    "1.6": {
         "normal": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			},
 
         "phrase": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			},
 			
         "blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			},
 			
         "phrase-blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			}
-		},
+	},
+
 	
-    "1.2": {
+    "2.1": {
         "normal": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			},
 
         "phrase": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			},
 			
         "blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			},
 			
         "phrase-blue": 
 			{ 
-				"Hallo": "Bonjour",
-				"Aufweidersehen": "Au revoir"
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
 			}
-		}
+	},
+
+	"2.2": {
+        "normal": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			}
+	},
+
+	"2.3": {
+        "normal": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			}
+	},
+
+	"2.4": {
+        "normal": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			}
+	},
+
+	"2.5": {
+        "normal": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+
+        "phrase": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			},
+			
+        "phrase-blue": 
+			{ 
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"hallo": "bonjour",
+				"aufwiedersehen": "au revoir"
+			}
+	}
+
 }
-

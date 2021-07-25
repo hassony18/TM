@@ -1,21 +1,6 @@
-var scoreToWinCountries = 5  // score nécessaire pour gagner le jeu de drapeaux
-var countriesGameDifficulty = "normal"; // la difficulté du jeu de drapeaux
 
-var scoreCountries = 0; // score actuel du joueur
-var correctCountry = null; // pays actuel (dont le drapeau est affiché)
-function runCountriesGame(difficulty) { // lancer le jeu
-	// modifier le score à atteindre pour gagner selon chaque difficulté
-	if (difficulty) {
-		document.getElementById("countries-game").style.display = "block"
-		document.getElementById("typing-game").style.display = "none"
-		countriesGameDifficulty = difficulty
-	}
-	if (countriesGameDifficulty == "easy") {
-		scoreToWinCountries = 2
-	}
-	else if (countriesGameDifficulty == "hard") {
-		scoreToWinCountries = 8
-	}
+var correctCountry = null; 
+function runCountriesGame() {
 	var randomKey = getRandomCountryKey() // un nombre aléatoire dans la liste de pays
 	correctCountry = countriesList[randomKey]["name"]; // on cherche le nom du pays à partir du nombre aléatoire trouvé auparavant
 	document.getElementById("countryFlag").src = "./styles/img/countries/"+countriesList[randomKey]["alpha2"]+".png"; // afficher le pays cible.
@@ -36,16 +21,11 @@ function runCountriesGame(difficulty) { // lancer le jeu
 function verify(element) { // appelé en choissisant un pays.
 	var value = element.innerHTML
 	if (value == correctCountry) { // si la bonne réponse, rajouter un point et relancer le jeu
-			scoreCountries++
-			if (scoreCountries >= scoreToWinCountries) {
-				alert("u win newbie")
-			} else {
-				runCountriesGame()
-			}
-	} else { // si mauvaise réponse, enlever un point.
-			scoreCountries--
+		runCountriesGame()
+	} else {
+		alert("mauvaise reponse")
 	}
-	document.getElementById("result").innerHTML = "Score: "+scoreCountries+" ("+ (scoreToWinCountries-scoreCountries) +" points pour passer au test suivant)"; // afficher le score
+
 }
 function getRandomCountryKey() {
 	var keys = countriesList.length

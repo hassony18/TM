@@ -68,7 +68,7 @@ function updateUserDataProfile() // Update the data in profile
         $user_password = $_POST['user_password'];
         $user_image = $_FILES['user_image']['name'];
         $user_image_temp = $_FILES['user_image']['tmp_name'];
-        move_uploaded_file($user_image_temp, "styles/img/$user_image");
+        move_uploaded_file($user_image_temp, "styles/img/profile_pictures/$user_image");
 
         // Security
         $username_filter = mysqli_real_escape_string($conn, $_POST["user_name"]);
@@ -112,7 +112,7 @@ function updateUserDataProfile() // Update the data in profile
 
         session_start();
         $_SESSION['userUid'] = $_POST['user_name'];
-        $_SESSION['user_image'] = "styles/img/$user_image";
+        $_SESSION['user_image'] = "styles/img/profile_pictures/$user_image";
         header("Location: profile.php?fields=success");
 
     }
