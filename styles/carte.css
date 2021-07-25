@@ -1,0 +1,1272 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#nombrePays{
+	color: white;
+	font-size: 30px;
+	position: fixed;
+	border-width: 3px;
+	background-color: #ff0000;
+	opacity: 70%;
+	border-style: solid;
+	padding: 7px;
+	bottom: 0;
+	right: 0;
+	max-width: 350px;
+	z-index: 999;
+	font-family: lato;
+}
+
+#points{
+	color: white;
+	font-size: 30px;
+	position: fixed;
+	border-width: 3px;
+	background-color: #ff0000;
+	opacity: 70%;
+	border-style: solid;
+	padding: 7px;
+	top: 0;
+	right: 0;
+	max-width: 350px;
+	z-index: 999;
+	font-family: lato;
+}
+
+#tempsRestant{
+	color: white;
+	font-size: 30px;
+	position: fixed;
+	border-width: 3px;
+	background-color: #ff0000;
+	opacity: 70%;
+	border-style: solid;
+	padding: 7px;
+	bottom: 0;
+	right: 0;
+	max-width: 350px;
+	z-index: 999;
+	font-family: lato;
+}
+
+#nomPays, #nomPays0, #nomPays1 {
+	color: white;
+	font-size: 30px;
+	position: fixed;
+	border-width: 3px;
+	background-color: #ff0000;
+	opacity: 70%;
+	border-style: solid;
+	padding: 7px;
+	bottom: 0;
+	left: 0;
+	max-width: 350px;
+	z-index: 999;
+	font-family: lato;
+}
+
+#test, #world0, #world1 {
+	background-color: #1f1f1f;
+}
+
+svg {
+	z-index: 0;
+}
+
+svg g {
+	fill: #4f0000;
+	stroke: #fff;
+	stroke-width: 0.25;
+}
+
+#Groenland:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Taiwan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Sahara_de_l\0027Ouest:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Palestine:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Kosovo:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Afghanistan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Afrique_du_Sud:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Albanie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Algérie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Allemagne:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Andorre:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Angola:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Antigua-et-Barbuda:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Arabie_saoudite:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Argentine:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Arménie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Australie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Autriche:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Azerbaïdjan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bahamas:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bahreïn:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bangladesh:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Barbade:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Biélorussie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Belgique:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Belize:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bénin:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bhoutan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bolivie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bosnie-Herzégovine:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Botswana:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Brésil:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Brunei:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Bulgarie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Burkina_Faso:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Burundi:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Cambodge:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Cameroun:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Canada:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Cap-Vert:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#République_centrafricaine:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Chili:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Chine:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Chypre:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Colombie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Comores:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#République_du_Congo:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#République_démocratique_du_Congo:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Corée_du_Sud:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Corée_du_Nord:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Costa_Rica:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Côte_d\0027Ivoire:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Croatie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Cuba:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Danemark:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Djibouti:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#République_dominicaine:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Dominique:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Égypte:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Salvador:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Émirats_arabes_unis:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Équateur:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Érythrée:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Espagne:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Estonie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#États-Unis:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Éthiopie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Fidji:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Finlande:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#France:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Gabon:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Gambie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Géorgie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Ghana:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Grèce:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Grenade:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Guatemala:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Guinée:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Guinée-Bissau:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Guinée_équatoriale:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Guyana:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Haïti:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Honduras:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Hongrie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Inde:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Indonésie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Iran:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Irak:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Irlande:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Islande:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Israël:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Italie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Jamaïque:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Japon:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Jordanie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Kazakhstan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Kenya:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Kirghizistan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Kiribati:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Koweït:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Laos:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Lesotho:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Lettonie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Liban:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Liberia:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Libye:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Liechtenstein:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Lituanie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Luxembourg:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Macédoine_du_Nord:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Madagascar:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Malaisie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Malawi:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Maldives:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Mali:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Malte:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Maroc:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Îles_Marshall:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Maurice:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Mauritanie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Mexique:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#États_fédérés_de_Micronésie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Moldavie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Monaco:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Mongolie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Monténégro:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Mozambique:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Birmanie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Namibie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Nauru:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Népal:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Nicaragua:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Niger:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Nigeria:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Norvège:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Nouvelle-Zélande:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Oman:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Ouganda:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Ouzbékistan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Pakistan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Palaos:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Panama:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Papouasie-Nouvelle-Guinée:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Paraguay:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Pays-Bas:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Pérou:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Philippines:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Pologne:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Portugal:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Qatar:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Roumanie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Royaume-Uni:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Russie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Rwanda:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Saint-Christophe-et-Niévès:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Saint-Marin:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Saint-Vincent-et-les-Grenadines:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Sainte-Lucie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Salomon:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Samoa:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Sao_Tomé-et-Principe:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Sénégal:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Serbie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Seychelles:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Sierra_Leone:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Singapour:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Slovaquie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Slovénie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Somalie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Soudan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Soudan_du_Sud:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Sri_Lanka:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Suède:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Suisse:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Suriname:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Eswatini:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Syrie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Tadjikistan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Tanzanie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Tchad:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Tchéquie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Thaïlande:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Timor_oriental:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Togo:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Tonga:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Trinité-et-Tobago:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Tunisie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Turkménistan:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Turquie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Tuvalu:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Ukraine:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Uruguay:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Vanuatu:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Venezuela:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Viêt_Nam:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Yémen:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Zambie:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}
+
+#Zimbabwe:hover {
+	fill: #ff0000;
+	transition: 0#6s;
+	cursor: pointer;
+}

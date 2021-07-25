@@ -15,7 +15,7 @@ body {
 
 
 /* THE MAINCONTAINER HOLDS EVERYTHING */
-.maincontainer{
+.cardContainer{
 	position: relative;
 	width: 400px;
 	height: 150px;
@@ -26,7 +26,7 @@ body {
 }
 
 /* THE CARD HOLDS THE FRONT AND BACK FACES */
-.thecard{
+.theCard{
 	position: relative;
 	top: 0;
 	left: 0;
@@ -38,12 +38,12 @@ body {
 }
 
 /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-.thecard:hover{
+.theCard:hover{
 	transform: rotateY(180deg);
 }
 
 /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
- .thefront{
+ .theFront{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -58,7 +58,7 @@ body {
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-.theback{
+.theBack{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -75,7 +75,7 @@ body {
 }
 
 
-.thefront h1, .theback h1{
+.theFront h1, .theBack h1{
 	font-family: 'zilla slab', sans-serif;
 	padding: 30px;
 	font-weight: bold;
@@ -83,7 +83,7 @@ body {
 	text-align: center;
 }
 
-.thefront p, .theback p{
+.theFront p, .theBack p{
 	font-family: 'zilla slab', sans-serif;
 	padding: 30px;
 	font-weight: normal;
