@@ -173,18 +173,21 @@ function getRandomInteger(min, max) { // trouver un nombre aléatoire entre 2 va
 function verifyWord_ecrire() {
 	var playerAnswer = document.getElementById("textAEcrire").value;
 	var question = document.getElementById("shownVocText_ecrire").innerHTML;
-	var correctAnswerPart1 = correctAnswer.split(",")[0].replace(/\([^()]*\)/g, '')
+	var correctAnswerPart1 = correctAnswer.split(",")[0]	
 	var correctAnswerPart2 = correctAnswer.split(", ")[1]
 	var correctAnswerPart3 = correctAnswer.split(", ")[2]
-	if (correctAnswerPart2) {
-		correctAnswerPart2 = correctAnswerPart2.replace(/\([^()]*\)/g, '')
-		correctAnswerPart2 = correctAnswerPart2.split(/\s+/).join('')
+	if (!playerAnswer.match(/\([^()]*\)/g)) { // s'il ne possede pas ()
+		correctAnswerPart1 = correctAnswer.split(",")[0].replace(/\([^()]*\)/g, '')
+		if (correctAnswerPart2) {
+			correctAnswerPart2 = correctAnswerPart2.replace(/\([^()]*\)/g, '')
+			correctAnswerPart2 = correctAnswerPart2.split(/\s+/).join('')
+		}
+		if (correctAnswerPart3) {
+			correctAnswerPart3 = correctAnswerPart3.replace(/\([^()]*\)/g, '')
+			correctAnswerPart3 = correctAnswerPart3.split(/\s+/).join('')
+		}
 	}
-	if (correctAnswerPart3) {
-		correctAnswerPart3 = correctAnswerPart3.replace(/\([^()]*\)/g, '')
-		correctAnswerPart3 = correctAnswerPart3.split(/\s+/).join('')
-	}
-	correctAnswerPart1 = correctAnswerPart1.split(/\s+/).join('')
+	correctAnswerPart1 = correctAnswerPart1.split(/\s+/).join('') // enlever les espaces
 	var canPass = false;
 	// search for synonymes
 	for (k in learningTable) {
