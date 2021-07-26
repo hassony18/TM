@@ -1,71 +1,51 @@
 <?php
 
-if (isset($_POST['login-submit'])) {
-	include_once '../db/config.php';
-	
-	
-	
+	require_once $_SERVER['DOCUMENT_ROOT'].'/TM/vendor/autoload.php';
 
+	$jwt = new \Firebase\JWT\JWT;
+	$jwt::$leeway = 10;
 
-	$mailuid = $_POST["mailuid"];
-	$password = $_POST["pwd"];
-	
-	if (empty($mailuid) or empty($password)) {
+	$id_token = $_POST["idtoken"];
+	$CLIENT_ID = '467170103073-1t65koimd2m4jd4npjtoopmdtrboec6u.apps.googleusercontent.com';
+
+	$client = new Google_Client(['client_id' => $CLIENT_ID]); 
+	$payload = $client->verifyIdToken($id_token);
+	if ($payload) {
+		var_dump($payload);
+
+		//log in
+ 		session_start();
 		
-		header("Location: ../signup.php?error=emptyfields");
-		exit();
+		$_SESSION['userFirstName'] = $payload["given_name"];
+		$_SESSION['userLastName'] = $payload["family_name"];
+		$_SESSION['userFullName'] = $payload["name"];
+		$_SESSION['email'] = $payload["email"];
+		$_SESSION['user_image'] = $payload["picture"];
 		
-	} else {
+		include_once "../db/config.php";
 		
-			$sql = "SELECT * FROM users WHERE username=? OR email=?;";
-			$stmt = mysqli_stmt_init($conn);
-			
+				
+		$email = mysqli_real_escape_string($conn, $payload["email"]);
+		$first = mysqli_real_escape_string($conn, $payload["given_name"]);
+		$last_name = mysqli_real_escape_string($conn, $payload["family_name"]);
+		$user_image = mysqli_real_escape_string($conn, $payload["picture"]);
+		
+		$sql = "INSERT INTO users (email, first_name, last_name, user_image) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE first_name=?, last_name=?, user_image=?;";
+		
+		// execute without parameters
+		mysqli_query($conn, $sql);
+		
+		// security 
+		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
-			header("Location: ../signup.php?error=sqlerror");
-			exit();
-			
+			echo "SQL ERROR";
 		} else {
-			
-			mysqli_stmt_bind_param($stmt, "ss", $mailuid, $mailuid);
+			mysqli_stmt_bind_param($stmt, "sssssss", $email, $first, $last_name, $user_image, $first, $last_name, $user_image);
 			mysqli_stmt_execute($stmt);
-			$result = mysqli_stmt_get_result($stmt);
-			
-			if ($row = mysqli_fetch_assoc($result)) {
-				
-				$pwdCheck = password_verify($password, $row["password"]);
-				
-				if ($pwdCheck == false) {
-					
-					header("Location: ../signup.php?error=wrongpwd");
-					exit();
-					
-				} else if ($pwdCheck == true) {
-					// logged in
-					session_start();
-
-					$user_image = $row ['user_image'];
-					$_SESSION['userId'] = $row["id"];
-					$_SESSION['userUid'] = $row["username"];
-					$_SESSION['user_image'] = "styles/img/{$user_image}";
-					
-					header("Location: ../index.php?login=success");
-					exit();
-					
-				} else { 
-				
-					header("Location: ../signup.php?error=wrongpwd");
-					exit();
-					
-				}
-			} else {
-				
-				header("Location: ../signup.php?error=nouser");
-				exit();
-				
-			}
 		}
+					
+		
+	
+	} else {
+		echo "<h1>ERROR</h1>";
 	}
-} else {
-	header("Location: ../index.php");
-	exit();
-}

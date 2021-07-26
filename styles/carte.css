@@ -16,6 +16,24 @@ body {
     background-color: #f8f9fe;
 }
 
+button {
+	border-radius: 25px;
+	background-color: crimson;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+    margin: 10px auto;
+    display:block;
+}
+
+button:hover {
+	background-color: transparent;
+	color: crimson;
+}
   
 #header .nav-list ul li a {
     font-size: 15px !important;
@@ -26,7 +44,7 @@ body {
 }
   
 #header .header {
-    background-color: rgb(0 0 0 / 100%) !important;
+    background-color: #29323c;
 }
 
 /* cool white background */

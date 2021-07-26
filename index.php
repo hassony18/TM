@@ -2,6 +2,7 @@
 	require "header.php";
 ?>
 
+
 	<main>
 	  <!-- homepage Section  -->
 		<section id="homepage">
@@ -26,24 +27,49 @@
 				<div class="ranking-bottom">
 					<!-- List a faire -->
 					<div class="ranking-item">
-						<div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-						<h2>Web Design</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
+						<!-- <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div> -->
+						<h2>allemand</h2>
+						<?php
+						for ($i = 1; $i <= 5; $i++) { ?>
+							<p><?php
+							echo $i."- HassoN"?></p>
+						<?php } ?>
 					</div>
 					<div class="ranking-item">
-						<div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-						<h2>Web Design</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
+						<!-- <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div> -->
+						<h2>anglais</h2>
+						<?php
+						for ($i = 1; $i <= 5; $i++) { ?>
+							<p><?php
+							echo $i."- HassoN"?></p>
+						<?php } ?>
 					</div>
 					<div class="ranking-item">
-						<div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-						<h2>Web Design</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
+						<!-- <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div> -->
+						<h2>italien</h2>
+						<?php
+						for ($i = 1; $i <= 5; $i++) { ?>
+							<p><?php
+							echo $i."- HassoN"?></p>
+						<?php } ?>
 					</div>
 					<div class="ranking-item">
-						<div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div>
-						<h2>Web Design</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed architecto placeat beatae tenetur officia quod</p>
+						<!-- <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div> -->
+						<h2>drapeaux</h2>
+						<?php
+						for ($i = 1; $i <= 5; $i++) { ?>
+							<p><?php
+							echo $i."- HassoN"?></p>
+						<?php } ?>
+					</div>
+					<div class="ranking-item">
+						<!-- <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png"/></div> -->
+						<h2>carte</h2>
+						<?php
+						for ($i = 1; $i <= 5; $i++) { ?>
+							<p><?php
+							echo $i."- HassoN"?></p>
+						<?php } ?>
 					</div>
 				</div>
 			</div>

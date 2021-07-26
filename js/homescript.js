@@ -3,17 +3,25 @@ var mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 var menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 var header = document.querySelector('.header.container');
 
-headerList.addEventListener('click', () => {
-	headerList.classList.toggle('active');
-	mobile_menu.classList.toggle('active');
-});
+if (headerList) {
+	headerList.addEventListener('click', () => {
+		headerList.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+}
 
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
-	if (scroll_position > 250) {
+	var path = window.location.pathname;
+	if (path.search("index.php") == -1) {
+		return false;
+	}
+	if (scroll_position > 200) {
 		header.style.backgroundColor = '#29323c';
+		console.log(header.style.backgroundColor)
 	} else {
 		header.style.backgroundColor = 'transparent';
+		console.log(header.style.backgroundColor)
 	}
 });
 

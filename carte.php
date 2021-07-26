@@ -37,7 +37,7 @@
 			</fieldset>
 			<div id="nbPaysopt"></div>
 			<div id="tempsopt">	</div>
-			<input type="submit" value="Commencer" onclick="launchMap()">
+			<button type="submit" onclick="launchMap()">Commencer</button>
 		</form>
 	</div>
 	<div id="test">
