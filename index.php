@@ -34,7 +34,7 @@
 						console.log('Signed in as: ' + xhr.responseText);
 					};
 					xhr.send('idtoken=' + id_token);
-					setTimeout(function(){ window.location.reload(); }, 1000);
+					setTimeout(function(){ window.location.reload(); }, 1500);
 				}
 				function onFail(error) {
 					console.log(error);

@@ -114,8 +114,32 @@
 			<h1 id="shownVocText_ecrire">WORD HERE</h1>
 			<h1 id="words_counter_ecrire">COUNTER</h1>
 			<label for="textAEcrire">Traduction:</label>
-			<input type="text" id="textAEcrire" name="textAEcrire">
+			<input type="text" id="textAEcrire" name="textAEcrire" autofocus>
 			<button id="verifyWord_ecrire_button" onclick="verifyWord_ecrire()" type="button"> ENTRER </button>
+			<div id="keyboard_container">
+				<button id="changeCaseButton" onclick="changeCase()" type="button">↑</button>
+				<h1>ALLEMAND</h1>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ä</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ö</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ü</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ß</button>
+				<h1>FRANÇAIS</h1>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">à</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">â</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">æ</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ç</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">è</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">é</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ê</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ë</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">î</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ï</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ô</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">œ</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ù</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">û</button>
+				<button class="keyboard_button" onclick="insertText(this)" type="button">ü</button>
+			</div>
 		</div>
 		
 		

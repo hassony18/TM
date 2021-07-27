@@ -3,21 +3,64 @@
 // apprendre => Cartes tournantes
 // Test => Choix Multiples ET ecrire (RANDOM)
 
+var vocTable = false
+
 var isLearning = false;
 var learningTable = null;
+var errorsTable = null;
 var currentNumberInQueue = 0;
 var correctAnswer = null;
 var language = null;
+var errorNum = null;
 
-document.getElementById("learningChoiceContainer").style.display = "block" // block
-document.getElementById("cardContainer").style.display = "none" // none
-document.getElementById("multipleChoicesContainer").style.display = "none"
-document.getElementById("testOptionsContainer").style.display = "none"
-document.getElementById("multipleChoicesOptionsContainer").style.display = "none"
-document.getElementById("writingContainer").style.display = "none"
-document.getElementById("ecrireOptionsContainer").style.display = "none"
+function loadPage() {
+	isLearning = false;
+	learningTable = null;
+	errorsTable = null;
+	currentNumberInQueue = 0;
+	correctAnswer = null;
+	language = null;
+	errorNum = null;
+	document.getElementById("learningChoiceContainer").style.display = "none" // block
+	document.getElementById("cardContainer").style.display = "none" // none
+	document.getElementById("multipleChoicesContainer").style.display = "none"
+	document.getElementById("testOptionsContainer").style.display = "none"
+	document.getElementById("multipleChoicesOptionsContainer").style.display = "none"
+	document.getElementById("writingContainer").style.display = "block"
+	document.getElementById("ecrireOptionsContainer").style.display = "none"
+}
+loadPage()
 
-var vocTable = false
+function changeCase() {
+	var els = document.getElementsByClassName("keyboard_button");
+	var changeCaseButton = document.getElementById("changeCaseButton");
+	for (var i = 0; i < els.length; i++) {
+		if (changeCaseButton.innerHTML == "↑") {
+			if (els[i].innerHTML == "ß") {
+				els[i].innerHTML = "ẞ"
+			} else { 
+				els[i].innerHTML = els[i].innerHTML.toUpperCase()
+			}
+		} else {
+			if (els[i].innerHTML == "ẞ") {
+				els[i].innerHTML = "ß"
+			} else { 
+			els[i].innerHTML = els[i].innerHTML.toLowerCase()
+			}
+		}
+	}
+	if (changeCaseButton.innerHTML == "↑") {
+		changeCaseButton.innerHTML = "↓";
+	} else if  (changeCaseButton.innerHTML == "↓") {
+		changeCaseButton.innerHTML = "↑";
+	} 
+}
+
+function insertText(e) {
+	var text = document.getElementById("textAEcrire").value;
+	var letter = e.innerHTML
+	document.getElementById("textAEcrire").value = text + "" + letter
+}
 
 fetch('./data/allemand.json').then(function(response) {
 	return response.json();
@@ -127,6 +170,7 @@ function prepareVocSession() {
 	} else if (testOption) {
 		var checkedChoixMultiple = document.getElementById("radio_choix_multiple").checked;	
 		var checkedEcrire = document.getElementById("radio_ecrire").checked;	
+		errorsTable = [];
 		if (!checkedEcrire && !checkedChoixMultiple) {
 			alert("Choisis un mode de test.")
 			return true;
@@ -149,6 +193,7 @@ function prepareVocSession() {
 		if (checkedChoixMultiple) {
 			var checkedFrench = document.getElementById("radio_cherche_francais").checked;	
 			var checkedGerman = document.getElementById("radio_cherche_allemand").checked;	
+			errorsTable = [];
 			if (!checkedFrench && !checkedGerman) {
 				alert("Choisis un mode de test.")
 				return true;
@@ -172,14 +217,18 @@ function getRandomInteger(min, max) { // trouver un nombre aléatoire entre 2 va
 
 function verifyWord_ecrire() {
 	var playerAnswer = document.getElementById("textAEcrire").value;
+	var playerAnswer = playerAnswer.split(/\s+/).join('')
 	var question = document.getElementById("shownVocText_ecrire").innerHTML;
+	if (!correctAnswer) {
+		return false;
+	}
 	var correctAnswerPart1 = correctAnswer.split(",")[0]	
-	var correctAnswerPart2 = correctAnswer.split(", ")[1]
-	var correctAnswerPart3 = correctAnswer.split(", ")[2]
+	var correctAnswerPart2 = correctAnswer.split(",")[1]
+	var correctAnswerPart3 = correctAnswer.split(",")[2]
 	if (!playerAnswer.match(/\([^()]*\)/g)) { // s'il ne possede pas ()
 		correctAnswerPart1 = correctAnswer.split(",")[0].replace(/\([^()]*\)/g, '')
 		if (correctAnswerPart2) {
-			correctAnswerPart2 = correctAnswerPart2.replace(/\([^()]*\)/g, '')
+			correctAnswerPart2 = correctAnswerPart2.replace(/\([^()]*\)/g, '') 
 			correctAnswerPart2 = correctAnswerPart2.split(/\s+/).join('')
 		}
 		if (correctAnswerPart3) {
@@ -197,34 +246,66 @@ function verifyWord_ecrire() {
 			}
 		}
 	}
-	if (canPass || playerAnswer == correctAnswer || (playerAnswer == correctAnswerPart1) || (playerAnswer == correctAnswerPart2 && language == "german") || (playerAnswer == correctAnswerPart3 && language == "german") ) {
-		alert("GJ")
-		setupEcrire(currentNumberInQueue++)
+	if (canPass || playerAnswer == correctAnswer || (playerAnswer == correctAnswerPart1) || (playerAnswer == correctAnswerPart2 && language == "french") || (playerAnswer == correctAnswerPart3 && language == "french") ) {
+		console.log("correct answer")
 	} else {
-		alert("NO")
+		console.log("wrong answer")
+		errorsTable.push([question, correctAnswer]) // word, answer
 	}
+	currentNumberInQueue++
+	setupEcrire()
 }
 
 function verifyWord_multipleChoices(e) {
 	var answer = e.innerHTML
-	if (answer == correctAnswer) {
-		alert("GJ")
-		setupMultipleChoices(currentNumberInQueue++)
-	} else {
-		alert("NO")
+	var question = document.getElementById("shownVocText").innerHTML;
+	if (!correctAnswer) {
+		return false;
 	}
+	if (answer == correctAnswer) {
+		console.log("correct answer")
+	} else {
+		console.log("wrong answer")
+		errorsTable.push([question, correctAnswer]) // word, answer
+	}
+	currentNumberInQueue++
+	setupMultipleChoices()
 }
 
-function setupMultipleChoices(num) {
-	var germanWord = learningTable[currentNumberInQueue][0] // german text
-	var frenchWord = learningTable[currentNumberInQueue][1] // french text
+function setupMultipleChoices() {
+	var num = currentNumberInQueue + 1 
+	if (num > learningTable.length) {
+		if (errorsTable.length > 0) {
+			if (!errorNum && errorNum !== 0) {
+				errorNum = 0
+			} else {
+				errorNum++
+			}
+			console.log(errorNum)
+			if (errorNum >= errorsTable.length) {
+				doneStudying()
+				return false;
+			}
+			var germanWord = errorsTable[errorNum][0] // word
+			var frenchWord = errorsTable[errorNum][1] // answer
+			var myerrorNumToShow = errorNum + 1
+			document.getElementById("words_counter_multipleChoices").innerHTML = (myerrorNumToShow)+"/"+ errorsTable.length
+		} else {
+			doneStudying()
+			return true;
+		}
+	} else {
+		var germanWord = learningTable[currentNumberInQueue][0] // german text
+		var frenchWord = learningTable[currentNumberInQueue][1] // french text
+		document.getElementById("words_counter_multipleChoices").innerHTML = (num)+"/"+ learningTable.length
+	}
 	document.getElementById("learningChoiceContainer").style.display = "none"
 	document.getElementById("multipleChoicesContainer").style.display = "block"
-	document.getElementById("words_counter_multipleChoices").innerHTML = (currentNumberInQueue+1)+"/"+ learningTable.length
-	if (language == "french") {
+	document.getElementById("words_counter_multipleChoices").innerHTML = (num)+"/"+ learningTable.length
+	if (language == "german") {
 		document.getElementById("shownVocText").innerHTML = frenchWord
 		correctAnswer = germanWord
-	} else if (language == "german") {
+	} else if (language == "french") {
 		document.getElementById("shownVocText").innerHTML = germanWord
 		correctAnswer = frenchWord
 	}
@@ -237,43 +318,89 @@ function setupMultipleChoices(num) {
 		}
 	}
 	document.getElementById("choix_multiple_option" + randomOption ).innerHTML = correctAnswer;
+	var alreadyUsedWords = []
 	for (var key in listToUpdate) {
 		var randomWord = getRandomInteger(0, learningTable.length)
-		if (language == "french") {
+		// prevent repetition
+		while (alreadyUsedWords[randomWord]) {
+			randomWord = getRandomInteger(0, learningTable.length)
+		} 
+		alreadyUsedWords[randomWord] = true;
+		if (language == "german") {
 			document.getElementById("choix_multiple_option" + listToUpdate[key] ).innerHTML = learningTable[randomWord][0];
-		} else if (language == "german") {
+		} else if (language == "french") {
 			document.getElementById("choix_multiple_option" + listToUpdate[key] ).innerHTML = learningTable[randomWord][1];
 		}
 	}
 }
 
-function setupEcrire(num) {
-	var germanWord = learningTable[currentNumberInQueue][0] // german text
-	var frenchWord = learningTable[currentNumberInQueue][1] // french text
+function setupEcrire() {
+	var num = currentNumberInQueue + 1 
+	if (num > learningTable.length) {
+		if (errorsTable.length > 0) {
+			if (!errorNum && errorNum !== 0) {
+				errorNum = 0
+			} else {
+				errorNum++
+			}
+			console.log(errorNum)
+			if (errorNum >= errorsTable.length) {
+				doneStudying()
+				return false;
+			}
+			var germanWord = errorsTable[errorNum][0] // word
+			var frenchWord = errorsTable[errorNum][1] // answer
+			var myerrorNumToShow = errorNum + 1
+			document.getElementById("words_counter_ecrire").innerHTML = (myerrorNumToShow)+"/"+ errorsTable.length
+		} else {
+			doneStudying()
+			return true;
+		}
+	} else {
+		var germanWord = learningTable[currentNumberInQueue][0] // german text
+		var frenchWord = learningTable[currentNumberInQueue][1] // french text
+		document.getElementById("words_counter_ecrire").innerHTML = (num)+"/"+ learningTable.length
+	}
 	document.getElementById("learningChoiceContainer").style.display = "none"
 	document.getElementById("writingContainer").style.display = "block"
-	document.getElementById("words_counter_ecrire").innerHTML = (currentNumberInQueue+1)+"/"+ learningTable.length
-	if (language == "french") {
+	if (language == "german") {
 		document.getElementById("shownVocText_ecrire").innerHTML = frenchWord
 		correctAnswer = germanWord
-	} else if (language == "german") {
+	} else if (language == "french") {
 		document.getElementById("shownVocText_ecrire").innerHTML = germanWord
 		correctAnswer = frenchWord
 	}
 }
 
 function startTestSession(table, testType, lng) {
-	learningTable = table
+	
+	learningTable = shuffle(table)
 	currentNumberInQueue = 0
 	language = lng
 	if (testType == "multipleChoices") {
-		setupMultipleChoices(currentNumberInQueue)
+		setupMultipleChoices()
 	} else if (testType == "ecrire") {
-		setupEcrire(currentNumberInQueue)
+		setupEcrire()
 	}
 }
 
-
+function shuffle(array) {
+	var currentIndex = array.length,  randomIndex;
+  
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+  
+	  // Pick a remaining element...
+	  randomIndex = Math.floor(Math.random() * currentIndex);
+	  currentIndex--;
+  
+	  // And swap it with the current element.
+	  [array[currentIndex], array[randomIndex]] = [
+		array[randomIndex], array[currentIndex]];
+	}
+  
+	return array;
+  }
 
 // learning 
 
@@ -318,4 +445,8 @@ function nextVoc(type) {
 	document.getElementById("faceText").innerHTML = learningTable[currentNumberInQueue][0] // german text
 	document.getElementById("backText").innerHTML = learningTable[currentNumberInQueue][1] // french text
 	document.getElementById("words_counter_learning").innerHTML = (currentNumberInQueue+1)+"/"+ (learningTable.length) // french text
+}
+
+function doneStudying() {
+	loadPage()
 }

@@ -18,7 +18,7 @@
 			</div>
 		  </div> 
 		  -->
-		  <p>Copyright © 2020-2022 Al-Obaidi Hasan & Scarpetta Jordan. All rights reserved.</p>
+		  <p>Copyrights © 2020-2022 Al-Obaidi Hasan & Scarpetta Jordan. All rights reserved.</p>
 		</div>
 	  </section>
 </footer>

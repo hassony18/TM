@@ -29,12 +29,12 @@
 				<div class="text">Allemand</div>
 			</div>
 		
-			<div class="card italian">
+			<div class="card italien">
 				<div class="circle">
 					<div class="bar"></div>
 					<div class="box"><span></span></div>
 				</div>
-				<div class="text">Italian</div>
+				<div class="text">Italien</div>
 			</div>
 		
 			<div class="card anglais">
@@ -86,7 +86,7 @@
       $(".allemand .bar").circleProgress({
         value: 0.69
       });
-      $(".italian .bar").circleProgress({
+      $(".italien .bar").circleProgress({
         value: 0.60
       });
       $(".anglais .bar").circleProgress({

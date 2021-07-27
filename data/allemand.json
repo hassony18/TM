@@ -391,7 +391,7 @@
 				"sich an/strengen": "s'efforcer, faire un effort",
 				"sich bemühen": "s'efforcer",
 				"die Mühe, n": "la peine",
-				"wozu ?": "pourquoi ? dans quel but ? à quoi bon ?",
+				"wozu ?": "pourquoi ?, dans quel but ?, à quoi bon ?",
 				"zögern": "hésiter",
 				"(sich) beschränken (auf + A)": "(se) limiter, (se) restreindre (à)",
 				"ab/lehnen": "refuser, écarter, décliner (une offre)",
@@ -1094,31 +1094,13 @@
 	"2.5": {
         "normal": 
 			{ 
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"hallo": "bonjour",
-				"aufwiedersehen": "au revoir"
+				"die Eltern": "les parents",
+				"die Mutter, ¨": "la mère",
+				"der Vater, ¨": "le père",
+				"das Baby, s": "le bébé",
+				"die Tochter, ¨": "la fille",
+				"der Sohn, ¨e": "le fils"
+
 			},
 
         "phrase": 

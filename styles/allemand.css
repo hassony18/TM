@@ -19,8 +19,8 @@ button {
 	text-decoration: none;
 	font-size: 16px;
 	cursor: pointer;
-    margin:0 auto;
-    display:block;
+    margin: 0 auto;
+	display: block;
 }
 
 button:hover {
@@ -84,7 +84,10 @@ input[type=number], input[type=text] {
 }
 
 
+
+
 /* INPUT STYLING */
+
 
 /* The container */
 .checkbox_container_style {
