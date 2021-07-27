@@ -248,10 +248,11 @@
 			  </div>
 			</div>
 			<div class="contact-item">
-			  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png"/></div>
+			  <div class="icon"><img src="styles/img/discord.png"/></div>
 			  <div class="contact-info">
-				<h1>Adresse</h1>
-				<h2>Genève, Suisse</h2>
+				<h1>Discord</h1>
+				<h2>HassoN#2709</h2>
+				<h2>Hultraman#8548</h2>
 			  </div>
 			</div>
 		  </div>

@@ -35,7 +35,6 @@ function fetchUserDataProfile() // Fetches the user from the database then shows
             $user_lastname = $row['last_name'];
             $user_email = $row['email'];
             $user_image = $row['user_image'];
-            $current_password = $row['password'];
             //  $user_role = $row['user_role'];
 
         }
@@ -61,19 +60,15 @@ function updateUserDataProfile() // Update the data in profile
         $email = $_POST['user_email'];
         $user_first = $_POST['first_name'];
         $user_last = $_POST['last_name'];
-        $current_password = $_POST['current_password'];
-        $user_password = $_POST['user_password'];
         $user_image = $_FILES['user_image']['name'];
         $user_image_temp = $_FILES['user_image']['tmp_name'];
         move_uploaded_file($user_image_temp, "styles/img/profile_pictures/$user_image");
 
         // Security
         $username_filter = mysqli_real_escape_string($conn, $_POST["user_name"]);
-        $password = mysqli_real_escape_string($conn, $_POST["user_password"]);
         $email_filter = mysqli_real_escape_string($conn, $_POST["user_email"]);
         $first_fitler = mysqli_real_escape_string($conn, $_POST["first_name"]);
         $last_filter = mysqli_real_escape_string($conn, $_POST["last_name"]);
-        $password_encrypted = password_hash($password, PASSWORD_DEFAULT);
 
 
         if (empty($username_filter) or empty($email_filter) or empty($first_fitler) or empty($last_filter)) { // If the fields is left empty it will display an error

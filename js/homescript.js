@@ -24,7 +24,7 @@ document.addEventListener('scroll', () => {
 });
 
 
-function dropdownprofile(event) {  document.getElementById("myDropdown").classList.toggle("show");
+function dropdownprofile(event) {  document.getElementById("myDropdown").classList.add("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
@@ -43,8 +43,8 @@ window.onclick = function(event) {
 
 menu_item.forEach((item) => {
 	item.addEventListener('click', () => {
-		headerList.classList.toggle('active');
-		mobile_menu.classList.toggle('active');
+		headerList.classList.add('active');
+		mobile_menu.classList.add('active');
 	});
 });
 
