@@ -22,8 +22,11 @@ function verify(element) { // appelé en choissisant un pays.
 	var value = element.innerHTML
 	if (value == correctCountry) { // si la bonne réponse, rajouter un point et relancer le jeu
 		runCountriesGame()
+		addScore("drapeaux", 1)
 	} else {
-		alert("mauvaise reponse")
+		alert("Mince! La bonne réponse était '" + correctCountry +"'")
+		runCountriesGame()
+		addScore("drapeaux", -1)
 	}
 
 }
@@ -34,6 +37,16 @@ function getRandomCountryKey() {
 }
 function getRandomInteger(min, max) { // trouver un nombre aléatoire entre 2 valeurs.
 	return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+function addScore(gType, amount) { 
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'http://localhost/TM/backend/score.backend.php');
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onload = function() {
+		console.log('score request sent: ' + xhr.responseText);
+	};
+	xhr.send('score=' + amount + '&gType=' + gType);
 }
 
 runCountriesGame()

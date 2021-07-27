@@ -256,8 +256,10 @@ function verifyWord_ecrire() {
 	}
 	if (canPass || playerAnswer == correctAnswer || (playerAnswer == correctAnswerPart1) || (playerAnswer == correctAnswerPart2 && language == "french") || (playerAnswer == correctAnswerPart3 && language == "french") ) {
 		console.log("correct answer")
+		addScore("allemand", 1)
 	} else {
 		console.log("wrong answer")
+		addScore("allemand", -1)
 		errorsTable.push([question, correctAnswer]) // word, answer
 	}
 	currentNumberInQueue++
@@ -272,8 +274,10 @@ function verifyWord_multipleChoices(e) {
 	}
 	if (answer == correctAnswer) {
 		console.log("correct answer")
+		addScore("allemand", 1)
 	} else {
 		console.log("wrong answer")
+		addScore("allemand", -1)
 		errorsTable.push([question, correctAnswer]) // word, answer
 	}
 	currentNumberInQueue++
@@ -289,7 +293,6 @@ function setupMultipleChoices() {
 			} else {
 				errorNum++
 			}
-			console.log(errorNum)
 			if (errorNum >= errorsTable.length) {
 				doneStudying()
 				return false;
@@ -351,7 +354,6 @@ function setupEcrire() {
 			} else {
 				errorNum++
 			}
-			console.log(errorNum)
 			if (errorNum >= errorsTable.length) {
 				doneStudying()
 				return false;
@@ -457,4 +459,14 @@ function nextVoc(type) {
 
 function doneStudying() {
 	loadPage()
+}
+
+function addScore(gType, amount) { 
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'http://localhost/TM/backend/score.backend.php');
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onload = function() {
+		console.log('score request sent: ' + xhr.responseText);
+	};
+	xhr.send('score=' + amount + '&gType=' + gType);
 }

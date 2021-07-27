@@ -1,5 +1,6 @@
 <?php
 	require "header.php";
+	require "backend/ranking.backend.php";
 ?>
 
 <!-- setup custom login button -->
@@ -84,11 +85,14 @@
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/german_flag.png"/></div> 
 						<h2>allemand</h2>
-						<?php
-						for ($i = 1; $i <= 5; $i++) { ?>
-							<p><?php
-							echo $i."- HassoN"?></p>
-						<?php } ?>
+							<p>
+							<?php
+
+								for ($i = 0; $i <= 4; $i++) { 
+									echo $i."- ".$topGerman[$i]["firstName"]." ".$topGerman[$i]["lastName"]." ".$topGerman[$i]["score"]."<br>";
+								}
+							?>
+							</p>
 					</div>
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/uk_flag.png"/></div>
