@@ -43,8 +43,7 @@
 			mysqli_stmt_bind_param($stmt, "sssssss", $email, $first, $last_name, $user_image, $first, $last_name, $user_image);
 			mysqli_stmt_execute($stmt);
 		}
-					
-		
+
 	
 	} else {
 		echo "<h1>ERROR</h1>";

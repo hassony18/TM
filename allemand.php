@@ -1,5 +1,8 @@
 <?php 
 	require 'header.php';
+    if (!isset($_SESSION['email'])) {
+        die(header("location: index.php"));
+    }
 ?>
 
 
@@ -8,6 +11,7 @@
 
 <body>
 	<!-- Home page -->
+
 	<div id="allemand_apprentissage_container">
 		
 		<div id="learningChoiceContainer">

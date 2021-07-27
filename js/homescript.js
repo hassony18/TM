@@ -18,10 +18,8 @@ document.addEventListener('scroll', () => {
 	}
 	if (scroll_position > 200) {
 		header.style.backgroundColor = '#29323c';
-		console.log(header.style.backgroundColor)
 	} else {
 		header.style.backgroundColor = 'transparent';
-		console.log(header.style.backgroundColor)
 	}
 });
 
