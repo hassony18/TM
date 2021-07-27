@@ -23,13 +23,13 @@ button {
 	display: block;
 }
 
-button:hover {
+button:hover, button:active {
 	background-color: transparent;
 	color: crimson;
 }
 
 /* cool white background */
-#learningChoiceContainer, #multipleChoicesContainer, #writingContainer {
+#learningChoiceContainer, #multipleChoicesContainer, #writingContainer, #learningCardContainerBackground {
 	background-color: white;
 	border-radius: 25px;
 	margin: auto;
@@ -59,8 +59,14 @@ input[type=number], input[type=text] {
 	border-top-style: hidden;
 	border-right-style: hidden;
 	border-left-style: hidden;
+	width: 50%;
+	font-size: 25px;
+	margin-top: 10px;
 }
 
+#vocCheckBoxesList {
+	overflow: auto;
+}
 
 #learningChoiceContainer h2, #learningChoiceContainer input {
 	margin: 10px;
@@ -228,13 +234,12 @@ input[type=number], input[type=text] {
 
 /* THE MAINCONTAINER HOLDS EVERYTHING */
 .cardContainer{
-	position: relative;
-	width: 400px;
-	height: 150px;
-	left: 50%;
-	margin-top: 10%;
-	background: none;
-	transform: translate(-50%, -50%);
+	position: relatve;
+	margin: auto;
+	width: 90%;
+	max-width: 500px;
+	height: 55%;
+	max-height: 150px;
 }
 
 /* THE CARD HOLDS THE FRONT AND BACK FACES */
@@ -249,8 +254,12 @@ input[type=number], input[type=text] {
 	transition: all 0.8s ease;
 }
 
+#learningCardContainerBackground {
+	height: 400px;
+}
+
 /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-.theCard:hover{
+.theCard:hover, .theCard:active {
 	transform: rotateY(180deg);
 }
 
@@ -264,7 +273,7 @@ input[type=number], input[type=text] {
 	border-radius: 10px;
 	backface-visibility: hidden;
 	overflow: hidden;
-	background: white;
+	background: rgb(214, 214, 214);
 	color: crimson;
 	box-shadow: 5px 10px crimson;
 }
@@ -280,10 +289,10 @@ input[type=number], input[type=text] {
 	backface-visibility: hidden;
 	overflow: hidden;
 	background: crimson;
-	color: white;
+	color: rgb(214, 214, 214);
 	text-align: center;
 	transform: rotateY(180deg);
-	box-shadow: 5px 10px white;
+	box-shadow: 5px 10px rgb(214, 214, 214);
 }
 
 

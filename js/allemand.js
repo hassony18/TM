@@ -21,12 +21,12 @@ function loadPage() {
 	correctAnswer = null;
 	language = null;
 	errorNum = null;
-	document.getElementById("learningChoiceContainer").style.display = "none" // block
-	document.getElementById("cardContainer").style.display = "none" // none
+	document.getElementById("learningChoiceContainer").style.display = "block" // block
+	document.getElementById("learningCardContainerBackground").style.display = "none" // none
 	document.getElementById("multipleChoicesContainer").style.display = "none"
 	document.getElementById("testOptionsContainer").style.display = "none"
 	document.getElementById("multipleChoicesOptionsContainer").style.display = "none"
-	document.getElementById("writingContainer").style.display = "block"
+	document.getElementById("writingContainer").style.display = "none"
 	document.getElementById("ecrireOptionsContainer").style.display = "none"
 }
 loadPage()
@@ -93,10 +93,15 @@ function onVocRadioValueChange() {
 function runVocScript(json) {
 	var data = json
 	// add voc lists into div
+	var table = document.createElement("TABLE");
+	table.setAttribute("id", "vocListTableHTML");
+	var tr = document.createElement("TR");
 	for (key in data) {
+		var td = document.createElement("TD");
 		var input = document.createElement("INPUT");
 		var label = document.createElement("LABEL");
 		var span = document.createElement("SPAN");
+
 		label.setAttribute("class", "checkbox_container_style");
 		label.innerHTML = key;
 		
@@ -109,7 +114,10 @@ function runVocScript(json) {
 		
 		label.appendChild(input);
 		label.appendChild(span);
-		document.getElementById("vocCheckBoxesList").appendChild(label);
+
+		tr.appendChild(td)
+		td.appendChild(label)
+		document.getElementById("vocCheckBoxesList").appendChild(td);
 	}
 	
 	
@@ -411,7 +419,7 @@ function startLearningSession(table) {
 	learningTable = table
 	isLearning = true;
 	document.getElementById("learningChoiceContainer").style.display = "none"
-	document.getElementById("cardContainer").style.display = "block"
+	document.getElementById("learningCardContainerBackground").style.display = "block"
 	nextVoc("start")
 }
 
@@ -438,7 +446,7 @@ function nextVoc(type) {
 	}
 	else if (type == "done") {
 		document.getElementById("learningChoiceContainer").style.display = "block"
-		document.getElementById("cardContainer").style.display = "none"
+		document.getElementById("learningCardContainerBackground").style.display = "none"
 		isLearning = null;
 		learningTable = null;
 	}
