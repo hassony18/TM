@@ -817,7 +817,7 @@ thead {
 		position: initial;
 		display: block;
 		height: auto;
-		width: fit-content;
+		width: 100%;
 		background-color: transparent;
 	}
 	#header .nav-list ul li {

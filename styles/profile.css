@@ -77,11 +77,15 @@ button:hover {
 	border-radius: 50%;
 	cursor: default;
   }
-  .card .circle .box,
+  .card .circle .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
   .card .circle .box span{
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	position: relative;
+    top: 35%;
+    left: 30%;
   }
   .card .circle .box{
 	height: 100%;
