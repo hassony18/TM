@@ -313,7 +313,7 @@
 		  <div><h1 class="section-title">Contact <span>info</span></h1></div>
 		  <div class="contact-items">
 			<div class="contact-item">
-			  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
+			  <div class="icon"><img src="styles/img/phone.png"/></div>
 			  <div class="contact-info">
 				<h1>Natel</h1>
 				<h2>+41 764414991</h2>
@@ -321,7 +321,7 @@
 			  </div>
 			</div>
 			<div class="contact-item">
-			  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
+			  <div class="icon"><img src="styles/img/email.png"/></div>
 			  <div class="contact-info">
 				<h1>E-mail</h1>
 				<h2>hasan.albd@eduge.ch</h2>
