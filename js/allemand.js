@@ -230,22 +230,26 @@ function verifyWord_ecrire() {
 	if (!correctAnswer) {
 		return false;
 	}
-	var correctAnswerPart1 = correctAnswer.split(",")[0]	
-	var correctAnswerPart2 = correctAnswer.split(",")[1]
-	var correctAnswerPart3 = correctAnswer.split(",")[2]
-	if (!playerAnswer.match(/\([^()]*\)/g)) { // s'il ne possede pas ()
-		correctAnswerPart1 = correctAnswer.split(",")[0].replace(/\([^()]*\)/g, '')
-		if (correctAnswerPart2) {
-			correctAnswerPart2 = correctAnswerPart2.replace(/\([^()]*\)/g, '') 
-			correctAnswerPart2 = correctAnswerPart2.split(/\s+/).join('')
-		}
-		if (correctAnswerPart3) {
-			correctAnswerPart3 = correctAnswerPart3.replace(/\([^()]*\)/g, '')
-			correctAnswerPart3 = correctAnswerPart3.split(/\s+/).join('')
+	var skipCommas = false;
+	var canPass = false;
+	if (correctAnswer.search("%") !== -1) {
+		skipCommas = true;
+		correctAnswer.replace("%", "")
+	}
+	if (!skipCommas) { 
+		var correctAnswersTable = correctAnswer.split(",")
+		for ( var i = 0; i < correctAnswersTable.length; i++) {
+			var correctAnswerPart = correctAnswersTable[i]
+
+			if (!playerAnswer.match(/\([^()]*\)/g)) { // s'il ne possede pas ()
+				correctAnswerPart = correctAnswer.split(",")[0].replace(/\([^()]*\)/g, '') // retirer les parantheses dans la reponse
+			}
+			correctAnswerPart = correctAnswerPart.split(/\s+/).join('') // enlever les espaces
+			if (playerAnswer == correctAnswerPart) {
+				canPass = true;
+			}
 		}
 	}
-	correctAnswerPart1 = correctAnswerPart1.split(/\s+/).join('') // enlever les espaces
-	var canPass = false;
 	// search for synonymes
 	for (k in learningTable) {
 		if (learningTable[k][0] == question || learningTable[k][1] == question) {
@@ -254,7 +258,7 @@ function verifyWord_ecrire() {
 			}
 		}
 	}
-	if (canPass || playerAnswer == correctAnswer || (playerAnswer == correctAnswerPart1) || (playerAnswer == correctAnswerPart2 && language == "french") || (playerAnswer == correctAnswerPart3 && language == "french") ) {
+	if (canPass || playerAnswer == correctAnswer) {
 		console.log("correct answer")
 		addScore("allemand", 1)
 	} else {
@@ -299,6 +303,12 @@ function setupMultipleChoices() {
 			}
 			var germanWord = errorsTable[errorNum][0] // word
 			var frenchWord = errorsTable[errorNum][1] // answer
+			if (germanWord.search("%") !== -1) {
+				germanWord = germanWord.replace("%", "")
+			}
+			if (frenchWord.search("%") !== -1) {
+				frenchWord = frenchWord.replace("%", "")
+			}
 			var myerrorNumToShow = errorNum + 1
 			document.getElementById("words_counter_multipleChoices").innerHTML = (myerrorNumToShow)+"/"+ errorsTable.length
 		} else {
@@ -308,6 +318,12 @@ function setupMultipleChoices() {
 	} else {
 		var germanWord = learningTable[currentNumberInQueue][0] // german text
 		var frenchWord = learningTable[currentNumberInQueue][1] // french text
+		if (germanWord.search("%") !== -1) {
+			germanWord = germanWord.replace("%", "")
+		}
+		if (frenchWord.search("%") !== -1) {
+			frenchWord = frenchWord.replace("%", "")
+		}
 		document.getElementById("words_counter_multipleChoices").innerHTML = (num)+"/"+ learningTable.length
 	}
 	document.getElementById("learningChoiceContainer").style.display = "none"
@@ -374,9 +390,15 @@ function setupEcrire() {
 	document.getElementById("learningChoiceContainer").style.display = "none"
 	document.getElementById("writingContainer").style.display = "block"
 	if (language == "german") {
+		if (frenchWord.search("%") !== -1) {
+			frenchWord = frenchWord.replace("%", "")
+		}
 		document.getElementById("shownVocText_ecrire").innerHTML = frenchWord
 		correctAnswer = germanWord
 	} else if (language == "french") {
+		if (germanWord.search("%") !== -1) {
+			germanWord = germanWord.replace("%", "")
+		}
 		document.getElementById("shownVocText_ecrire").innerHTML = germanWord
 		correctAnswer = frenchWord
 	}

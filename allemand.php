@@ -133,6 +133,7 @@
 						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ö</button></td>
 						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ü</button></td>
 						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ß</button></td>
+						<td><button class="keyboard_button" onclick="insertText(this)" type="button">¨</button></td>
 					</tr>
 					<tr>
 						<td colspan="5"><h1>FRANÇAIS</h1></td>
