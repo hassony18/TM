@@ -64,6 +64,9 @@
         $fetchedTopItalian = $cache->retrieve('topItalian');
         $topItalian = json_decode($fetchedTopItalian, true);
 
+        $fetchedTopFlags = $cache->retrieve('topFlags');
+        $topFlags = json_decode($fetchedTopFlags, true);
+
         $fetchedTopMap = $cache->retrieve('topMap');
         $topMap = json_decode($fetchedTopMap, true);
     }
@@ -81,97 +84,89 @@
     function topMap() {
         global $conn;
         connect();
-        global $topGerman;
+        global $topMap;
         global $cache;
 
-        //$sql = "SELECT id, Criminal from jobs_progress ORDER BY Criminal DESC LIMIT 5";
 		$sql = "SELECT first_name, last_name, scoreCarte from users ORDER BY scoreCarte DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
         {
             $tempArray = [
-               // "player" => getPlayerNameById($row['id']),
 				"firstName" => $row['first_name'],
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreCarte'],
             ];
-            array_push($topGerman, $tempArray);
+            array_push($topMap, $tempArray);
         }
-        $encodedTopGerman = json_encode($topGerman);
-        $cache->store('topGerman', $encodedTopGerman);
+        $encodedTopMap = json_encode($topMap);
+        $cache->store('topMap', $encodedTopMap);
     }
 
     function topFlags() {
         global $conn;
         connect();
-        global $topGerman;
+        global $topFlags;
         global $cache;
 
-        //$sql = "SELECT id, Criminal from jobs_progress ORDER BY Criminal DESC LIMIT 5";
 		$sql = "SELECT first_name, last_name, scoreDrapeaux from users ORDER BY scoreDrapeaux DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
         {
             $tempArray = [
-               // "player" => getPlayerNameById($row['id']),
 				"firstName" => $row['first_name'],
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreDrapeaux'],
             ];
-            array_push($topGerman, $tempArray);
+            array_push($topFlags, $tempArray);
         }
-        $encodedTopGerman = json_encode($topGerman);
-        $cache->store('topGerman', $encodedTopGerman);
+        $encodedTopFlags = json_encode($topFlags);
+        $cache->store('topFlags', $encodedTopFlags);
     }
 
     function topItalian() {
         global $conn;
         connect();
-        global $topGerman;
+        global $topItalian;
         global $cache;
 
-        //$sql = "SELECT id, Criminal from jobs_progress ORDER BY Criminal DESC LIMIT 5";
 		$sql = "SELECT first_name, last_name, scoreItalien from users ORDER BY scoreItalien DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
         {
             $tempArray = [
-               // "player" => getPlayerNameById($row['id']),
 				"firstName" => $row['first_name'],
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreItalien'],
             ];
-            array_push($topGerman, $tempArray);
+            array_push($topItalian, $tempArray);
         }
-        $encodedTopGerman = json_encode($topGerman);
-        $cache->store('topGerman', $encodedTopGerman);
+        $encodedTopItalian = json_encode($topItalian);
+        $cache->store('topItalian', $encodedTopItalian);
     }
 
     function topEnglish() {
         global $conn;
         connect();
-        global $topGerman;
+        global $topEnglish;
         global $cache;
 
-        //$sql = "SELECT id, Criminal from jobs_progress ORDER BY Criminal DESC LIMIT 5";
 		$sql = "SELECT first_name, last_name, scoreAnglais from users ORDER BY scoreAnglais DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
         {
             $tempArray = [
-               // "player" => getPlayerNameById($row['id']),
 				"firstName" => $row['first_name'],
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreAnglais'],
             ];
-            array_push($topGerman, $tempArray);
+            array_push($topEnglish, $tempArray);
         }
-        $encodedTopGerman = json_encode($topGerman);
-        $cache->store('topGerman', $encodedTopGerman);
+        $encodedTopEnglish = json_encode($topEnglish);
+        $cache->store('topEnglish', $encodedTopEnglish);
     }
 
     function topGerman() {
@@ -180,14 +175,12 @@
         global $topGerman;
         global $cache;
 
-        //$sql = "SELECT id, Criminal from jobs_progress ORDER BY Criminal DESC LIMIT 5";
 		$sql = "SELECT first_name, last_name, scoreAllemand from users ORDER BY scoreAllemand DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
         {
             $tempArray = [
-               // "player" => getPlayerNameById($row['id']),
 				"firstName" => $row['first_name'],
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreAllemand'],

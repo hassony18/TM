@@ -390,12 +390,12 @@ p {
 #rankings .rankings {
 	flex-direction: column;
 	text-align: center;
-	max-width: 1500px;
+	max-width: 2500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
 #rankings .ranking-top {
-	max-width: 500px;
+	max-width: 1500px;
 	margin: 0 auto;
 }
 #rankings .ranking-bottom {
@@ -404,6 +404,17 @@ p {
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
+	width: 100%;
+}
+td {
+    padding: 0 15px;
+	font-size: 12px;
+}
+table {
+	border-collapse: collapse;
+}
+thead {
+	border-bottom: 1px solid crimson;
 }
 #rankings .ranking-item {
 	flex-basis: 80%;
@@ -426,7 +437,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(to left, #c31432, #240b36);
+	background-color: rgba(195, 20, 50, 0.25);
 	opacity: .75;
 	z-index: -1;
 }

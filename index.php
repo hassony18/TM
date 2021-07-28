@@ -85,50 +85,127 @@
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/german_flag.png"/></div> 
 						<h2>allemand</h2>
-							<p>
+						<table>
+							<thead>
+								<td>Top</td>
+								<td>Nom</td>
+								<td>Score</td>
+							</thead>
 							<?php
 
 								for ($i = 0; $i <= 4; $i++) { 
-									echo $i."- ".$topGerman[$i]["firstName"]." ".$topGerman[$i]["lastName"]." ".$topGerman[$i]["score"]."<br>";
+									if (array_key_exists($i, $topGerman)) {
+										$fullName = $topGerman[$i]["firstName"]." ".$topGerman[$i]["lastName"];
+										$score = $topGerman[$i]["score"];
+									} else {
+										$fullName = "N/A";
+										$score = "N/A";
+									}
+									$num = $i + 1;
+									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
 								}
 							?>
-							</p>
+						</table>
 					</div>
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/uk_flag.png"/></div>
 						<h2>anglais</h2>
-						<?php
-						for ($i = 1; $i <= 5; $i++) { ?>
-							<p><?php
-							echo $i."- HassoN"?></p>
-						<?php } ?>
+						<table>
+							<thead>
+								<td>Top</td>
+								<td>Nom</td>
+								<td>Score</td>
+							</thead>
+							<?php
+
+								for ($i = 0; $i <= 4; $i++) { 
+									if (array_key_exists($i, $topEnglish)) {
+										$fullName = $topEnglish[$i]["firstName"]." ".$topEnglish[$i]["lastName"];
+										$score = $topEnglish[$i]["score"];
+									} else {
+										$fullName = "N/A";
+										$score = "N/A";
+									}
+									$num = $i + 1;
+									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+								}
+							?>
+						</table>
 					</div>
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/italian_pizza.png"/></div>
 						<h2>italien</h2>
-						<?php
-						for ($i = 1; $i <= 5; $i++) { ?>
-							<p><?php
-							echo $i."- HassoN"?></p>
-						<?php } ?>
+						<table>
+							<thead>
+								<td>Top</td>
+								<td>Nom</td>
+								<td>Score</td>
+							</thead>
+							<?php
+
+								for ($i = 0; $i <= 4; $i++) { 
+									if (array_key_exists($i, $topItalian)) {
+										$fullName = $topItalian[$i]["firstName"]." ".$topItalian[$i]["lastName"];
+										$score = $topItalian[$i]["score"];
+									} else {
+										$fullName = "N/A";
+										$score = "N/A";
+									}
+									$num = $i + 1;
+									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+								}
+							?>
+						</table>
 					</div>
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/flags.png"/></div>
 						<h2>drapeaux</h2>
-						<?php
-						for ($i = 1; $i <= 5; $i++) { ?>
-							<p><?php
-							echo $i."- HassoN"?></p>
-						<?php } ?>
+						<table>
+							<thead>
+								<td>Top</td>
+								<td>Nom</td>
+								<td>Score</td>
+							</thead>
+							<?php
+
+								for ($i = 0; $i <= 4; $i++) { 
+									if (array_key_exists($i, $topFlags)) {
+										$fullName = $topFlags[$i]["firstName"]." ".$topFlags[$i]["lastName"];
+										$score = $topFlags[$i]["score"];
+									} else {
+										$fullName = "N/A";
+										$score = "N/A";
+									}
+									$num = $i + 1;
+									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+								}
+							?>
+						</table>
 					</div>
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/map.png"/></div>
 						<h2>carte</h2>
-						<?php
-						for ($i = 1; $i <= 5; $i++) { ?>
-							<p><?php
-							echo $i."- HassoN"?></p>
-						<?php } ?>
+						<table>
+							<thead>
+								<td>Top</td>
+								<td>Nom</td>
+								<td>Score</td>
+							</thead>
+							<?php
+
+								for ($i = 0; $i <= 4; $i++) { 
+									if (array_key_exists($i, $topMap)) {
+										$fullName = $topMap[$i]["firstName"]." ".$topMap[$i]["lastName"];
+										$score = $topMap[$i]["score"];
+									} else {
+										$fullName = "N/A";
+										$score = "N/A";
+									}
+									$num = $i + 1;
+									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+								}
+							?>
+						</table>
 					</div>
 				</div>
 			</div>
