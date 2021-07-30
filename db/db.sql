@@ -14,27 +14,32 @@
 
 
 -- Dumping database structure for tm
-CREATE DATABASE IF NOT EXISTS `tm` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE IF NOT EXISTS `tm` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
 USE `tm`;
 
 -- Dumping structure for table tm.users
 CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(320) NOT NULL,
-  `score` int(11) NOT NULL DEFAULT 0,
+  `scoreAllemand` int(11) NOT NULL DEFAULT 0,
+  `scoreAnglais` int(11) NOT NULL DEFAULT 0,
+  `scoreItalien` int(11) NOT NULL DEFAULT 0,
+  `scoreCarte` int(11) NOT NULL DEFAULT 0,
+  `scoreDrapeaux` int(11) NOT NULL DEFAULT 0,
   `first_name` varchar(1000) NOT NULL,
   `last_name` varchar(1000) NOT NULL,
   `user_image` varchar(1000) NOT NULL DEFAULT '0',
   `date` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`email`),
-  KEY `score` (`score`),
-  KEY `email` (`email`)
+  KEY `email` (`email`),
+  KEY `scoreAllemand` (`scoreAllemand`),
+  KEY `scoreAnglais` (`scoreAnglais`),
+  KEY `scoreItalien` (`scoreItalien`),
+  KEY `scoreCarte` (`scoreCarte`),
+  KEY `scoreDrapeaux` (`scoreDrapeaux`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table tm.users: ~2 rows (approximately)
+-- Dumping data for table tm.users: ~0 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`email`, `score`, `first_name`, `last_name`, `user_image`, `date`) VALUES
-	('hasan.albd@eduge.ch', 0, 'HASAN', 'HASAN.ALBD', 'https://lh3.googleusercontent.com/a/AATXAJzMbti0-enQrPyzjJeaQjs58o92qw_CE0xJ-_Ii=s96-c', '2021-07-26 19:48:38'),
-	('hassonyalobaidy01@gmail.com', 0, 'Hassan', 'Al Obaidi', 'https://lh3.googleusercontent.com/a-/AOh14GhWc7mFJHGEnhyhOgBO0HsS0ugO33ldcExpLkIB1A=s96-c', '2021-07-26 19:24:57');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

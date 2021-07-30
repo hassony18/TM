@@ -260,7 +260,7 @@
 						<a href="carte.php">
 							<div class="learn-item">
 								<div class="learn-img">
-									<img src="./styles/img/carte-mondiale.png" alt="img">
+									<img src="./styles/img/carte.png" alt="img">
 								</div>
 								<div class="learn-info">
 									<h1>Carte mondiale</h1>

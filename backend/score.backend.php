@@ -1,23 +1,22 @@
 <?php
-	$score = $_POST["score"];
-	$type = $_POST["gType"];
-	echo $score;
-	echo $type;
+//log in
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
 
-	//log in
-	session_start();	
-	include_once "../db/config.php";
-	
+function addScore($type, $score) {
+	global $conn;
 	$email = mysqli_real_escape_string($conn, $_SESSION["email"]);
 	if ($type == "allemand") {
 		$sql = "UPDATE `users` set scoreAllemand=scoreAllemand+? WHERE email=?;";
-	} else if ($type == "drapeaux") {
+	} elseif ($type == "drapeaux") {
 		$sql = "UPDATE `users` set scoreDrapeaux=scoreDrapeaux+? WHERE email=?;";
-	} else if ($type == "carte") {
+	} elseif ($type == "carte") {
 		$sql = "UPDATE `users` set scoreCarte=scoreCarte+? WHERE email=?;";
-	} else if ($type == "italien") {
+	} elseif ($type == "italien") {
 		$sql = "UPDATE `users` set scoreItalien=scoreItalien+? WHERE email=?;";
-	} else if ($type == "anglais") {
+	} elseif ($type == "anglais") {
 		$sql = "UPDATE `users` set scoreAnglais=scoreAnglais+? WHERE email=?;";
 	}
 	
@@ -32,3 +31,4 @@
 		mysqli_stmt_bind_param($stmt, "ss", $score, $email);
 		mysqli_stmt_execute($stmt);
 	}
+}

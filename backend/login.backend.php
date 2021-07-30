@@ -22,7 +22,7 @@
 		$_SESSION['email'] = $payload["email"];
 		$_SESSION['user_image'] = $payload["picture"];
 		
-		include_once "../db/config.php";
+		include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
 		
 				
 		$email = mysqli_real_escape_string($conn, $payload["email"]);

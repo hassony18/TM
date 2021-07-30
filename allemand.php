@@ -1,13 +1,28 @@
 <?php 
 	require 'header.php';
+	require_once 'backend/allemand.backend.php';
+
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
+
+
+	if (isset($_GET["error"])) {
+		$error = $_GET["error"];
+		if ($error == "chooseChapter") {
+			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir un chapitre.');</script>";
+		} elseif ($error == "chooseLearningOption") {
+			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir un mode d\'apprentissage.');</script>";
+		}  elseif ($error == "chooseTestOption") {
+			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir un mode de test.');</script>";
+		}  elseif ($error == "chooseLanguage") {
+			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir une langue.');</script>";
+		} 
+	}
 ?>
 
 
 <link rel="stylesheet" href="styles/allemand.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 <body>
 	<!-- Home page -->
@@ -15,76 +30,90 @@
 	<div id="allemand_apprentissage_container">
 		
 		<div id="learningChoiceContainer">
-			<h1>Choix de mode d'apprentissage</h1>
+			<form action="backend/allemand.backend.php" method="post">
+				<h1>Choix de mode d'apprentissage</h1>
 
-			<h2 style="color: crimson;">Choisis un ou plusieurs chapitres:</h2>
-			<div id="vocCheckBoxesList"></div>
-			<h2 style="color: crimson;">Choisis le type d'apprentissage:</h2>
-			
-			<label class="radio_style_container">Apprendre
-				<input type="radio" name="radio" id="apprendreRadio" onchange="onVocRadioValueChange()">
-				<span class="radio_style_checkmark"></span>
-			</label>
-			<label class="radio_style_container">Test
-				<input type="radio" name="radio" id="testRadio" onchange="onVocRadioValueChange()">
-				<span class="radio_style_checkmark"></span>
-			</label>
-			
-			
-			<div id="testOptionsContainer">
-			
-				<label class="radio_style_container">Choix multiples
-					<input type="radio" name="radio2" id="radio_choix_multiple" onchange="onVocRadioValueChange()">
-					<span class="radio_style_checkmark"></span>
-				</label>
+				<h2 style="color: crimson;">Choisis un ou plusieurs chapitres:</h2>
+				<div id="vocCheckBoxesList"> 
+					<table>
+						<?php
+							foreach ($baseVocTable as $key => $value){
+								echo '
+								<td>
+									<label class="checkbox_container_style">'.$key.'
+											<input type="checkbox" name="'. str_replace(".", "_", $key) .'">
+											<span class="checkbox_checkmark"></span>
+									</label>
+								</td>
+								';
+							}
+						?>
+					</table>
+				</div>
 
-				<div id="multipleChoicesOptionsContainer">
-					<label class="radio_style_container">Cherche le mot francais
-						<input type="radio" name="radio3" id="radio_cherche_francais">
-						<span class="radio_style_checkmark"></span>
-					</label>
-					<label class="radio_style_container">Cherche le mot allemand
-						<input type="radio" name="radio3" id="radio_cherche_allemand">
-						<span class="radio_style_checkmark"></span>
-					</label>
-				</div>
-			
-				<label class="radio_style_container">Ecrire
-					<input type="radio" name="radio2" id="radio_ecrire" onchange="onVocRadioValueChange()">
-					<span class="radio_style_checkmark"></span>
-				</label>
-			
-				<div id="ecrireOptionsContainer">
-					<label class="radio_style_container">Ecrire en francais
-						<input type="radio" name="radio3" id="radio_ecrire_francais" onchange="onVocRadioValueChange()">
-						<span class="radio_style_checkmark"></span>
-					</label>
-					<label class="radio_style_container">Ecrire en allemand
-						<input type="radio" name="radio3" id="radio_ecrire_allemand" onchange="onVocRadioValueChange()">
-						<span class="radio_style_checkmark"></span>
-					</label>
-				</div>
-						
-			</div>
+				<h2 style="color: crimson;">Choisis le type d'apprentissage:</h2>
 				
+				<label class="radio_style_container">Apprendre
+					<input type="radio" value="apprendre" name="apprendreOuTest" id="apprendreRadio" onchange="onVocRadioValueChange()">
+					<span class="radio_style_checkmark"></span>
+				</label>
+				<label class="radio_style_container">Test
+					<input type="radio" value="test" name="apprendreOuTest" id="testRadio" onchange="onVocRadioValueChange()">
+					<span class="radio_style_checkmark"></span>
+				</label>
+				
+				
+				<div id="testOptionsContainer">
+					<label class="radio_style_container">Choix multiples
+						<input type="radio" name="choixMultiplesOuEcrire" value="choixMultiples" id="radio_choix_multiple" onchange="onVocRadioValueChange()">
+						<span class="radio_style_checkmark"></span>
+					</label>
+					<div id="multipleChoicesOptionsContainer">
+						<label class="radio_style_container">Cherche le mot francais
+							<input type="radio" value="francais" name="francaisOuAllemand" id="radio_cherche_francais">
+							<span class="radio_style_checkmark"></span>
+						</label>
+						<label class="radio_style_container">Cherche le mot allemand
+							<input type="radio" value="allemand" name="francaisOuAllemand" id="radio_cherche_allemand">
+							<span class="radio_style_checkmark"></span>
+						</label>
+					</div>
+					<label class="radio_style_container">Ecrire
+						<input type="radio" name="choixMultiplesOuEcrire" value="ecrire" id="radio_ecrire" onchange="onVocRadioValueChange()">
+						<span class="radio_style_checkmark"></span>
+					</label>
+					<div id="ecrireOptionsContainer">
+						<label class="radio_style_container">Ecrire en francais
+							<input type="radio" value="francais" name="francaisOuAllemand" id="radio_ecrire_francais" onchange="onVocRadioValueChange()">
+							<span class="radio_style_checkmark"></span>
+						</label>
+						<label class="radio_style_container">Ecrire en allemand
+							<input type="radio" value="allemand" name="francaisOuAllemand" id="radio_ecrire_allemand" onchange="onVocRadioValueChange()">
+							<span class="radio_style_checkmark"></span>
+						</label>
+					</div>	
+				</div>
+					
 				<h2 style="color: crimson;">Options:</h2>
 				<label class="checkbox_container_style">Avec les phrases normales
-					<input id="normalPhrasesOption" type="checkbox">
+					<input id="normalPhrasesOption" name="phrasesNormales" type="checkbox">
 					<span class="checkbox_checkmark"></span>
 				</label>
 				<label class="checkbox_container_style">Avec les bleues
-					<input id="blueOption" type="checkbox">
+					<input id="blueOption" name="bleues" type="checkbox">
 					<span class="checkbox_checkmark"></span>
 				</label>
 				<label class="checkbox_container_style">Avec les phrases bleues
-					<input id="bluePhrasesOption" type="checkbox">
+					<input id="bluePhrasesOption" name="phrasesBleues" type="checkbox">
 					<span class="checkbox_checkmark"></span>
 				</label>
-				
-				<button onclick="prepareVocSession()" type="button" id="startSessionButton">On y va!</button>
+					
+				<input type="submit" name="submit_vocSession" value="On y va!">
+			</form>
 		</div>
 		
 		<div id="learningCardContainerBackground">
+			<form action="backend/allemand.backend.php" method="post"><input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←"></form>
 			<div id="cardContainer" class="cardContainer">
 				<div class="theCard">
 					<div class="theFront">
@@ -105,21 +134,23 @@
 			</div>
 		</div>
 
-		<div id="multipleChoicesContainer">
+		<form action="backend/allemand.backend.php" method="post" id="multipleChoicesContainer">
+			<input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←">
 			<h1 id="shownVocText">WORD HERE</h1>
 			<h1 id="words_counter_multipleChoices">COUNTER</h1>
-			<button id="choix_multiple_option1" onclick="verifyWord_multipleChoices(this)" type="button"> OPTION 1 </button>
-			<button id="choix_multiple_option2" onclick="verifyWord_multipleChoices(this)" type="button"> OPTION 2 </button>
-			<button id="choix_multiple_option3" onclick="verifyWord_multipleChoices(this)" type="button"> OPTION 3 </button>
-			<button id="choix_multiple_option4" onclick="verifyWord_multipleChoices(this)" type="button"> OPTION 4 </button>
-		</div>
+			<input type="submit" name="submit_multipleChoices" id="choix_multiple_option0" value="">
+			<input type="submit" name="submit_multipleChoices" id="choix_multiple_option1" value="">
+			<input type="submit" name="submit_multipleChoices" id="choix_multiple_option2" value="">
+			<input type="submit" name="submit_multipleChoices" id="choix_multiple_option3" value="">
+		</form>
 		
-		<div id="writingContainer">
+		<form action="backend/allemand.backend.php" method="post" id="writingContainer">
+			<input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←">
 			<h1 id="shownVocText_ecrire">WORD HERE</h1>
 			<h1 id="words_counter_ecrire">COUNTER</h1>
 			<label for="textAEcrire">Traduction:</label>
 			<input type="text" id="textAEcrire" name="textAEcrire" autofocus>
-			<button id="verifyWord_ecrire_button" onclick="verifyWord_ecrire()" type="button"> ENTRER </button>
+			<input type="submit" name="submit_ecrire_test" value="Soumettre"></button>
 			<div id="keyboard_container">
 				<table style="width:80%; margin-left: 10%;">
 					<tr>
@@ -164,12 +195,62 @@
 
 				</table>
 			</div>
-		</div>
+		</form>
 		
 		
 	</div>
 	
 	<script src="js/allemand.js"></script>
+
+	<?php
+		if (isset($_GET["success"])) {
+
+			$success = $_GET["success"];
+			if ($success == "apprendre" && !$_SESSION["learningTable"]) {
+				echo "<script>window.location.replace('allemand.php');</script>";
+				return true;
+			}
+			if ($success == "apprendre") {
+				echo "<script>startLearningSession(".json_encode($_SESSION['learningTable']).")</script>";
+			} elseif ($success == "test") {
+				echo "<script>startTestSession(".json_encode($_SESSION['learningTable']).", '".$_SESSION['test_choice']."', '".$_SESSION['test_language']."');</script>";
+			} elseif ($success == "multipleChoices") {
+				$tableToSend = null;
+				$counter = null;
+				if ($_SESSION["currentNumberInQueue"] >= count($_SESSION["learningTable"])) {
+					$errorTable = $_SESSION["errorTable"];
+					if (count($errorTable) > 0) {
+						$tableToSend = $errorTable;
+						$counter = $_SESSION['errorNumber'];
+					}
+				} else {
+					$tableToSend = $_SESSION['learningTable'];
+					$counter = $_SESSION['currentNumberInQueue'];
+				}
+				$num = count($tableToSend);
+				echo "<script>showMultipleChoices('".addslashes($_SESSION['question'])."', ".$_SESSION['answersList'].", '".$counter."', '".$num."');</script>";
+			} elseif ($success == "writingTest") {
+				$tableToSend = null;
+				$counter = null;
+				if ($_SESSION["currentNumberInQueue"] >= count($_SESSION["learningTable"])) {
+					$errorTable = $_SESSION["errorTable"];
+					if (count($errorTable) > 0) {
+						$tableToSend = $errorTable;
+						$counter = $_SESSION['errorNumber'];
+					}
+				} else {
+					$tableToSend = $_SESSION['learningTable'];
+					$counter = $_SESSION['currentNumberInQueue'];
+				}
+				$num = count($tableToSend);
+				echo "<script>showWritingTest('".addslashes($_SESSION['question'])."', '".$counter."', '".$num."');</script>";
+			} elseif ($success == "doneStudying") {
+				echo "<script>startCelebration();</script>";
+			}
+		}
+
+	?>
+
 </body>
 
 
