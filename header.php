@@ -1,5 +1,6 @@
 <?php
 	include 'backend/functions.backend.php';
+	require_once 'backend/notifications.backend.php';
 	session_start();
 ?>
 

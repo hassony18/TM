@@ -1,0 +1,109 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+
+@-webkit-keyframes bganim {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 500px -500px;
+    }
+    to {
+        background-position: 1000px -1000px;
+    }
+}
+@keyframes bganim {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 500px -500px;
+    }
+    to {
+        background-position: 1000px -1000px;
+    }
+}
+
+
+@keyframes show_slide {
+    0%{
+      transform: translateX(100%);
+    }
+    40%{
+      transform: translateX(-10%);
+    }
+    80%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-10px);
+    }
+}
+
+
+#notification-zone
+{
+    position: fixed;
+    top: -40vh;
+    right: 10px;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#notification-zone .notification{
+    padding: 15px 15px;
+    color:#f5f5f5;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 5px 0px;
+	
+	background-image: url(background.png);
+	background-size: 100%;
+}
+
+#notification-zone .notification.success
+{
+    animation: show_slide 1s ease forwards;
+    border-left: 8px solid #015c0d;
+    background-color: rgba(46, 139, 86, 0.85);
+
+
+	background-image: url(img/pattern.png);
+    -webkit-animation: bganim 20s linear 0s infinite;
+    animation: bganim 50s linear 0s infinite;
+	background-size: 45%;
+}
+
+#notification-zone .notification.warning
+{
+    animation: show_slide 1s ease forwards;
+    border-left: 8px solid #8d5700;
+    background-color: rgba(235, 114, 0, 0.85);
+
+	background-image: url(img/pattern.png);
+    -webkit-animation: bganim 20s linear 0s infinite;
+    animation: bganim 50s linear 0s infinite;
+	background-size: 45%;
+}
+
+#notification-zone .notification.error
+{
+    animation: show_slide 1s ease forwards;
+    border-left: 8px solid #5c0101;
+    background-color: rgba(223, 6, 6, 0.85);
+
+	background-image: url(img/pattern.png);
+    -webkit-animation: bganim 20s linear 0s infinite;
+    animation: bganim 50s linear 0s infinite;
+	background-size: 45%;
+}

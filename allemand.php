@@ -10,13 +10,13 @@
 	if (isset($_GET["error"])) {
 		$error = $_GET["error"];
 		if ($error == "chooseChapter") {
-			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir un chapitre.');</script>";
+			echo "<script>showNotification('error', 'Tu dois choisir un chapitre');</script>";
 		} elseif ($error == "chooseLearningOption") {
-			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir un mode d\'apprentissage.');</script>";
+			echo "<script>showNotification('error', 'Tu dois choisir un mode d\'apprentissage.');</script>";
 		}  elseif ($error == "chooseTestOption") {
-			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir un mode de test.');</script>";
+			echo "<script>showNotification('error', 'Tu dois choisir un mode de test');</script>";
 		}  elseif ($error == "chooseLanguage") {
-			echo "<script>window.location.replace('allemand.php'); alert('Tu dois choisir une langue.');</script>";
+			echo "<script>showNotification('error', 'Tu dois choisir une langue');</script>";
 		} 
 	}
 ?>
@@ -245,7 +245,8 @@
 				$num = count($tableToSend);
 				echo "<script>showWritingTest('".addslashes($_SESSION['question'])."', '".$counter."', '".$num."');</script>";
 			} elseif ($success == "doneStudying") {
-				echo "<script>startCelebration();</script>";
+				echo "<script>showNotification('error', 'hello world');</script>";
+				//echo "<script>startCelebration();</script>";
 			}
 		}
 

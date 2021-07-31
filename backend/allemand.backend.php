@@ -90,13 +90,13 @@ function prepareVocSession() {
             }
         }
     }
-    shuffle($finalTable);
-    $_SESSION["learningTable"] = $finalTable;
-
     if ($learningChoice == "apprendre") {
+        $_SESSION["learningTable"] = $finalTable;
         header("Location: ../allemand.php?success=apprendre");
         exit();
     } elseif ($learningChoice == "test") {
+        shuffle($finalTable);
+        $_SESSION["learningTable"] = $finalTable;
         $_SESSION["test_choice"] = $testChoice;
         $_SESSION["test_language"] = $language;
         // reset settings

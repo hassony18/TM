@@ -1,17 +1,11 @@
 
 
-var currentNumberInQueue = 0;
-var correctAnswer = null;
+var currentNumberInQueue = 0; // for learning cards
 
-var language = null;
-var errorNum = null;
 
 function loadPage() {
 	isLearning = false;
 	currentNumberInQueue = 0;
-	correctAnswer = null;
-	language = null;
-	errorNum = null;
 	document.getElementById("learningChoiceContainer").style.display = "block" // block
 	document.getElementById("learningCardContainerBackground").style.display = "none" // none
 	document.getElementById("multipleChoicesContainer").style.display = "none"
@@ -104,15 +98,16 @@ function showWritingTest(question, position, total) {
 
 
 
-
+var learningTable = null;
 function startLearningSession(table) {
 	console.log(table)
+	learningTable = table
 	document.getElementById("learningChoiceContainer").style.display = "none"
 	document.getElementById("learningCardContainerBackground").style.display = "block"
-	nextVoc("start", table)
+	nextVoc("start")
 }
 
-function nextVoc(type, learningTable) {
+function nextVoc(type) {
 	if (type == "start") {
 		currentNumberInQueue = 0
 	}
