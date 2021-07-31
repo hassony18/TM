@@ -1,17 +1,20 @@
 <?php
 
 	require_once $_SERVER['DOCUMENT_ROOT'].'/TM/vendor/autoload.php';
+	include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
 
 	$jwt = new \Firebase\JWT\JWT;
 	$jwt::$leeway = 10;
 
+	if (!isset($_POST["idtoken"])) {
+		exit();
+	}
 	$id_token = $_POST["idtoken"];
 	$CLIENT_ID = '467170103073-1t65koimd2m4jd4npjtoopmdtrboec6u.apps.googleusercontent.com';
 
 	$client = new Google_Client(['client_id' => $CLIENT_ID]); 
 	$payload = $client->verifyIdToken($id_token);
 	if ($payload) {
-		var_dump($payload);
 
 		//log in
  		session_start();
@@ -21,8 +24,6 @@
 		$_SESSION['userFullName'] = $payload["name"];
 		$_SESSION['email'] = $payload["email"];
 		$_SESSION['user_image'] = $payload["picture"];
-		
-		include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
 		
 				
 		$email = mysqli_real_escape_string($conn, $payload["email"]);
@@ -43,6 +44,7 @@
 			mysqli_stmt_bind_param($stmt, "sssssss", $email, $first, $last_name, $user_image, $first, $last_name, $user_image);
 			mysqli_stmt_execute($stmt);
 		}
+		exit();
 
 	
 	} else {

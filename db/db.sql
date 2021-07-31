@@ -14,17 +14,17 @@
 
 
 -- Dumping database structure for tm
-CREATE DATABASE IF NOT EXISTS `tm` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+CREATE DATABASE IF NOT EXISTS `tm` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `tm`;
 
 -- Dumping structure for table tm.users
 CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(320) NOT NULL,
-  `scoreAllemand` int(11) NOT NULL DEFAULT 0,
-  `scoreAnglais` int(11) NOT NULL DEFAULT 0,
-  `scoreItalien` int(11) NOT NULL DEFAULT 0,
-  `scoreCarte` int(11) NOT NULL DEFAULT 0,
-  `scoreDrapeaux` int(11) NOT NULL DEFAULT 0,
+  `scoreAllemand` int(11) unsigned NOT NULL DEFAULT 0,
+  `scoreAnglais` int(11) unsigned NOT NULL DEFAULT 0,
+  `scoreItalien` int(11) unsigned NOT NULL DEFAULT 0,
+  `scoreCarte` int(11) unsigned NOT NULL DEFAULT 0,
+  `scoreDrapeaux` int(11) unsigned NOT NULL DEFAULT 0,
   `first_name` varchar(1000) NOT NULL,
   `last_name` varchar(1000) NOT NULL,
   `user_image` varchar(1000) NOT NULL DEFAULT '0',

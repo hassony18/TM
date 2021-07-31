@@ -247,6 +247,16 @@
 			} elseif ($success == "doneStudying") {
 				echo "<script>showNotification('error', 'hello world');</script>";
 				//echo "<script>startCelebration();</script>";
+			} 
+		}
+
+		if (isset($_GET["answer"])) {
+			$answer = $_GET["answer"];
+			if ($answer == "correct") {
+				echo "<script>showNotification('success', 'Bien joué!');</script>";
+			} elseif ($answer == "incorrect") {
+				echo "<script>showNotification('error', 'Aïe aïe!');</script>";
+
 			}
 		}
 

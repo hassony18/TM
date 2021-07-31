@@ -125,8 +125,10 @@ if (isset($_POST["submit_multipleChoices"])) {
 }
 
 function verifyMultipleChoicesAnswer($answer) {
+    $_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
 	if ($answer == $_SESSION["correctAnswer"]) {
 		addScore("allemand", 1);
+        header("Location: ../allemand.php?success=correctAnswer");
         // remove from error list if the answer is correct
         if (isset( $_SESSION["errorTable"]) && !empty($_SESSION["errorTable"])) {
             foreach ($_SESSION["errorTable"] as $key => $value) {
@@ -135,8 +137,11 @@ function verifyMultipleChoicesAnswer($answer) {
                 }
             }
         }
+
+        setupMultipleChoices("&answer=correct");
 	} else {
 		addScore("allemand", -1);
+        header("Location: ../allemand.php?success=wrongAnswer");
         // add to error list
         if (!isset( $_SESSION["errorTable"]) || empty($_SESSION["errorTable"])) { 
             $tempArray = array();
@@ -145,13 +150,12 @@ function verifyMultipleChoicesAnswer($answer) {
         }
         array_push($tempArray, [$_SESSION["question"], $_SESSION["correctAnswer"]]);
         $_SESSION["errorTable"] = $tempArray;
+        setupMultipleChoices("&answer=incorrect");
     }
-	$_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
-	setupMultipleChoices();
 }
 
 
-function setupMultipleChoices() {
+function setupMultipleChoices($status = "") {
 	$num = $_SESSION["currentNumberInQueue"];
     $localLearningTable = $_SESSION["learningTable"];
     // if done normal table start error table
@@ -173,21 +177,22 @@ function setupMultipleChoices() {
                 $_SESSION["correctAnswer"] = $answer;
                 $_SESSION["question"] = $question;
                 $tempAnswerArray = array();
+                $rand_keys = array_rand($errorTable, 3);
                 if ($_SESSION["test_language"] == "allemand") {
-                    array_push($tempAnswerArray, $errorTable[random_int(0, count($errorTable))][0]);
-                    array_push($tempAnswerArray, $errorTable[random_int(0, count($errorTable))][0]);
-                    array_push($tempAnswerArray, $errorTable[random_int(0, count($errorTable))][0]);
+                    array_push($tempAnswerArray, $errorTable[$rand_keys[0]][0]);
+                    array_push($tempAnswerArray, $errorTable[$rand_keys[1]][0]);
+                    array_push($tempAnswerArray, $errorTable[$rand_keys[2]][0]);
                     array_push($tempAnswerArray, $answer); // correct answer
                 } elseif ($_SESSION["test_language"] == "francais") {
-                    array_push($tempAnswerArray, $errorTable[random_int(0, count($errorTable))][1]);
-                    array_push($tempAnswerArray, $errorTable[random_int(0, count($errorTable))][1]);
-                    array_push($tempAnswerArray, $errorTable[random_int(0, count($errorTable))][1]);
+                    array_push($tempAnswerArray, $errorTable[$rand_keys[0]][1]);
+                    array_push($tempAnswerArray, $errorTable[$rand_keys[1]][1]);
+                    array_push($tempAnswerArray, $errorTable[$rand_keys[2]][1]);
                     array_push($tempAnswerArray, $answer); // correct answer
                 }
                 shuffle($tempAnswerArray);
                 $_SESSION["answersList"] = json_encode($tempAnswerArray);
-                header("Location: ../allemand.php?success=multipleChoices");
                 $_SESSION["errorNumber"] = $_SESSION["errorNumber"] + 1;
+                header("Location: ../allemand.php?success=multipleChoices".$status);
                 exit();
            } else { header("Location: ../allemand.php?success=doneStudying"); exit(); }
          } else { header("Location: ../allemand.php?success=doneStudying"); exit(); }
@@ -203,24 +208,25 @@ function setupMultipleChoices() {
 		}
 	}
     $tempAnswerArray = array();
+    $rand_keys = array_rand($localLearningTable, 3);
 	if ($_SESSION["test_language"] == "allemand") {
 		$_SESSION["correctAnswer"] = $germanWord;
         $_SESSION["question"] = $frenchWord;
-        array_push($tempAnswerArray, $localLearningTable[random_int(0, count($localLearningTable))][0]);
-        array_push($tempAnswerArray, $localLearningTable[random_int(0, count($localLearningTable))][0]);
-        array_push($tempAnswerArray, $localLearningTable[random_int(0, count($localLearningTable))][0]);
+        array_push($tempAnswerArray, $localLearningTable[$rand_keys[0]][0]);
+        array_push($tempAnswerArray, $localLearningTable[$rand_keys[1]][0]);
+        array_push($tempAnswerArray, $localLearningTable[$rand_keys[2]][0]);
         array_push($tempAnswerArray, $germanWord); // correct answer
 	} elseif ($_SESSION["test_language"] == "francais") {
         $_SESSION["correctAnswer"] = $frenchWord;
         $_SESSION["question"] = $germanWord;
-        array_push($tempAnswerArray, $localLearningTable[random_int(0, count($localLearningTable))][1]);
-        array_push($tempAnswerArray, $localLearningTable[random_int(0, count($localLearningTable))][1]);
-        array_push($tempAnswerArray, $localLearningTable[random_int(0, count($localLearningTable))][1]);
+        array_push($tempAnswerArray, $localLearningTable[$rand_keys[0]][1]);
+        array_push($tempAnswerArray, $localLearningTable[$rand_keys[1]][1]);
+        array_push($tempAnswerArray, $localLearningTable[$rand_keys[2]][1]);
         array_push($tempAnswerArray, $frenchWord); // correct answer
 	}
     shuffle($tempAnswerArray);
     $_SESSION["answersList"] = json_encode($tempAnswerArray);
-    header("Location: ../allemand.php?success=multipleChoices");
+    header("Location: ../allemand.php?success=multipleChoices".$status);
     exit();
 
 }
@@ -236,6 +242,7 @@ if (isset($_POST["submit_ecrire_test"])) {
 }
 
 function verifyWritingTestAnswer($answer) {
+    $_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
     $answer = preg_replace("/\s+/", "", $answer); // remove all spaces from answer
     $question = $_SESSION["question"];
     $correctAnswer = preg_replace("/\s+/", "", $_SESSION["correctAnswer"]); // remove all spaces from answer
@@ -269,6 +276,7 @@ function verifyWritingTestAnswer($answer) {
     }
     if ($canPass || $answer == $correctAnswer) {
         addScore("allemand", 1);
+        header("Location: ../allemand.php?success=correctAnswer");
         // remove from error list if the answer is correct
         if (isset($_SESSION["errorTable"]) && !empty($_SESSION["errorTable"])) {
             foreach ($_SESSION["errorTable"] as $key => $value) {
@@ -277,9 +285,10 @@ function verifyWritingTestAnswer($answer) {
                 }
             }
         }
+        startWritingTest("&answer=correct");
     } else {
         addScore("allemand", -1);
-        header("Location: ../allemand.php?answer=false");
+        header("Location: ../allemand.php?success=wrongAnswer");
         // remove from error list if the answer is correct
         if (isset($_SESSION["errorTable"]) && !empty($_SESSION["errorTable"])) {
             foreach ($_SESSION["errorTable"] as $key => $value) {
@@ -296,12 +305,11 @@ function verifyWritingTestAnswer($answer) {
         }
         array_push($tempArray, [$_SESSION["question"], $_SESSION["correctAnswer"]]);
         $_SESSION["errorTable"] = $tempArray;
+        startWritingTest("&answer=incorrect");
     }
-    $_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
-    startWritingTest();
 }
 
-function startWritingTest() {
+function startWritingTest($status = "") {
     $num = $_SESSION["currentNumberInQueue"];
     $localLearningTable = $_SESSION["learningTable"];
     // if done normal table start error table
@@ -324,7 +332,7 @@ function startWritingTest() {
                 }
                 $_SESSION["correctAnswer"] = $answer;
                 $_SESSION["question"] = $question;
-                header("Location: ../allemand.php?success=writingTest");
+                header("Location: ../allemand.php?success=writingTest".$status);
                 $_SESSION["errorNumber"] = $_SESSION["errorNumber"] + 1;
                 exit();
             } else { header("Location: ../allemand.php?success=doneStudying"); exit(); }
@@ -347,6 +355,6 @@ function startWritingTest() {
         $_SESSION["correctAnswer"] = $frenchWord;
         $_SESSION["question"] = $germanWord;
     }
-    header("Location: ../allemand.php?success=writingTest");
+    header("Location: ../allemand.php?success=writingTest".$status);
     exit();
 }

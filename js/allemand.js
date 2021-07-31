@@ -133,13 +133,6 @@ function nextVoc(type) {
 	document.getElementById("words_counter_learning").innerHTML = (currentNumberInQueue+1)+"/"+ (learningTable.length) // french text
 }
 
-
-function sendAnswer(answer) { 
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'http://localhost/TM/allemand.php');
-	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	xhr.onload = function() {
-		console.log('Answer sent: ');
-	};
-	xhr.send('answer=' + answer);
-}
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});

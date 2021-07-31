@@ -21,7 +21,7 @@
 	padding: 10px;
 }
 
-button {
+input[type="submit"] {
 	border-radius: 25px;
 	background-color: crimson;
 	border: none;
@@ -35,7 +35,7 @@ button {
     display:block;
 }
 
-button:hover {
+input[type="submit"]:hover, input[type="submit"]:active {
 	background-color: transparent;
 	color: crimson;
 }

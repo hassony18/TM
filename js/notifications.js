@@ -1,7 +1,7 @@
 const showTime = 5000 
 
 
-function showNotification(type, message) {
+function showNotification(type, message) { // "error", "success", "warning"
     var audio = document.getElementById("audio")
     audio.volume = 0.05;
     audio.play();

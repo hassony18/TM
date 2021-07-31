@@ -32,10 +32,10 @@
 					xhr.open('POST', 'http://localhost/TM/backend/login.backend.php'); // link
 					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 					xhr.onload = function() {
-						console.log('Signed in as: ' + xhr.responseText);
+						console.log('Signed in:');
+						window.location.reload();
 					};
 					xhr.send('idtoken=' + id_token);
-					setTimeout(function(){ window.location.reload(); }, 1500);
 				}
 				function onFail(error) {
 					console.log(error);
@@ -88,6 +88,7 @@
 						<table>
 							<thead>
 								<td>Top</td>
+								<td></td>
 								<td>Nom</td>
 								<td>Score</td>
 							</thead>
@@ -97,12 +98,14 @@
 									if (array_key_exists($i, $topGerman)) {
 										$fullName = $topGerman[$i]["firstName"]." ".$topGerman[$i]["lastName"];
 										$score = $topGerman[$i]["score"];
+										$img = $topGerman[$i]["image"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
+										$img = "styles/img/user.png";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -113,6 +116,7 @@
 						<table>
 							<thead>
 								<td>Top</td>
+								<td></td>
 								<td>Nom</td>
 								<td>Score</td>
 							</thead>
@@ -122,12 +126,14 @@
 									if (array_key_exists($i, $topEnglish)) {
 										$fullName = $topEnglish[$i]["firstName"]." ".$topEnglish[$i]["lastName"];
 										$score = $topEnglish[$i]["score"];
+										$img = $topGerman[$i]["image"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
+										$img = "styles/img/user.png";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -138,6 +144,7 @@
 						<table>
 							<thead>
 								<td>Top</td>
+								<td></td>
 								<td>Nom</td>
 								<td>Score</td>
 							</thead>
@@ -147,12 +154,14 @@
 									if (array_key_exists($i, $topItalian)) {
 										$fullName = $topItalian[$i]["firstName"]." ".$topItalian[$i]["lastName"];
 										$score = $topItalian[$i]["score"];
+										$img = $topGerman[$i]["image"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
+										$img = "styles/img/user.png";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -163,6 +172,7 @@
 						<table>
 							<thead>
 								<td>Top</td>
+								<td></td>
 								<td>Nom</td>
 								<td>Score</td>
 							</thead>
@@ -172,12 +182,14 @@
 									if (array_key_exists($i, $topFlags)) {
 										$fullName = $topFlags[$i]["firstName"]." ".$topFlags[$i]["lastName"];
 										$score = $topFlags[$i]["score"];
+										$img = $topGerman[$i]["image"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
+										$img = "styles/img/user.png";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -188,6 +200,7 @@
 						<table>
 							<thead>
 								<td>Top</td>
+								<td></td>
 								<td>Nom</td>
 								<td>Score</td>
 							</thead>
@@ -197,12 +210,14 @@
 									if (array_key_exists($i, $topMap)) {
 										$fullName = $topMap[$i]["firstName"]." ".$topMap[$i]["lastName"];
 										$score = $topMap[$i]["score"];
+										$img = $topGerman[$i]["image"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
+										$img = "styles/img/user.png";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
