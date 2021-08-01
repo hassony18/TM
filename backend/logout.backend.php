@@ -3,8 +3,7 @@
 session_start();
 session_unset();
 session_destroy();
-$_SESSION['userFirstName'] = null;
-$_SESSION['userLastName'] = null;
-$_SESSION['userFullName'] = null;
-$_SESSION['user_image'] = null;
+foreach($_SESSION as $key => $value) {
+    $_SESSION[$key] = null;
+}
 header("Location: ../index.php");

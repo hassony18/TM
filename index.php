@@ -99,13 +99,15 @@
 										$fullName = $topGerman[$i]["firstName"]." ".$topGerman[$i]["lastName"];
 										$score = $topGerman[$i]["score"];
 										$img = $topGerman[$i]["image"];
+										$id = $topGerman[$i]["id"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
 										$img = "styles/img/user.png";
+										$id = "";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td><a href='./profile.php?u=".$id."'>".$fullName."</a></td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -126,14 +128,16 @@
 									if (array_key_exists($i, $topEnglish)) {
 										$fullName = $topEnglish[$i]["firstName"]." ".$topEnglish[$i]["lastName"];
 										$score = $topEnglish[$i]["score"];
-										$img = $topGerman[$i]["image"];
+										$img = $topEnglish[$i]["image"];
+										$id = $topEnglish[$i]["id"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
 										$img = "styles/img/user.png";
+										$id = "";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td><a href='./profile.php?u=".$id."'>".$fullName."</a></td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -154,14 +158,16 @@
 									if (array_key_exists($i, $topItalian)) {
 										$fullName = $topItalian[$i]["firstName"]." ".$topItalian[$i]["lastName"];
 										$score = $topItalian[$i]["score"];
-										$img = $topGerman[$i]["image"];
+										$img = $topItalian[$i]["image"];
+										$id = $topItalian[$i]["id"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
 										$img = "styles/img/user.png";
+										$id = "";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td><a href='./profile.php?u=".$id."'>".$fullName."</a></td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -182,14 +188,16 @@
 									if (array_key_exists($i, $topFlags)) {
 										$fullName = $topFlags[$i]["firstName"]." ".$topFlags[$i]["lastName"];
 										$score = $topFlags[$i]["score"];
-										$img = $topGerman[$i]["image"];
+										$img = $topFlags[$i]["image"];
+										$id = $topFlags[$i]["id"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
 										$img = "styles/img/user.png";
+										$id = "";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td><a href='./profile.php?u=".$id."'>".$fullName."</a></td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>
@@ -210,14 +218,16 @@
 									if (array_key_exists($i, $topMap)) {
 										$fullName = $topMap[$i]["firstName"]." ".$topMap[$i]["lastName"];
 										$score = $topMap[$i]["score"];
-										$img = $topGerman[$i]["image"];
+										$img = $topMap[$i]["image"];
+										$id = $topMap[$i]["id"];
 									} else {
 										$fullName = "N/A";
 										$score = "N/A";
 										$img = "styles/img/user.png";
+										$id = "";
 									}
 									$num = $i + 1;
-									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td>".$fullName."</td><td>".$score."</td></tr>";
+									echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td><a href='./profile.php?u=".$id."'>".$fullName."</a></td><td>".$score."</td></tr>";
 								}
 							?>
 						</table>

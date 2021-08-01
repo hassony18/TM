@@ -30,22 +30,34 @@
 		$first = mysqli_real_escape_string($conn, $payload["given_name"]);
 		$last_name = mysqli_real_escape_string($conn, $payload["family_name"]);
 		$user_image = mysqli_real_escape_string($conn, $payload["picture"]);
-		
-		$sql = "INSERT INTO users (email, first_name, last_name, user_image) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE first_name=?, last_name=?, user_image=?;";
-		
-		// execute without parameters
+
+		$stmt = $conn->prepare('SELECT id from users WHERE email= ?');
+		$stmt->bind_param('s', $_SESSION['email']);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$data = $result->fetch_assoc();
+		if (empty($data)) { 
+			$sql = "INSERT INTO users (first_name, last_name, user_image, email) VALUES (?, ?, ?, ?);";
+		} else {
+			$sql = "UPDATE users SET first_name = ?, last_name = ?, user_image = ? WHERE email = ?;";
+		}
 		mysqli_query($conn, $sql);
-		
-		// security 
 		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
 			echo "SQL ERROR";
 		} else {
-			mysqli_stmt_bind_param($stmt, "sssssss", $email, $first, $last_name, $user_image, $first, $last_name, $user_image);
+			mysqli_stmt_bind_param($stmt, "ssss", $first, $last_name, $user_image, $email);
 			mysqli_stmt_execute($stmt);
 		}
+		if (empty($data)) {
+			$stmt = $conn->prepare('SELECT id from users WHERE email= ?');
+			$stmt->bind_param('s', $_SESSION['email']);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			$data = $result->fetch_assoc();
+		}
+		$_SESSION['user_id'] = $data['id'];
 		exit();
-
 	
 	} else {
 		echo "<h1>ERROR</h1>";

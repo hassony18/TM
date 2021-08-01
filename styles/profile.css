@@ -59,6 +59,9 @@ button:hover {
 	background-size: cover;
 }
 
+.card {
+	margin: 50px;
+}
 
 .wrapper{
 	width: 80%;
@@ -69,7 +72,7 @@ button:hover {
   }
   .wrapper .card{
 	background: #fff;
-	width: calc(50% - 20px);
+	width: calc(20% - 20px);
 	height: 300px;
 	border-radius: 5px;
 	display: flex;

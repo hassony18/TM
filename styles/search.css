@@ -1,0 +1,89 @@
+
+#header .nav-list ul li a {
+    font-size: 15px !important;
+}
+
+.header {
+	position: relative;
+}
+  
+#header .header {
+    background-color: #29323c;
+}
+
+/* cool white background */
+#search_container {
+	background-color: white;
+	border-radius: 25px;
+	margin: 100px auto;
+	width: 80%;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
+}
+
+.profile_picture {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+#results h2 {
+	width: 50%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+button, input[type=submit] {
+	border-radius: 25px;
+	background-color: crimson;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+    margin: 10px auto;
+	display: block;
+}
+
+button:hover, button:active, input[type=submit]:hover, input[type=submit]:active {
+	background-color: transparent;
+	color: crimson;
+}
+
+
+input[type=number]:focus, input[type=text]:focus {
+	border-bottom: 2px solid crimson;
+    outline: none !important;
+}
+
+input[type=number], input[type=text] {
+	background: transparent;
+	color: crimson;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	width: 100%;
+	font-size: 25px;
+	margin-top: 10px;
+	margin: 0 auto;
+}
+
+#results {
+    margin: 10px 15px 15px;
+    padding: 1% 5%;
+    overflow: auto;
+    height: 250px;
+	width: 100%;;
+}
+
+/* FOOTER */
+
+.footer{
+	padding-top: 4px !important;
+	padding-bottom: 8px !important;
+	margin-top: 360px !important;
+}

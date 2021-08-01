@@ -1,5 +1,4 @@
 <?php
-	include 'backend/functions.backend.php';
 	require_once 'backend/notifications.backend.php';
 	session_start();
 ?>
@@ -37,7 +36,21 @@
 							<?php
 								if (isset($_SESSION["email"])) {
 									// if logged in, show profile dropdown
-									showProfileDropdown(); // dropdown function 
+									echo '
+									<li class="dropbtn">
+										<a onclick="dropdownprofile()" href="#"> <img  id="no-width"  src="' . $_SESSION['user_image'] . '"</img> ' . $_SESSION["userFirstName"] . '  <b><i class="fa fa-caret-down"></i></b></a>
+									</li>
+									<div id="myDropdown" class="dropdown-content">
+										<li>
+											<a href="profile.php?u='.$_SESSION["user_id"].'"><i class="fa fa-fw fa-user"></i>Profil</a>
+										</li>
+										<li>
+											<a href="search.php"><i class="fa fa-fw fa-power-off"></i>Recherche de personnes</a>
+										</li>
+										<li>
+											<a href="./backend/logout.backend.php"><i class="fa fa-fw fa-power-off"></i>Se déconnecter</a>
+										</li>
+									</div>';
 								}						
 							?>
 						</ul>

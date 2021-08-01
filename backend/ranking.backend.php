@@ -87,7 +87,7 @@
         global $topMap;
         global $cache;
 
-		$sql = "SELECT first_name, last_name, scoreCarte, user_image from users ORDER BY scoreCarte DESC LIMIT 5";
+		$sql = "SELECT id, first_name, last_name, scoreCarte, user_image from users ORDER BY scoreCarte DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
@@ -97,6 +97,7 @@
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreCarte'],
                 "image" => $row['user_image'],
+                "id" => $row['id'],
             ];
             array_push($topMap, $tempArray);
         }
@@ -110,7 +111,7 @@
         global $topFlags;
         global $cache;
 
-		$sql = "SELECT first_name, last_name, scoreDrapeaux, user_image from users ORDER BY scoreDrapeaux DESC LIMIT 5";
+		$sql = "SELECT id, first_name, last_name, scoreDrapeaux, user_image from users ORDER BY scoreDrapeaux DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
@@ -120,6 +121,7 @@
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreDrapeaux'],
                 "image" => $row['user_image'],
+                "id" => $row['id'],
             ];
             array_push($topFlags, $tempArray);
         }
@@ -133,7 +135,7 @@
         global $topItalian;
         global $cache;
 
-		$sql = "SELECT first_name, last_name, scoreItalien, user_image from users ORDER BY scoreItalien DESC LIMIT 5";
+		$sql = "SELECT id, first_name, last_name, scoreItalien, user_image from users ORDER BY scoreItalien DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
@@ -143,6 +145,7 @@
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreItalien'],
                 "image" => $row['user_image'],
+                "id" => $row['id'],
             ];
             array_push($topItalian, $tempArray);
         }
@@ -156,7 +159,7 @@
         global $topEnglish;
         global $cache;
 
-		$sql = "SELECT first_name, last_name, scoreAnglais, user_image from users ORDER BY scoreAnglais DESC LIMIT 5";
+		$sql = "SELECT id, first_name, last_name, scoreAnglais, user_image from users ORDER BY scoreAnglais DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
@@ -166,6 +169,7 @@
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreAnglais'],
                 "image" => $row['user_image'],
+                "id" => $row['id'],
             ];
             array_push($topEnglish, $tempArray);
         }
@@ -179,7 +183,7 @@
         global $topGerman;
         global $cache;
 
-		$sql = "SELECT first_name, last_name, scoreAllemand, user_image from users ORDER BY scoreAllemand DESC LIMIT 5";
+		$sql = "SELECT id, first_name, last_name, scoreAllemand, user_image from users ORDER BY scoreAllemand DESC LIMIT 5";
 		
         $result = $conn->query($sql);
         while($row = $result->fetch_array())
@@ -189,6 +193,7 @@
                 "lastName" => $row['last_name'],
                 "score" => $row['scoreAllemand'],
                 "image" => $row['user_image'],
+                "id" => $row['id'],
             ];
             array_push($topGerman, $tempArray);
         }
