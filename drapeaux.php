@@ -4,6 +4,7 @@
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
+	$_SESSION["user_page"] = "drapeaux.php";
 ?>
 
 <link rel="stylesheet" href="./styles/drapeaux.css" />

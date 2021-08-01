@@ -5,7 +5,7 @@
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
-
+	$_SESSION["user_page"] = "allemand.php";
 
 	if (isset($_GET["error"])) {
 		$error = $_GET["error"];

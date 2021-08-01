@@ -23,6 +23,7 @@
 	  </section>
 </footer>
 	<script src="js/homescript.js"></script>
+	<script src="js/activity.js"></script>
 	
 
 </body>

@@ -1,5 +1,6 @@
 <?php
 
+    include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
     ob_start(); 
     date_default_timezone_set("Europe/Zurich");
     require_once 'cache.class.php';
@@ -37,11 +38,6 @@
 
     function connect() {
         global $conn;
-        $dbServerName = "localhost";
-        $dbServerUsername = "root";
-        $dbPassword = "";
-        $dbName = "tm";
-        $conn = new mysqli($dbServerName, $dbServerUsername, $dbPassword, $dbName);
         if ($conn->connect_error) {
             header('Location: '+mysqli_connect_error());
          }

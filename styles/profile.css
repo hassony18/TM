@@ -22,12 +22,12 @@
 }
 
 #profile_picture {
-	width: 1000px;
-	height: 1000px;
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+	color: cornflowerblue;
+	box-shadow: 0 0 5px 3px darkred;	
 }
 
 button {
@@ -64,7 +64,7 @@ button:hover {
 }
 
 .wrapper{
-	width: 80%;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;

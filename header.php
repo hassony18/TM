@@ -25,6 +25,7 @@
 						<ul>
 							<li><a href="index.php">Accueil</a></li>
 							<li><a href="index.php#rankings">Classement</a></li>
+							<li><a href="online.php">En ligne</a></li>
 
 							<?php
 								if (isset($_SESSION["email"])) {
@@ -38,7 +39,7 @@
 									// if logged in, show profile dropdown
 									echo '
 									<li class="dropbtn">
-										<a onclick="dropdownprofile()" href="#"> <img  id="no-width"  src="' . $_SESSION['user_image'] . '"</img> ' . $_SESSION["userFirstName"] . '  <b><i class="fa fa-caret-down"></i></b></a>
+										<a onclick="dropdownprofile()" href="#"> <img  id="no-width"  src="' . $_SESSION['user_image'] . '"</img> ' . $_SESSION["userFirstName"] . '</a>
 									</li>
 									<div id="myDropdown" class="dropdown-content">
 										<li>
@@ -58,5 +59,6 @@
 				</div>
 			</div>
 		</section>
+		
 		<!-- End Header -->
 	</header>

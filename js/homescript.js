@@ -10,7 +10,7 @@ if (headerList) {
 	});
 }
 
-document.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
 	var path = window.location.pathname;
 	if (path.search("index.php") == -1) {
@@ -24,8 +24,7 @@ document.addEventListener('scroll', () => {
 });
 
 
-function dropdownprofile(event) {  document.getElementById("myDropdown").classList.add("show");
-}
+function dropdownprofile(event) {  document.getElementById("myDropdown").classList.add("show"); }
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {

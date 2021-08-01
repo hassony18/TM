@@ -120,7 +120,7 @@ legend {
 }
 
 
-#nombrePays{
+#point{
 	color: white;
 	font-size: 30px;
 	position: fixed;
@@ -132,43 +132,11 @@ legend {
 	bottom: 0;
 	right: 0;
 	max-width: 350px;
-	z-index: 999;
+	z-index: 9999;
 	font-family: lato;
 }
 
-#points{
-	color: white;
-	font-size: 30px;
-	position: fixed;
-	border-width: 3px;
-	background-color: #ff0000;
-	opacity: 70%;
-	border-style: solid;
-	padding: 7px;
-	top: 0;
-	right: 0;
-	max-width: 350px;
-	z-index: 999;
-	font-family: lato;
-}
-
-#tempsRestant{
-	color: white;
-	font-size: 30px;
-	position: fixed;
-	border-width: 3px;
-	background-color: #ff0000;
-	opacity: 70%;
-	border-style: solid;
-	padding: 7px;
-	bottom: 0;
-	right: 0;
-	max-width: 350px;
-	z-index: 999;
-	font-family: lato;
-}
-
-#nomPays, #nomPays0, #nomPays1 {
+#nomPays, #nomPays0{
 	color: white;
 	font-size: 30px;
 	position: fixed;
@@ -184,7 +152,7 @@ legend {
 	font-family: lato;
 }
 
-#test, #world0, #world1 {
+#test, #world0 {
 	background-color: #1f1f1f;
 }
 

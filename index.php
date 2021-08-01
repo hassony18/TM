@@ -1,6 +1,10 @@
 <?php
 	require "header.php";
 	require "backend/ranking.backend.php";
+	if (session_status() === PHP_SESSION_NONE) {
+		session_start();
+	}
+	$_SESSION["user_page"] = "index.php";
 ?>
 
 <!-- setup custom login button -->

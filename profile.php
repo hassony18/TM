@@ -1,16 +1,20 @@
 <?php 
 	require 'header.php';
 	include 'db/config.php';
-
 	
 	if (session_status() === PHP_SESSION_NONE) {
 		session_start();
 	}
+	$_SESSION["user_page"] = "profile.php";
 
-	if (isset($_GET["u"])) {
+	if (isset($_GET["u"]) && !empty($_GET["u"])) {
 		global $conn;
 		$userID = $_GET["u"];
-		$stmt = $conn->prepare('SELECT * FROM users WHERE id = ?');
+		$_SESSION["user_page"] = "profile.php?u=".$_GET["u"];
+		$stmt = $conn->prepare('SELECT * FROM users INNER JOIN activity ON users.id = activity.id WHERE users.id = ?');
+		if ($stmt === FALSE) {
+			die ("Mysql Error: " . $conn->error);
+		}
 		$stmt->bind_param('s', $userID);
 		$stmt->execute();
 		$result = $stmt->get_result();
@@ -45,6 +49,7 @@
 		<?php echo "<img src='".$data["user_image"]."' id='profile_picture'>" ?>
 		<br><br><br>
 		<h1>Bienvenue au profil de <?php echo $data["first_name"] ?>! <span style="float: right;">date de création du compte: <?php echo date("d-m-Y, H:i:s", strtotime($data["date"])); ?></span></h1>
+		<h1><span style="float: right;">dernière activité de l'utilisateur: <?php echo date("d-m-Y, H:i:s", strtotime($data["last_activity"])); ?> à la page: <?php echo $data["page"]; ?></span></h1>
 		<br><br><br>
 		<h2>ici tu peux trouver ses progrès d'apprentissage:</h2>
 		<br><br><br>

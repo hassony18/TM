@@ -1,6 +1,7 @@
 <?php 
 	require 'header.php';
 	include 'db/config.php';
+	$_SESSION["user_page"] = "search.php";
 ?>
 
 <link rel="stylesheet" href="styles/search.css" />
