@@ -76,7 +76,7 @@ THE SOFTWARE.
 -->
 <p id="nomPays"></p>
 
-<svg id="svg-id" version="1.2" viewbox="1100 350 500 200" width="2000" height="857" xmlns="http://www.w3.org/2000/svg">
+<svg id="svg-id" version="1.2" viewbox="1100 350 500 200" width="1519" height="857" xmlns="http://www.w3.org/2000/svg">
 	<g class="svg-pan-zoom_viewport" fill="none" transform="matrix(2,0,0,2,0,0)" style="transform: matrix(2, 0, 0, 2, 0, 0);">
 	<g onclick="direPays(id)" id="Afghanistan">
 		<path d="M1383 261.6l1.5 1.8-2.9 0.8-2.4 1.1-5.9 0.8-5.3 1.3-2.4 2.8 1.9 2.7 1.4 3.2-2 2.7 0.8 2.5-0.9 2.3-5.2-0.2 3.1 4.2-3.1 1.7-1.4 3.8 1.1 3.9-1.8 1.8-2.1-0.6-4 0.9-0.2 1.7-4.1 0-2.3 3.7 0.8 5.4-6.6 2.7-3.9-0.6-0.9 1.4-3.4-0.8-5.3 1-9.6-3.3 3.9-5.8-1.1-4.1-4.3-1.1-1.2-4.1-2.7-5.1 1.6-3.5-2.5-1 0.5-4.7 0.6-8 5.9 2.5 3.9-0.9 0.4-2.9 4-0.9 2.6-2-0.2-5.1 4.2-1.3 0.3-2.2 2.9 1.7 1.6 0.2 3 0 4.3 1.4 1.8 0.7 3.4-2 2.1 1.2 0.9-2.9 3.2 0.1 0.6-0.9-0.2-2.6 1.7-2.2 3.3 1.4-0.1 2 1.7 0.3 0.9 5.4 2.7 2.1 1.5-1.4 2.2-0.6 2.5-2.9 3.8 0.5 5.4 0z" id="AF" name="Afghanistan">
@@ -1447,7 +1447,7 @@ THE SOFTWARE.
 -->
 <p id="nomPays0"></p>
 <p id="nombrePays"></p>
-<svg id="svg-id0" version="1.2" viewbox="1100 350 500 200" width="2000" height="857" xmlns="http://www.w3.org/2000/svg">
+<svg id="svg-id0" version="1.2" viewbox="1100 350 500 200" width="1519" height="857" xmlns="http://www.w3.org/2000/svg">
 	<g class="svg-pan-zoom_viewport" fill="none" transform="matrix(2,0,0,2,0,0)" style="transform: matrix(2, 0, 0, 2, 0, 0);">
 	<g onclick="testPays0(id)" id="Afghanistan">
 		<path d="M1383 261.6l1.5 1.8-2.9 0.8-2.4 1.1-5.9 0.8-5.3 1.3-2.4 2.8 1.9 2.7 1.4 3.2-2 2.7 0.8 2.5-0.9 2.3-5.2-0.2 3.1 4.2-3.1 1.7-1.4 3.8 1.1 3.9-1.8 1.8-2.1-0.6-4 0.9-0.2 1.7-4.1 0-2.3 3.7 0.8 5.4-6.6 2.7-3.9-0.6-0.9 1.4-3.4-0.8-5.3 1-9.6-3.3 3.9-5.8-1.1-4.1-4.3-1.1-1.2-4.1-2.7-5.1 1.6-3.5-2.5-1 0.5-4.7 0.6-8 5.9 2.5 3.9-0.9 0.4-2.9 4-0.9 2.6-2-0.2-5.1 4.2-1.3 0.3-2.2 2.9 1.7 1.6 0.2 3 0 4.3 1.4 1.8 0.7 3.4-2 2.1 1.2 0.9-2.9 3.2 0.1 0.6-0.9-0.2-2.6 1.7-2.2 3.3 1.4-0.1 2 1.7 0.3 0.9 5.4 2.7 2.1 1.5-1.4 2.2-0.6 2.5-2.9 3.8 0.5 5.4 0z" id="AF" name="Afghanistan">
@@ -2789,7 +2789,7 @@ THE SOFTWARE.
 <p id="nomPays1"></p>
 <p id="tempsRestant"></p>
 <p id="points"></p>
-<svg id="svg-id1" version="1.2" viewbox="1100 350 500 200" width="2000" height="857" xmlns="http://www.w3.org/2000/svg">
+<svg id="svg-id1" version="1.2" viewbox="1100 350 500 200" width="1519" height="857" xmlns="http://www.w3.org/2000/svg">
 	<g class="svg-pan-zoom_viewport" fill="none" transform="matrix(2,0,0,2,0,0)" style="transform: matrix(2, 0, 0, 2, 0, 0);">
 	<g onclick="testPays1(id)" id="Afghanistan">
 		<path d="M1383 261.6l1.5 1.8-2.9 0.8-2.4 1.1-5.9 0.8-5.3 1.3-2.4 2.8 1.9 2.7 1.4 3.2-2 2.7 0.8 2.5-0.9 2.3-5.2-0.2 3.1 4.2-3.1 1.7-1.4 3.8 1.1 3.9-1.8 1.8-2.1-0.6-4 0.9-0.2 1.7-4.1 0-2.3 3.7 0.8 5.4-6.6 2.7-3.9-0.6-0.9 1.4-3.4-0.8-5.3 1-9.6-3.3 3.9-5.8-1.1-4.1-4.3-1.1-1.2-4.1-2.7-5.1 1.6-3.5-2.5-1 0.5-4.7 0.6-8 5.9 2.5 3.9-0.9 0.4-2.9 4-0.9 2.6-2-0.2-5.1 4.2-1.3 0.3-2.2 2.9 1.7 1.6 0.2 3 0 4.3 1.4 1.8 0.7 3.4-2 2.1 1.2 0.9-2.9 3.2 0.1 0.6-0.9-0.2-2.6 1.7-2.2 3.3 1.4-0.1 2 1.7 0.3 0.9 5.4 2.7 2.1 1.5-1.4 2.2-0.6 2.5-2.9 3.8 0.5 5.4 0z" id="AF" name="Afghanistan">
@@ -4161,13 +4161,7 @@ THE SOFTWARE.
             }
           }, animationStepTime)
         }
-
-        var button = document.getElementById("animate")
-        button.addEventListener("click", function() {
-          // Pan by any values from -80 to 80
-          customPanBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
-        });
-      };</script>
+      }</script>
       <script type="text/javascript">
       // Don't use window.onLoad like this in production, because it can only listen to one function.
       function leZoom0() {
@@ -4201,13 +4195,7 @@ THE SOFTWARE.
             }
           }, animationStepTime)
         }
-
-        var button = document.getElementById("animate")
-        button.addEventListener("click", function() {
-          // Pan by any values from -80 to 80
-          customPanBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
-        });
-      };</script>
+      }</script>
       <script type="text/javascript">
       // Don't use window.onLoad like this in production, because it can only listen to one function.
       function leZoom1() {
@@ -4241,13 +4229,7 @@ THE SOFTWARE.
             }
           }, animationStepTime)
         }
-
-        var button = document.getElementById("animate")
-        button.addEventListener("click", function() {
-          // Pan by any values from -80 to 80
-          customPanBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
-        });
-      };</script>
+      }</script>
 	<script type="text/javascript">
     document.getElementById("test").style.display = "none"
 	document.getElementById("world0").style.display = "none" 
@@ -4255,7 +4237,3 @@ THE SOFTWARE.
     </script>
 
 </body>
-
-<?php 
-	require 'footer.php';
-?>

@@ -1,12 +1,3 @@
-
-*{
-  margin: 0;
-  padding: 0;
-  user-select: none;
-  box-sizing: border-box;
-}
-
-
 @-webkit-keyframes bganim {
     0% {
         background-position: 0 0;
@@ -57,6 +48,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    z-index: -99;
 }
 
 #notification-zone .notification{

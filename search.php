@@ -26,10 +26,9 @@
 		$stmt->bind_param('sss', $searchResult, $searchResult, $searchResult);
 		$stmt->execute();
 		$result = $stmt->get_result();
-		$data = $result->fetch_assoc();
-		if ($data && !empty($data)) {
+		if ($result && !empty($result)) {
 			$num = 0;
-			while($row = $result->fetch_array()) { 
+			while($row = $result->fetch_assoc()) {
 				$num = $num + 1;
 				echo '<script>
 				var a = document.createElement("a")
@@ -43,7 +42,7 @@
 				h.prepend(img)
 				document.getElementById("results").append(a)
 			</script>';
-			}
+			} 
 			echo '<script>
 			var h = document.createElement("h1")
 			h.innerHTML = "total de '.$num.' résultat(s) trouvé(s):"
