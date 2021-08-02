@@ -18,3 +18,4 @@ jobs:
             - .git*/**
             - **/vendor/**
             - *.png
+            
