@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
       - name: Install dependencies
-        run: composer require google/apiclient:^2.10
+        run: composer require google/apiclient
       #- name: Build dependencies
        # run: npm run build
       - name: Archive production artifact
@@ -28,7 +28,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
       - name: Download artifact
-        uses: actions/download-artifact@main
+        uses: actions/download-artifact@v2.0.10
         with: 
           name: dist
           path: dist
