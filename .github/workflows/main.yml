@@ -35,6 +35,6 @@ jobs:
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          server: 162.0.217.31
-          username: github@swisslearns.ch
+          server: ${{ secrets.ftp_server }}
+          username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
