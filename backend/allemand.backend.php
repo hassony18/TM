@@ -1,6 +1,6 @@
 <?php
 
-include_once $_SERVER['DOCUMENT_ROOT']."/TM/backend/score.backend.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php";
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -13,7 +13,7 @@ if (!function_exists('str_contains')) {
     }
 }
 
-$content = file_get_contents("http://localhost/TM/data/allemand.json");
+$content = file_get_contents("http://localhost/data/allemand.json");
 
 $baseVocTable = json_decode($content, true);
     

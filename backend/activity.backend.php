@@ -1,5 +1,5 @@
 <?php
-    include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
+    include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }

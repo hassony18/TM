@@ -1,7 +1,7 @@
 <?php
 
-	require_once $_SERVER['DOCUMENT_ROOT'].'/TM/vendor/autoload.php';
-	include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
+	require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
+	include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
 
 	$jwt = new \Firebase\JWT\JWT;
 	$jwt::$leeway = 10;

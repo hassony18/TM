@@ -17,8 +17,21 @@
 CREATE DATABASE IF NOT EXISTS `tm` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `tm`;
 
+-- Dumping structure for table tm.activity
+CREATE TABLE IF NOT EXISTS `activity` (
+  `id` int(11) unsigned NOT NULL,
+  `last_activity` datetime NOT NULL,
+  `page` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table tm.activity: ~0 rows (approximately)
+/*!40000 ALTER TABLE `activity` DISABLE KEYS */;
+/*!40000 ALTER TABLE `activity` ENABLE KEYS */;
+
 -- Dumping structure for table tm.users
 CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(320) NOT NULL,
   `scoreAllemand` int(11) unsigned NOT NULL DEFAULT 0,
   `scoreAnglais` int(11) unsigned NOT NULL DEFAULT 0,
@@ -29,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `last_name` varchar(1000) NOT NULL,
   `user_image` varchar(1000) NOT NULL DEFAULT '0',
   `date` datetime NOT NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`email`),
+  PRIMARY KEY (`id`),
   KEY `email` (`email`),
   KEY `scoreAllemand` (`scoreAllemand`),
   KEY `scoreAnglais` (`scoreAnglais`),

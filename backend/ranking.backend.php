@@ -1,6 +1,6 @@
 <?php
 
-    include_once $_SERVER['DOCUMENT_ROOT']."/TM/db/config.php";
+    include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
     ob_start(); 
     date_default_timezone_set("Europe/Zurich");
     require_once 'cache.class.php';

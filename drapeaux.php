@@ -1,6 +1,6 @@
 <?php 
 	require 'header.php';
-	include_once $_SERVER['DOCUMENT_ROOT']."/TM/backend/score.backend.php";
+	include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php";
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
@@ -24,7 +24,7 @@
 </body>
 
 <?php
-	$content = file_get_contents("http://localhost/TM/data/pays.json");
+	$content = file_get_contents("data/pays.json");
 	$baseCountriesTable = json_decode($content, true);
 	
 	if (isset($_POST["submit_country"])) {
