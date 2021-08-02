@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Build ⛏
-    runs-on: ubentu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
@@ -23,7 +23,7 @@ jobs:
   deploy:
     name: Deploy 🚀
     needs: build
-    runs-on: ubentu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Checkout repository
         uses: actions/checkout@main
