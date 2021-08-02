@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Build ⛏
-    runs-on: windows-latest
+    runs-on: ubentu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
@@ -23,12 +23,12 @@ jobs:
   deploy:
     name: Deploy 🚀
     needs: build
-    runs-on: windows-latest
+    runs-on: ubentu-latest
     steps: 
       - name: Checkout repository
         uses: actions/checkout@main
       - name: Download artifact
-        uses: actions/download-artifact@v2.0.10
+        uses: actions/download-artifact
         with: 
           name: dist
           path: dist
