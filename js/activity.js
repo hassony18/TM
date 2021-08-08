@@ -5,7 +5,7 @@ function update_user_activity() {
         method:"POST",
         data:{action:action},
         success:function(data) {
-            console.log(data)
+            //console.log(data)
         }
     });
 }

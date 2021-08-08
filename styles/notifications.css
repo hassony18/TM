@@ -48,8 +48,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    pointer-events: none;
-    /*z-index: -99;*/
+	pointer-events: none;
+    z-index: 999999999;
 }
 
 #notification-zone .notification{

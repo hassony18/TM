@@ -8,7 +8,7 @@ body {
     background-color: #f8f9fe;
 }
 
-button, input[type=submit] {
+input[type=submit], button {
 	border-radius: 25px;
 	background-color: crimson;
 	border: none;
@@ -47,12 +47,12 @@ button:hover, button:active, input[type=submit]:hover, input[type=submit]:active
     display:block;
 }
 
-input[type=number]:focus, input[type=text]:focus {
+.input_text:focus, .input_text:active {
 	border-bottom: 2px solid crimson;
     outline: none !important;
 }
 
-input[type=number], input[type=text] {
+.input_text {
 	background: transparent;
 	color: crimson;
 	border-top-style: hidden;
@@ -84,10 +84,29 @@ input[type=number], input[type=text] {
     background-color: #29323c;
 }
 
-#allemand_apprentissage_container {
-	margin-top: 100px;
+/* Media Query For Phone */
+@media only screen and (min-width: 200px) { /*768px*/
+	#allemand_apprentissage_container {
+		margin-top: 30%;
+	}
 }
+/* E
 
+/* Media Query For Tablet */
+@media only screen and (min-width: 600px) { /*768px*/
+	#allemand_apprentissage_container {
+		margin-top: 10%;
+	}
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1600px) {
+	#allemand_apprentissage_container {
+		margin-top: 10%;
+	}
+}
+/* End  Media Query For Desktop */
 
 
 

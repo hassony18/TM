@@ -5,7 +5,8 @@
 	padding: 0;
 }
 
-button {
+
+input[type=submit] {
 	border-radius: 25px;
 	background-color: crimson;
 	border: none;
@@ -19,7 +20,7 @@ button {
     display:block;
 }
 
-button:hover {
+input[type=submit]:hover, input[type=submit]:active {
 	background-color: transparent;
 	color: crimson;
 }
@@ -36,8 +37,11 @@ button:hover {
     background-color: #29323c;
 }
 
-/* cool white background */
-#choose {
+h1 {
+	text-align: center;
+}
+
+#map_container {
 	background-color: white;
 	border-radius: 25px;
 	margin: 100px auto;
@@ -45,12 +49,6 @@ button:hover {
 	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 	padding: 10px;
 }
-
-legend {
-	font-size: 20px;
-	color: crimson;
-}
-
 
 
 /* RADIO STYLING */
@@ -119,40 +117,7 @@ legend {
 	background: white;
 }
 
-
-#point{
-	color: white;
-	font-size: 30px;
-	position: fixed;
-	border-width: 3px;
-	background-color: #ff0000;
-	opacity: 70%;
-	border-style: solid;
-	padding: 7px;
-	bottom: 0;
-	right: 0;
-	max-width: 350px;
-	z-index: 9999;
-	font-family: lato;
-}
-
-#nomPays, #nomPays0{
-	color: white;
-	font-size: 30px;
-	position: fixed;
-	border-width: 3px;
-	background-color: #ff0000;
-	opacity: 70%;
-	border-style: solid;
-	padding: 7px;
-	bottom: 0;
-	left: 0;
-	max-width: 350px;
-	z-index: 999;
-	font-family: lato;
-}
-
-#test, #world0 {
+#map {
 	background-color: #1f1f1f;
 }
 

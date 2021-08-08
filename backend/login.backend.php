@@ -3,9 +3,14 @@
 	require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
 	include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
 
-	$jwt = new \Firebase\JWT\JWT;
-	$jwt::$leeway = 10;
-
+	//$jwt = new \Firebase\JWT\JWT;
+	//$jwt::$leeway = 10;
+	
+	$verifiyAccess = array(
+		"hassonyalobaidy01@gmail.com" => true,
+		"scarpettajordan@gmail.com" => true
+	);
+	
 	if (!isset($_POST["idtoken"])) {
 		exit();
 	}
@@ -15,6 +20,10 @@
 	$client = new Google_Client(['client_id' => $CLIENT_ID]); 
 	$payload = $client->verifyIdToken($id_token);
 	if ($payload) {
+		
+		if (!$verifiyAccess[$payload["email"]]) {
+			die();
+		}
 
 		//log in
  		session_start();
@@ -25,12 +34,6 @@
 		$_SESSION['email'] = $payload["email"];
 		$_SESSION['user_image'] = $payload["picture"];
 		
-				
-		$email = mysqli_real_escape_string($conn, $payload["email"]);
-		$first = mysqli_real_escape_string($conn, $payload["given_name"]);
-		$last_name = mysqli_real_escape_string($conn, $payload["family_name"]);
-		$user_image = mysqli_real_escape_string($conn, $payload["picture"]);
-
 		$stmt = $conn->prepare('SELECT id from users WHERE email= ?');
 		$stmt->bind_param('s', $_SESSION['email']);
 		$stmt->execute();
@@ -41,14 +44,10 @@
 		} else {
 			$sql = "UPDATE users SET first_name = ?, last_name = ?, user_image = ? WHERE email = ?;";
 		}
-		mysqli_query($conn, $sql);
-		$stmt = mysqli_stmt_init($conn);
-		if (!mysqli_stmt_prepare($stmt, $sql)) {
-			echo "SQL ERROR";
-		} else {
-			mysqli_stmt_bind_param($stmt, "ssss", $first, $last_name, $user_image, $email);
-			mysqli_stmt_execute($stmt);
-		}
+		
+		$stmt = $conn->prepare($sql);
+		$stmt->bind_param('ssss', $payload["given_name"], $payload["family_name"], $payload["picture"], $payload["email"]);
+		$stmt->execute();
 		if (empty($data)) {
 			$stmt = $conn->prepare('SELECT id from users WHERE email= ?');
 			$stmt->bind_param('s', $_SESSION['email']);

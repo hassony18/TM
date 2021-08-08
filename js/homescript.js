@@ -13,7 +13,7 @@ if (headerList) {
 window.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
 	var path = window.location.pathname;
-	if (path.search("index.php") == -1) {
+	if (path.search("index.php") == -1 && !matchExact(path, "/")) {
 		return false;
 	}
 	if (scroll_position > 200) {
@@ -22,6 +22,11 @@ window.addEventListener('scroll', () => {
 		header.style.backgroundColor = 'transparent';
 	}
 });
+
+function matchExact(r, str) {
+   var match = str.match(r);
+   return match && str === match[0];
+}
 
 
 function dropdownprofile(event) {  document.getElementById("myDropdown").classList.add("show"); }

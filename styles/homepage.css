@@ -711,7 +711,7 @@ thead {
 /* End Keyframes */
 
 /* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) { /*768px*/
 	.cta {
 		font-size: 2.5rem;
 		padding: 20px 60px;
@@ -816,7 +816,7 @@ thead {
 /* End Media Query For Tablet */
 
 /* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1600px) {
 	/* header */
 	#header .headerList {
 		display: none;
@@ -832,7 +832,7 @@ thead {
 		display: inline-block;
 	}
 	#header .nav-list ul li a {
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 	}
 	#header .nav-list ul a:after {
 		display: none;

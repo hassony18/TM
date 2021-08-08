@@ -1,3 +1,8 @@
+<?
+	define("showChatPHP", TRUE);
+	require_once "chat.php"
+?>
+
 <footer>
 	  <section id="footer">
 		<div class="footer container">
@@ -24,7 +29,6 @@
 </footer>
 	<script src="js/homescript.js"></script>
 	<script src="js/activity.js"></script>
-	
 
 </body>
 </html>

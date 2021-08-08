@@ -1,0 +1,688 @@
+[08-Aug-2021 14:48:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 14:48:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/swisicfc/public_html/backend/chat.backend.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/swisicfc/public_html/backend/chat.backend.php on line 23
+[08-Aug-2021 15:13:12 UTC] PHP Notice:  Undefined index: francaisOuAllemand in /home/swisicfc/public_html/backend/allemand.backend.php on line 49
+[08-Aug-2021 15:13:12 UTC] PHP Notice:  Undefined index: choixMultiplesOuEcrire in /home/swisicfc/public_html/backend/allemand.backend.php on line 50
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:58 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:14:59 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:00 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:01 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:02 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:03 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:04 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:05 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:07 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:08 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:09 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:10 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:11 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:12 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:13 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:14 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:15 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:16 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:17 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:18 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:19 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:20 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:21 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:22 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:23 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:24 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:25 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:26 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:27 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:28 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:29 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:30 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:31 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:32 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:33 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:46 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:47 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:48 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:48 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:48 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:15:48 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:34 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:35 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:36 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:37 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:38 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:39 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:40 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:41 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:42 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:43 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:44 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40
+[08-Aug-2021 15:16:45 UTC] PHP Parse error:  syntax error, unexpected 'array_push' (T_STRING) in /home/swisicfc/public_html/backend/chat.backend.php on line 40

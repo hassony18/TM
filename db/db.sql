@@ -14,8 +14,8 @@
 
 
 -- Dumping database structure for tm
-CREATE DATABASE IF NOT EXISTS `tm` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `tm`;
+CREATE DATABASE IF NOT EXISTS `swisicfc_tm` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `swisicfc_tm`;
 
 -- Dumping structure for table tm.activity
 CREATE TABLE IF NOT EXISTS `activity` (

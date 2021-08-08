@@ -50,6 +50,7 @@
         global $topItalian;
         global $topFlags;
         global $topMap;
+		global $conn;
 
         $fetchedTopGerman = $cache->retrieve('topGerman');
         $topGerman = json_decode($fetchedTopGerman, true);
@@ -65,6 +66,11 @@
 
         $fetchedTopMap = $cache->retrieve('topMap');
         $topMap = json_decode($fetchedTopMap, true);
+		
+		// supprimer les messages tous les 10 jours. (A verifier toutes les 3 heures)
+		$statement = $conn->prepare("DELETE FROM messages WHERE DATE(DATE) < DATE(NOW() - INTERVAL 10 DAY)");
+		$statement->execute();
+		
     }
 
     

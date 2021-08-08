@@ -13,7 +13,7 @@ if (!function_exists('str_contains')) {
     }
 }
 
-$content = file_get_contents("http://localhost/data/allemand.json");
+$content = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data/allemand.json");
 
 $baseVocTable = json_decode($content, true);
     
@@ -57,9 +57,8 @@ function prepareVocSession() {
             array_push($selectedVocNums, $key);
         }
     }
-
+	var_dump($selectedVocNums);
     if (empty($selectedVocNums)) {
-        echo '<script>alert("Tu dois choisir au moins un chapitre.")</script>';
         header("Location: ../allemand.php?error=chooseChapter");
         exit();
     }

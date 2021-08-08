@@ -149,7 +149,7 @@
 			<h1 id="shownVocText_ecrire">WORD HERE</h1>
 			<h1 id="words_counter_ecrire">COUNTER</h1>
 			<label for="textAEcrire">Traduction:</label>
-			<input type="text" id="textAEcrire" name="textAEcrire" autofocus>
+			<input type="text" class="input_text" id="textAEcrire" name="textAEcrire" autofocus>
 			<input type="submit" name="submit_ecrire_test" value="Soumettre">
 			<div id="keyboard_container">
 				<table style="width:80%; margin-left: 10%;">

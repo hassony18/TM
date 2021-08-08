@@ -9,7 +9,8 @@
 	<meta name="google-signin-client_id" content="467170103073-1t65koimd2m4jd4npjtoopmdtrboec6u.apps.googleusercontent.com">
 	<title>Swiss Learns</title>
 	<link rel="stylesheet" href="styles/homepage.css">
-	<link rel="icon" type="image/png" href="styles/img/favicon.png"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<script data-ad-client="ca-pub-6364569692738849" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
 	<header>

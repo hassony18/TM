@@ -5,6 +5,15 @@
 		session_start();
 	}
 	$_SESSION["user_page"] = "index.php";
+	
+	if (isset($_GET["error"])) {
+		$error = $_GET["error"];
+		if ($error == "anglais") {
+			echo "<script>showNotification('error', 'Ce programme n\'est actuellement pas disponible.');</script>";
+		} elseif ($error == "italien") {
+			echo "<script>showNotification('error', 'Ce programme n\'est actuellement pas disponible.');</script>";
+		}
+	}
 ?>
 
 <!-- setup custom login button -->
@@ -19,7 +28,7 @@
 					auth2 = gapi.auth2.init({
 						client_id: '467170103073-1t65koimd2m4jd4npjtoopmdtrboec6u.apps.googleusercontent.com',
 						cookiepolicy: 'single_host_origin',
-						//scope: 'https://www.googleapis.com/auth/userinfo.profile'
+						//scope: 'https://www.googleapis.com/auth/user.addresses.read',
 					});
 					attachSignin(document.getElementById('customGoogleButton'));
 					});
@@ -36,7 +45,7 @@
 					xhr.open('POST', 'backend/login.backend.php'); // link
 					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 					xhr.onload = function() {
-						console.log('Signed in:');
+						console.log('Signed in:' + xhr.responseText);
 						window.location.reload();
 					};
 					xhr.send('idtoken=' + id_token);
@@ -64,7 +73,7 @@
 							<a href="#learn" type="button" class="cta">Lancer</a>';
 						} else {
 							echo '
-							<h1>Connectes-toi<span></span></h1>
+							<h1>Connecte-toi<span></span></h1>
 							<h1>Afin de<span></span></h1>
 							<h1>Commencer à apprendre<span></span></h1>
 							<div id="customGoogleButton" class="customGPlusSignIn">Inscris-toi</div>
@@ -264,28 +273,32 @@
 								</div>
 							</div>
 						</a>
-						<div class="learn-item">
-							<div class="learn-info">
-								<h1>Vocabulaire d\'Anglais</h1>
-								<h2>"Self education is the only kind of education there is."</h2>
-								<p>Veux-tu bien apprendre le vocabulaire qui te permettra de voyager autour de globe? Si oui, alors le programme sera parfait pour t\'aider à atteindre le vocabulaire nécessaire à un niveau B2.</p>
+						<a href="index.php?error=anglais">
+							<div class="learn-item">
+								<div class="learn-img">
+									<img src="./styles/img/anglais.png" alt="img">
+								</div>
+								
+								<div class="learn-info">
+									<h1>Vocabulaire d\'Anglais</h1>
+									<h2>"Self education is the only kind of education there is."</h2>
+									<p>Veux-tu bien apprendre le vocabulaire qui te permettra de voyager autour de globe? Si oui, alors le programme sera parfait pour t\'aider à atteindre le vocabulaire nécessaire à un niveau B2.</p>
+								</div>
 							</div>
-							
-							<div class="learn-img">
-								<img src="./styles/img/anglais.png" alt="img">
+						</a>
+						<a href="index.php?error=italien">
+							<div class="learn-item">
+								<div class="learn-info">
+									<h1>Vocabulaire d\'Italien</h1>
+									<h2>"Il segreto per andare avanti è iniziare."</h2>
+									<p>Souhaites-tu connaître la langue de la romance? Enfin, surtout de pouvoir commander tes plats aux pizzerrias les plus proches de chez toi de telle sorte à ce que ta commande soit comprise. Si oui, alors utilises ce programme.</p>
+								</div>
+								
+								<div class="learn-img">
+									<img src="./styles/img/italy.png" alt="img">
+								</div>
 							</div>
-						</div>
-						<div class="learn-item">
-							<div class="learn-info">
-								<h1>Vocabulaire d\'Italien</h1>
-								<h2>"Il segreto per andare avanti è iniziare."</h2>
-								<p>Souhaites-tu connaître la langue de la romance? Enfin, surtout de pouvoir commander tes plats aux pizzerrias les plus proches de chez toi de telle sorte à ce que ta commande soit comprise. Si oui, alors utilises ce programme.</p>
-							</div>
-							
-							<div class="learn-img">
-								<img src="./styles/img/italy.png" alt="img">
-							</div>
-						</div>
+						</a>
 						<a href="carte.php">
 							<div class="learn-item">
 								<div class="learn-img">
@@ -342,11 +355,11 @@
 		  <div><h1 class="section-title">Contact <span>info</span></h1></div>
 		  <div class="contact-items">
 			<div class="contact-item">
-			  <div class="icon"><img src="styles/img/phone.png"/></div>
+			  <div class="icon"><img src="styles/img/account.png"/></div>
 			  <div class="contact-info">
-				<h1>Natel</h1>
-				<h2>+41 764414991</h2>
-				<h2>+41 784067710</h2>
+				<h1>Comptes</h1>
+				<a href="profile.php?u=1"><h2>Hassan Al-Obaidi</h2></a>
+				<a href="profile.php?u=2"><h2>Jordan Scarpetta</h2></a>
 			  </div>
 			</div>
 			<div class="contact-item">
