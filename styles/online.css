@@ -20,6 +20,7 @@
 	height: 750px;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 	padding: 10px;
+	overflow: auto;
 }
 
 .profile_picture {
@@ -36,7 +37,6 @@
 	display: flex;
 	align-items: center;
 }
-
 
 #results {
 	width: 100%;
@@ -59,6 +59,7 @@
 	box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
 }
 
+
 @media(max-width: 753px){
 	#results{
 	  max-width: 700px;
@@ -77,10 +78,50 @@
 	}
   }
 
-/* FOOTER */
-
+/* footer */
 .footer{
-	padding-top: 4px !important;
-	padding-bottom: 8px !important;
-	margin-top: 360px !important;
+	position: absolute;
+	bottom:0;
+	width:100%;
+	height:60px;   /* Height of the footer */
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
+
+
+/* Media Query For Phone */
+@media only screen and (min-width: 200px) { /*768px*/
+	#online_container {
+		margin-top: 30%;
+	}
+	
+	.footer {
+		position: absolute;
+	}
+}
+/* E
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 600px) { /*768px*/
+
+	#online_container {
+		margin-top: 20%;
+	}
+	
+	.footer {
+		position: absolute;
+	}
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1600px) {
+	#online_container {
+		margin-top: 10%;
+	}
+	
+	.footer {
+		position: relative;
+		bottom:-50px;
+	}
+}
+/* End  Media Query For Desktop */

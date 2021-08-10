@@ -61,7 +61,7 @@ function sendMessage() {
 }
 
 
-// show users list
+// show messages in a conversation
 
 setInterval(function(){ 
 	if (chattingWithUser) {
@@ -114,31 +114,31 @@ function searchFunction() {
 
 // show users list
 
-fetch_user_login_data_chat();
 setInterval(function(){ 
 	if (shownChat) {
 		fetch_user_login_data_chat(); 
 	}
 }, 3000);
 function fetch_user_login_data_chat() {
-	var action = "fetch_data";
+	var action = "fetch_users";
 	$.ajax({
-		url: "backend/activity.backend.php",
+		url: "backend/chat.backend.php",
 		method:"POST",
 		data:{action:action},
 		success:function(data){ showOnlineListChat(JSON.parse(data));}
 	});
 }
 function showOnlineListChat(data) {
-	//var num = data[0]
-	var table = data[1]
-	var myID = data[2]
+	var table = data[0]
+	var myID = data[1]
 	document.getElementById("chatbox_textArea_search_users").innerHTML = "";
 	for (let i = 0; i < table.length; i++) {
 		if (myID != table[i]["id"]) {
+			//console.log(table[i]["lastActive"])
 			usersTable[table[i]["id"]] = {
 				"name": table[i]["firstName"],
 				"image": table[i]["image"],
+				"lastActive": table[i]["lastActive"],
 			}
 			var div = document.createElement("div")
 			var img = document.createElement("img")
@@ -146,9 +146,12 @@ function showOnlineListChat(data) {
 			div.setAttribute("class", "chatbox_search_people")
 			div.setAttribute("id", table[i]["id"])
 			div.setAttribute('onclick','showChat(id)')
+			if (table[i]["lastActive"] < 5) {
+				div.classList.add("user_online")
+			}
 			img.src = table[i]["image"]
 			img.style.float = "left";
-			img.setAttribute("class", "chatbox_profile_picture")
+			img.classList.add("chatbox_profile_picture")
 			h.innerHTML = table[i]["firstName"]
 			div.append(img)
 			div.append(h)

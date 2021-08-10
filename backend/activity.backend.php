@@ -17,25 +17,31 @@
                 die ("Mysql Error: " . $conn->error);
             }
            } elseif ($_POST["action"] == "fetch_data") {
-                $statement = $conn->prepare("SELECT users.id, users.first_name, users.last_name, users.user_image, activity.`page` FROM users INNER JOIN activity ON activity.id = users.id WHERE activity.last_activity > DATE_SUB(NOW(), INTERVAL 5 SECOND)");
+                $statement = $conn->prepare("SELECT users.id, users.first_name, users.last_name, users.user_image, activity.`page`, activity.last_activity FROM users INNER JOIN activity ON activity.id = users.id WHERE activity.last_activity > DATE_SUB(NOW(), INTERVAL 5 SECOND)");
                 $statement->execute();
                 $result = $statement->get_result();
                 //$result = $statement->fetchAll();
                 if ($statement === FALSE) {
                     die ("Mysql Error: " . $conn->error);
                 }
-                $count = mysqli_affected_rows($conn);
                 $tempArray = array();
+				$i = 0;
                 foreach($result as $row) {
-                    array_push($tempArray, array(
-                        "image" => $row["user_image"],
-                        "firstName" => $row["first_name"],
-                        "id" => $row["id"],
-                        "page" => $row["page"]
-                    ));
+					$time = new DateTime( $row["last_activity"] );
+					$now = new DateTime( date("Y-m-d H:i:s", STRTOTIME(date('h:i:sa'))) );
+					$diff = $now->getTimestamp() - $time->getTimestamp();
+					if ($diff <= 5) {
+						$i = $i + 1;
+						array_push($tempArray, array(
+							"image" => $row["user_image"],
+							"firstName" => $row["first_name"],
+							"id" => $row["id"],
+							"page" => $row["page"]
+						));
+					}
                 }
                 $tableToSend = array();
-                array_push($tableToSend, $count);
+                array_push($tableToSend, $i);
                 array_push($tableToSend, $tempArray);
 				array_push($tableToSend, $_SESSION["user_id"]);
                 

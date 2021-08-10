@@ -28,6 +28,11 @@
 		var num = data[0]
 		var table = data[1]
 		document.getElementById("online_container").innerHTML = "";
+		var h = document.createElement("h1")
+		h.innerHTML = "total de "+num+" personne(s) en ligne:"
+		document.getElementById("online_container").append(h)
+		
+		
 		var div = document.createElement("div")
 		div.setAttribute("id", "results")
 		document.getElementById("online_container").append(div)
@@ -43,10 +48,6 @@
 			h.prepend(img)
 			document.getElementById("results").append(a)
 		}
-
-		var h = document.createElement("h1")
-		h.innerHTML = "total de "+num+" personne(s) en ligne:"
-		document.getElementById("results").prepend(h)
 	}
 </script>
 

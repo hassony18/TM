@@ -233,8 +233,8 @@
 							if ($stmt === FALSE) {
 								die ("Mysql Error: " . $conn->error);
 							}
-							$count = count($result);
-							echo '<h3>total: '.$count.'</h3>';
+							//$count = count($result);
+							//echo '<h3>total: '.$count.'</h3>';
 							foreach($result as $row) {
 								echo '<a href="profile.php?u='.$row["user_2"].'"><img class="pp_class" src="'.$row["user_image"].'">'.$row["first_name"].'</a>';
 							}
@@ -253,8 +253,8 @@
 							if ($stmt === FALSE) {
 								die ("Mysql Error: " . $conn->error);
 							}
-							$count = count($result);
-							echo '<h3>total: '.$count.'</h3>';
+							//$count = count($result);
+							//echo '<h3>total: '.$count.'</h3>';
 							foreach($result as $row) {
 								echo '<a href="profile.php?u='.$row["user_1"].'"><img class="pp_class" src="'.$row["user_image"].'">'.$row["first_name"].'</a>';
 							}

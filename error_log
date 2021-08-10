@@ -1,2 +1,15 @@
-[08-Aug-2021 15:20:29 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/swisicfc/public_html/profile.php on line 236
-[08-Aug-2021 15:20:29 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/swisicfc/public_html/profile.php on line 256
+[10-Aug-2021 09:21:35 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/swisicfc/public_html/carte.php on line 1436
+[10-Aug-2021 09:21:36 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/swisicfc/public_html/carte.php on line 1436
+[10-Aug-2021 09:25:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:25:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:26:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:26:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:26:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:28:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:28:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:31:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:31:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:31:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:31:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:33:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428
+[10-Aug-2021 09:33:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/carte.php:11) in /home/swisicfc/public_html/carte.php on line 1428

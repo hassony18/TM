@@ -1403,31 +1403,34 @@
 
 	<?php
 	
-	if (isset($_POST["userAnswer"])) {
-		verifyAnswer($_POST["userAnswer"]);
-	}
-	
-	function verifyAnswer($answer) {
-		if ($answer == $_SESSION["question"]) {
-			addScore("carte", 10);
-			echo "<script>showNotification('success', 'Bien joué!');</script>";
-		} else {
-			addScore("carte", -1);
-			echo "<script>showNotification('error', 'Aïe aïe! Tu as selectionné ".addslashes($_GET["response"])."');</script>";
-		}
-	}
-
 	
 	if (isset($_GET["success"])) {
 		$success = $_GET["success"];
 		if ($success == "learn") {
 			echo "<script>startLearning();</script>";
 		} elseif ($success == "test") {			
-			global $baseCountriesTable;
-			$rand_keys = array_rand($baseCountriesTable, 2);
-			$_SESSION["question"] = $baseCountriesTable[$rand_keys[0]]["name"];
-			echo "<script>startTest('".$_SESSION['question']."');</script>";
+			startNewQuiz();
 		}
+	}
+	
+	if (isset($_POST["userAnswer"])) {
+		verifyAnswer($_POST["userAnswer"]);
+	}
+
+	function verifyAnswer($answer) {
+		$correctAnswer = preg_replace('/_/', ' ', $_SESSION["question"]);
+		if ($answer == $correctAnswer) {
+			addScore("carte", 10);
+		} else {
+			addScore("carte", -1);
+		}
+	}
+	
+	function startNewQuiz() {
+		global $baseCountriesTable;
+		$rand_keys = array_rand($baseCountriesTable, 2);
+		$_SESSION["question"] = $baseCountriesTable[$rand_keys[0]]["name"];
+		echo "<script>startTest('".$_SESSION['question']."');</script>";
 	}
 	?>
 

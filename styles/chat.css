@@ -23,7 +23,14 @@
 	bottom: 10px;
 	width: 50px;
 	height: 50px;
+	z-index: 9999999;
 }
+
+.user_online:before{ 
+	content:url(img/online.png) ;
+	position: absolute; 
+	float: left;
+ }
 
 /*  container  */
 

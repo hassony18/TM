@@ -115,7 +115,7 @@
 		<div id="learningCardContainerBackground">
 			<form action="backend/allemand.backend.php" method="post"><input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←"></form>
 			<div id="cardContainer" class="cardContainer">
-				<div class="theCard">
+				<div class="theCard" onclick="">
 					<div class="theFront">
 						<h1 id="faceText">FACE</h1>
 					</div>

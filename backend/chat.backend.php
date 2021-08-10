@@ -39,5 +39,32 @@
 
 
 			}
-		}
+		}  elseif ($_POST["action"] == "fetch_users") {
+                $statement = $conn->prepare("SELECT users.id, users.first_name, users.last_name, users.user_image, activity.last_activity FROM users INNER JOIN friends ON friends.user_2 = users.id INNER JOIN activity ON friends.user_2 = activity.id WHERE user_1 = ?;");
+				$statement->bind_param('s', $_SESSION["user_id"]);
+                $statement->execute();
+                $result = $statement->get_result();
+                //$result = $statement->fetchAll();
+                if ($statement === FALSE) {
+                    die ("Mysql Error: " . $conn->error);
+                }
+                $count = mysqli_affected_rows($conn);
+                $tempArray = array();
+                foreach($result as $row) {
+					$time = new DateTime( $row["last_activity"] );
+					$now = new DateTime( date("Y-m-d H:i:s", STRTOTIME(date('h:i:sa'))) );
+					$diff = $now->getTimestamp() - $time->getTimestamp();
+                    array_push($tempArray, array(
+                        "image" => $row["user_image"],
+                        "firstName" => $row["first_name"],
+						"lastActive" => $diff,
+                        "id" => $row["id"],
+                    ));
+                }
+                $tableToSend = array();
+                array_push($tableToSend, $tempArray);
+				array_push($tableToSend, $_SESSION["user_id"]);
+                
+                echo json_encode($tableToSend);
+             }
 	}

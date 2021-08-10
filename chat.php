@@ -17,14 +17,14 @@
 			</div>
 			
 			<div id="chatbox_textArea_search_users">
-					Pas d'utilistateurs en ligne.
+					Pas d'amis.
 			</div>
 		</div>
 		
 	
 		<div id="chatbox_chatPanel">
 			<div class="chatbox_header">
-				<input type="text" id="returnToSearchButton" style="position:fixed; margin-top: 10px; margin-left:10px; z-index: 189;" onclick="returnToSearchUsers()" value="←">
+				<input type="text" id="returnToSearchButton" style="position: absolute; float: left; width: 50px; height: 70px; z-index: 9999;" onclick="returnToSearchUsers()" value="←">
 				<img style="margin-left: 50px;" src="" id="headerUserProfilePictureChatBox" class="chatbox_profile_picture">
 				<h1 id="userChatName"></h1>
 			</div>

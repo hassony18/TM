@@ -8,7 +8,8 @@
 	
 	$verifiyAccess = array(
 		"hassonyalobaidy01@gmail.com" => true,
-		"scarpettajordan@gmail.com" => true
+		"scarpettajordan@gmail.com" => true,
+		"hasan.albd@eduge.ch" => true
 	);
 	
 	if (!isset($_POST["idtoken"])) {
@@ -21,9 +22,9 @@
 	$payload = $client->verifyIdToken($id_token);
 	if ($payload) {
 		
-		if (!$verifiyAccess[$payload["email"]]) {
-			die();
-		}
+		//if (!$verifiyAccess[$payload["email"]]) {
+			//die();
+		//}
 
 		//log in
  		session_start();

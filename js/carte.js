@@ -16,16 +16,16 @@ function startTest(q) {
 	leZoom()
 	question = q
 	console.log(question)
-	showNotification("success", question.replaceAll("_", " "))
+	showNotification("success", "Cherche: '"+question.replaceAll("_", " ")+"'")
 }
 
 function clickCountry(id) {
 	var answer = id.replaceAll("_", " ")
 	if (question) {
 		sendAnswer(answer)
-		return true
+	} else {
+		showNotification("success", answer)
 	}
-	showNotification("success", answer)
 };
 
 function sendAnswer(answer) {
@@ -33,11 +33,17 @@ function sendAnswer(answer) {
 	xhr.open('POST', 'carte.php'); // link
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xhr.onload = function() {
-		console.log('response:' + xhr.responseText);
+		//console.log('response:' + xhr.responseText);
+		if (answer == question) {
+			showNotification("success", "Bravo!")
+		} else { 
+			showNotification("warning", "Tu as selectionné '"+answer+"'!")
+		}
+		setTimeout(function(){
+				window.location.href = 'carte.php?success=test'
+		}, 1000);
 	};
-	console.log(answer)
 	xhr.send('userAnswer=' + answer);
-	question = null;
 }
 
 
