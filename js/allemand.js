@@ -47,6 +47,16 @@ function insertText(e) {
 	document.getElementById("textAEcrire").value = text + "" + letter
 }
 
+function flipCard() {
+	var card = document.getElementById("flippingCard")
+	console.log(card.style.transform)
+	if (card.style.transform == "none" || card.style.transform == "") {
+		card.style.transform = "rotateY(180deg)";
+	} else {
+		card.style.transform = "none";
+	}
+}
+
 function onVocRadioValueChange() {
 	var checkedTest = document.getElementById("testRadio").checked;	
 	var checkedChoixMultiple = document.getElementById("radio_choix_multiple").checked;	

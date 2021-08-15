@@ -115,7 +115,7 @@
 		<div id="learningCardContainerBackground">
 			<form action="backend/allemand.backend.php" method="post"><input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←"></form>
 			<div id="cardContainer" class="cardContainer">
-				<div class="theCard" onclick="">
+				<div class="theCard" id="flippingCard" onclick="">
 					<div class="theFront">
 						<h1 id="faceText">FACE</h1>
 					</div>
@@ -131,6 +131,7 @@
 					</tr>
 				</table>
 				<button onclick="nextVoc('done')" type="button"> Fini! </button>
+				<button id="flipButton" onclick="flipCard()" type="button"> Flip! </button>
 			</div>
 		</div>
 
@@ -145,6 +146,8 @@
 		</form>
 		
 		<form action="backend/allemand.backend.php" method="post" id="writingContainer">
+			<!-- ENTER BUG FIX -->
+			<input type="submit" name="submit_ecrire_test" value="Soumettre" style="opacity: 0; float: left;" />
 			<input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←">
 			<h1 id="shownVocText_ecrire">WORD HERE</h1>
 			<h1 id="words_counter_ecrire">COUNTER</h1>

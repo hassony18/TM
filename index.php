@@ -93,8 +93,39 @@
 					<h1 class="section-title">Cla<span>ss</span>ement</h1>
 					<p>Voici l'endroit où tu trouveras les meilleures personnes de chaque programme! Arrives-tu à trouver ton pote dans cette liste? Pas de soucis! Tu peux le rattrapper en t'exerçant!</p>
 				</div>
+			
+				<div class="ranking-item">
+					<div class="icon"><img src="styles/img/total.png"></div> 
+					<h2>Top total</h2>
+					<table>
+						<thead>
+							<td>Top</td>
+							<td></td>
+							<td>Nom</td>
+							<td>Score</td>
+						</thead>
+						<?php
+
+							for ($i = 0; $i <= 2; $i++) { 
+								if (array_key_exists($i, $topTotal)) {
+									$fullName = $topTotal[$i]["firstName"]." ".$topTotal[$i]["lastName"];
+									$score = $topTotal[$i]["score"];
+									$img = $topTotal[$i]["image"];
+									$id = $topTotal[$i]["id"];
+								} else {
+									$fullName = "N/A";
+									$score = "N/A";
+									$img = "styles/img/user.png";
+									$id = "";
+								}
+								$num = $i + 1;
+								echo "<tr><td>".$num."-</td><td><img src='".$img."' id='profile_picture'></td><td><a href='./profile.php?u=".$id."'>".$fullName."</a></td><td>".$score."</td></tr>";
+							}
+						?>
+					</table>
+				</div>
+				
 				<div class="ranking-bottom">
-					<!-- List a faire -->
 					<div class="ranking-item">
 						<div class="icon"><img src="styles/img/german_flag.png"/></div> 
 						<h2>allemand</h2>
@@ -383,6 +414,14 @@
 	  </section>
 	  <!-- End Contact Section -->
 </body>
+
+<?php
+// easter egg
+	if (isset($_GET["easteregg"])) {
+		die(header("location: https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"));
+	}
+
+?>
 	
 <?php
 	require "footer.php";

@@ -291,6 +291,7 @@ p {
 #header .headerList.active .bar::after {
 	top: 0;
 }
+
 /* End Header section */
 
 /* google login button */
@@ -406,6 +407,7 @@ a {
 	max-width: 1500px;
 	margin: 0 auto;
 }
+
 #rankings .ranking-bottom {
 	display: flex;
 	align-items: center;
@@ -414,8 +416,10 @@ a {
 	margin-top: 50px;
 	width: 100%;
 }
+
+
 td {
-    padding: 0 15px;
+    padding: 0 8px;
 	font-size: 15px;
 }
 table {
@@ -449,13 +453,10 @@ thead {
 	opacity: .75;
 	z-index: -1;
 }
-#rankings .ranking-bottom .icon img {
-	width: 50px;
-	height: 50px;
+#rankings .icon img {
+	width: 25px;
+	height: 25px;
 	border-radius: 50px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
 }
 #rankings .ranking-item h2 {
 	font-size: 2rem;
@@ -616,6 +617,10 @@ thead {
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: .3s ease box-shadow;
 }
+#contact .contact-item img {
+	width: 80px;
+	height: 80px;
+}
 #contact .contact-item:hover {
 	box-shadow: 0px 0px 5px 0 #0000002c;
 }
@@ -673,7 +678,14 @@ thead {
 }
 #footer p {
 	color: white;
+	text-align: center;
 	font-size: 1.3rem;
+}
+
+/* footer */
+
+footer {
+  margin-top:auto; 
 }
 /* End Footer */
 
@@ -812,6 +824,8 @@ thead {
 		text-align: left;
 		padding-left: 20px;
 	}
+	
+
 	/* End contact  */
 }
 /* End Media Query For Tablet */

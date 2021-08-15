@@ -5,6 +5,7 @@
     date_default_timezone_set("Europe/Zurich");
     require_once 'cache.class.php';
 
+	$topTotal = array();
     $topGerman = array();
     $topEnglish = array();
     $topItalian = array();
@@ -45,6 +46,7 @@
 
     function populateWebsite() {
         global $cache;
+		global $topTotal;
         global $topGerman;
         global $topEnglish;
         global $topItalian;
@@ -67,6 +69,9 @@
         $fetchedTopMap = $cache->retrieve('topMap');
         $topMap = json_decode($fetchedTopMap, true);
 		
+        $fetchedTopTotal = $cache->retrieve('topTotal');
+        $topTotal = json_decode($fetchedTopTotal, true);
+		
 		// supprimer les messages tous les 10 jours. (A verifier toutes les 3 heures)
 		$statement = $conn->prepare("DELETE FROM messages WHERE DATE(DATE) < DATE(NOW() - INTERVAL 10 DAY)");
 		$statement->execute();
@@ -76,11 +81,36 @@
     
 
     function updateWebsite() {
+		topTotal();
         topGerman();
         topEnglish();
         topItalian();
         topFlags();
         topMap();
+    }
+	
+    function topTotal() {
+        global $conn;
+        connect();
+        global $topTotal;
+        global $cache;
+
+		$sql = "SELECT id, first_name, last_name, user_image, scoreAllemand + scoreAnglais + scoreItalien + scoreDrapeaux + scoreCarte AS amount from users ORDER BY amount DESC LIMIT 3";
+		
+        $result = $conn->query($sql);
+        while($row = $result->fetch_array())
+        {
+            $tempArray = [
+				"firstName" => $row['first_name'],
+                "lastName" => $row['last_name'],
+                "score" => $row['amount'],
+                "image" => $row['user_image'],
+                "id" => $row['id'],
+            ];
+            array_push($topTotal, $tempArray);
+        }
+        $encodedTopTotal = json_encode($topTotal);
+        $cache->store('topTotal', $encodedTopTotal);
     }
 
     function topMap() {

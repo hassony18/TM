@@ -30,7 +30,7 @@
 					$time = new DateTime( $row["last_activity"] );
 					$now = new DateTime( date("Y-m-d H:i:s", STRTOTIME(date('h:i:sa'))) );
 					$diff = $now->getTimestamp() - $time->getTimestamp();
-					if ($diff <= 5) {
+					if ($diff <= 10) {
 						$i = $i + 1;
 						array_push($tempArray, array(
 							"image" => $row["user_image"],

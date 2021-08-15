@@ -1,19 +1,17 @@
 
 var question = null
 
-document.getElementById("map").style.display = "none"
+document.getElementById("mobile-div").style.display = "none"
 
 function startLearning() {
-	document.getElementById("map").style.display = "block"
+	document.getElementById("mobile-div").style.display = "block"
 	document.getElementById("map_container").style.display = "none" 
-	leZoom()
 	question = null
 }
 
 function startTest(q) {
-	document.getElementById("map").style.display = "block"
+	document.getElementById("mobile-div").style.display = "block"
 	document.getElementById("map_container").style.display = "none" 
-	leZoom()
 	question = q
 	console.log(question)
 	showNotification("success", "Cherche: '"+question.replaceAll("_", " ")+"'")
@@ -46,37 +44,14 @@ function sendAnswer(answer) {
 	xhr.send('userAnswer=' + answer);
 }
 
-
-// Don't use window.onLoad like this in production, because it can only listen to one function.
-function leZoom() {
-// Expose to window namespase for testing purposes
-window.panZoomInstance = svgPanZoom('#svg-id', {
-  zoomEnabled: true,
-  controlIconsEnabled: true,
-  fit: true,
-  center: true,
-  minZoom: 0.1
+// touch
+var country = document.getElementsByClassName("country")
+country.addEventListener("click", function() {
+    var id = this.id
+	clickCountry(id)
 });
 
-// Zoom out
-panZoomInstance.zoom(0.2);
-
-function customPanBy(amount){ // {x: 1, y: 2}
-  var animationTime = 300 // ms
-	, animationStepTime = 15 // one frame per 30 ms
-	, animationSteps = animationTime / animationStepTime
-	, animationStep = 0
-	, intervalID = null
-	, stepX = amount.x / animationSteps
-	, stepY = amount.y / animationSteps
-
-  intervalID = setInterval(function(){
-	if (animationStep++ < animationSteps) {
-	  panZoomInstance.panBy({x: stepX, y: stepY})
-	} else {
-	  // Cancel interval
-	  clearInterval(intervalID)
-	}
-  }, animationStepTime)
-}
-}
+country.addEventListener("touchstart", function() {
+    var id = this.id
+	clickCountry(id)
+});
