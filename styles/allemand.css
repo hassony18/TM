@@ -228,9 +228,17 @@ button:hover, input[type=submit]:hover {
 
 /* CARDS */
 
+#keyboard_container {
+	opacity: 0;
+}
+
 @media (hover) {
 	#flipButton {
 		opacity: 0;
+	}
+	
+	#keyboard_container {
+		opacity: 1;
 	}
 }
 
@@ -275,10 +283,10 @@ button:hover, input[type=submit]:hover {
 	border-radius: 10px;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-	overflow: hidden;
-	background: rgb(214, 214, 214);
+	/* overflow: hidden; */
+	background: white;
 	color: crimson;
-	box-shadow: 5px 10px crimson;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
@@ -291,12 +299,13 @@ button:hover, input[type=submit]:hover {
 	border-radius: 10px;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-	overflow: hidden;
-	background: crimson;
-	color: rgb(214, 214, 214);
+	/* overflow: hidden; */
+	background: linear-gradient(to left, #c31432, #240b36);
+	color: white;
 	text-align: center;
 	transform: rotateY(180deg);
-	box-shadow: 5px 10px rgb(214, 214, 214);
+	-webkit-transform: rotateY(180deg);
+	box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
 }
 
 

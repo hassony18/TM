@@ -46,8 +46,10 @@ function prepareVocSession() {
         header("Location: ../allemand.php?error=chooseLanguage");
         exit();
     }
-    $language = $_POST["francaisOuAllemand"]; // francais ou allemand
-    $testChoice = $_POST["choixMultiplesOuEcrire"]; // choixMultiples ou ecrire
+	if ($learningChoice == "test") {
+		$language = $_POST["francaisOuAllemand"]; // francais ou allemand
+		$testChoice = $_POST["choixMultiplesOuEcrire"]; // choixMultiples ou ecrire
+	}
 
     $selectedVocNums = array();
     foreach ($baseVocTable as $key => $value){

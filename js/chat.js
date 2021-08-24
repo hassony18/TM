@@ -5,6 +5,22 @@ var shownChat = false
 var chattingWithUser = false
 var usersTable = {};
 
+document.addEventListener('mouseup', function(e) {
+    var container = document.getElementById('chatbox_container');
+    if (!container.contains(e.target)) {
+        container.style.display = 'none';
+		shownChat = false
+    }
+});
+
+document.addEventListener('touchstart', function(e) {
+    var container = document.getElementById('chatbox_container');
+    if (!container.contains(e.target)) {
+        container.style.display = 'none';
+		shownChat = false
+    }
+});
+
 function toggleChat() {
 	shownChat = !shownChat
 	if (shownChat) {

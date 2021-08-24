@@ -44,14 +44,15 @@ function sendAnswer(answer) {
 	xhr.send('userAnswer=' + answer);
 }
 
-// touch
-var country = document.getElementsByClassName("country")
-country.addEventListener("click", function() {
-    var id = this.id
-	clickCountry(id)
-});
 
-country.addEventListener("touchstart", function() {
+
+var country = document.getElementsByClassName("country");
+
+var requestClick = function() {
     var id = this.id
 	clickCountry(id)
-});
+};
+
+for (var i = 0; i < country.length; i++) {
+    country[i].addEventListener('click', requestClick, false);
+}

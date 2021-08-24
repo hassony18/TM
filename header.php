@@ -11,6 +11,7 @@
 	<title>Swiss Learns</title>
 	<link rel="stylesheet" href="styles/homepage.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
 	<header>

@@ -21,7 +21,9 @@
 	$client = new Google_Client(['client_id' => $CLIENT_ID]); 
 	$payload = $client->verifyIdToken($id_token);
 	if ($payload) {
-		
+		if (empty($payload["family_name"]) || !isset($payload["family_name"])) {
+			$payload["family_name"] = "";
+		}
 		//if (!$verifiyAccess[$payload["email"]]) {
 			//die();
 		//}
@@ -45,7 +47,7 @@
 		} else {
 			$sql = "UPDATE users SET first_name = ?, last_name = ?, user_image = ? WHERE email = ?;";
 		}
-		
+		//error_log( print_r($payload, true) );
 		$stmt = $conn->prepare($sql);
 		$stmt->bind_param('ssss', $payload["given_name"], $payload["family_name"], $payload["picture"], $payload["email"]);
 		$stmt->execute();

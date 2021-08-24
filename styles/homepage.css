@@ -594,6 +594,43 @@ thead {
 }
 /* End About Section */
 
+
+/* share Section */
+#share .share {
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#share .col-left {
+	width: 250px;
+	height: 360px;
+}
+#share .col-right {
+	width: 100%;
+}
+#share .col-right h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	margin-bottom: 10px;
+}
+#share .share-img {
+	background-color: white;
+	border-radius: 25px;
+	margin: auto;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
+}
+
+#share img {
+	width: 350px;
+	height: 350px;
+	border-radius: 50px;
+}
+/* End share Section */
+
 /* contact Section */
 #contact .contact {
 	flex-direction: column;

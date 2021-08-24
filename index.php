@@ -304,6 +304,7 @@
 								</div>
 							</div>
 						</a>
+						<!--
 						<a href="index.php?error=anglais">
 							<div class="learn-item">
 								<div class="learn-img">
@@ -330,6 +331,7 @@
 								</div>
 							</div>
 						</a>
+						-->
 						<a href="carte.php">
 							<div class="learn-item">
 								<div class="learn-img">
@@ -379,6 +381,20 @@
 		</div>
 	  </section>
 	  <!-- End About Section -->
+	  
+	  <!-- Share Section -->
+	  <section id="share">
+		<div class="share container">
+			<div class="share-img">
+			  <img src="./styles/img/qr.png" alt="img">
+			</div>
+		  <div class="col-right">
+			<h1 class="section-title">Part<span>age</span></h1>
+			<h2>Fais tourner le code QR ci-dessous pour nous aider à atteindre tout le monde!</h2>
+		  </div>
+		</div>
+	  </section>
+	  <!-- End Share Section -->
 
 	  <!-- Contact Section -->
 	  <section id="contact">
