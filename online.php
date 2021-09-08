@@ -4,7 +4,11 @@
 	$_SESSION["user_page"] = "online.php";
 ?>
 
-<link rel="stylesheet" href="styles/online.css" />
+<?
+	$filename = 'styles/online.css';
+	$fileModified = substr(md5(filemtime($filename)), 0, 6);
+?>
+<link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 
 <body>
 	<div id="online_container">

@@ -16,6 +16,7 @@
 	}
 ?>
 
+
 <!-- setup custom login button -->
 <?php
 	if (!isset($_SESSION["email"])) {
@@ -80,11 +81,84 @@
 							';
 						}
 					?>
-
+					<p>Bienvenue sur swisslearns.ch. L’objectif de ce site est de vous aider à apprendre plusieurs points. Il y a du vocabulaire d’allemand, des drapeaux et la position des pays. Ce site vise principalement les collégiens des cantons romands de Suisse, mais tout le monde peut participer. Vous pouvez également ajouter des personnes en ami, si vous êtes connecté. Si cette personne vous a également ajouté en ami, vous pourrez vous envoyer des messages en cliquant sur l’icône en bas à droite. Vous pouvez voir votre avancement sur votre compte. Il vous suffit de cliquer sur les trois barres, votre nom et « profil ». Bon apprentissage</p>
 				</div>
 			</div>
 		</section>
 	  <!-- End homepage Section  -->
+		
+		<!-- Avis Section -->
+		<section id="testimonials">
+			<div class="testimonials">
+			  <div class="inner">
+				<h1>Avis</h1>
+				<div class="border"></div>
+
+				<div class="row">
+				
+				<?php
+					if (isset($topReviews) && isset($topReviews[1])) {
+						echo '<div class="col">
+								<div class="testimonial">
+									<img src="'.$topReviews[1]["image"].'" alt="">
+									<div class="name"><a href="profile.php?u='.$topReviews[1]["id"].'">'.$topReviews[1]["firstName"].' '.$topReviews[1]["lastName"].'</a></div>
+									<div class="stars">';
+									$stars = $topReviews[1]["review"];
+									for ($i = 1; $i < 6; $i++) {
+										if ($i <= $stars) {
+											echo '<i><img src="styles/img/star.png"></img></i>';
+										} else {
+											echo '<i><img src="styles/img/empty-star.png"></img></i>';
+										}
+									}
+								  echo '</div><p>'.$topReviews[1]["message"].'</p></div></div>';
+					}
+					
+					if (isset($topReviews) && isset($topReviews[2])) {
+						echo '<div class="col">
+								<div class="testimonial">
+									<img src="'.$topReviews[2]["image"].'" alt="">
+									<div class="name"><a href="profile.php?u='.$topReviews[2]["id"].'">'.$topReviews[2]["firstName"].' '.$topReviews[2]["lastName"].'</a></div>
+									<div class="stars">';
+									$stars = $topReviews[2]["review"];
+									for ($i = 1; $i < 6; $i++) {
+										if ($i <= $stars) {
+											echo '<i><img src="styles/img/star.png"></img></i>';
+										} else {
+											echo '<i><img src="styles/img/empty-star.png"></img></i>';
+										}
+									}
+								  echo '</div><p>'.$topReviews[2]["message"].'</p></div></div>';
+					}
+					
+					if (isset($topReviews) && isset($topReviews[3])) {
+						echo '<div class="col">
+								<div class="testimonial">
+									<img src="'.$topReviews[3]["image"].'" alt="">
+									<div class="name"><a href="profile.php?u='.$topReviews[3]["id"].'">'.$topReviews[3]["firstName"].' '.$topReviews[3]["lastName"].'</a></div>
+									<div class="stars">';
+									$stars = $topReviews[3]["review"];
+									for ($i = 1; $i < 6; $i++) {
+										if ($i <= $stars) {
+											echo '<i><img src="styles/img/star.png"></img></i>';
+										} else {
+											echo '<i><img src="styles/img/empty-star.png"></img></i>';
+										}
+									}
+								  echo '</div><p>'.$topReviews[3]["message"].'</p></div></div>';
+					}
+				?>
+				
+		  
+				  
+				</div>
+				<h1>Moyenne des avis: <?php echo $topReviews[0]; ?> </h1>
+				<a href="avis.php" style="color: black;" class="cta">Voir tous les avis</a>';
+			  </div>
+			</div>
+			
+		</section>
+	 <!-- End Avis Section -->
 
 	  <!-- Ranking Section -->
 		<section id="rankings">
@@ -295,7 +369,7 @@
 							<div class="learn-item">
 								<div class="learn-info">
 									<h1>Vocabulaire d\'Allemand</h1>
-									<h2>"Arbeit macht frei"</h2>
+									<h2>"Übung macht den Meister"</h2>
 									<p>As-tu du mal à apprendre ton voc d\'allemand? N\'arrives tu pas à réussir tes évals non plus? La solution est ici! Appuies ici pour commencer ta session d\'apprentissage unique!</p>
 								</div>
 								
@@ -304,8 +378,8 @@
 								</div>
 							</div>
 						</a>
-						<!--
-						<a href="index.php?error=anglais">
+
+						<a href="anglais.php">
 							<div class="learn-item">
 								<div class="learn-img">
 									<img src="./styles/img/anglais.png" alt="img">
@@ -331,7 +405,6 @@
 								</div>
 							</div>
 						</a>
-						-->
 						<a href="carte.php">
 							<div class="learn-item">
 								<div class="learn-img">
@@ -376,8 +449,39 @@
 		  <div class="col-right">
 			<h1 class="section-title">Qui sommes <span>nous</span></h1>
 			<h2>Hassan & Jordan</h2>
-			<p>Nous sommes deux élèves du collège Rousseau. Il fut un temps où nous étions à votre place. En ces temps révolus, nous avions un unique démon... l’allemand. Pour le vaincre, il nous fût acquérir de nouvelles compétences tel que le html, le css, le JavaScript et le PHP. Après une longue réflexion, nous avons réunis ces divers outils et notre expérience nouvellement acquise dans le but de terrasser ce vil ennemi au travers d’un site internet. Ce n’est qu’après de long efforts et de grands fichiers json que nous avons pu le vaincre. Aujourd’hui, nous coulons des jours heureux grâce à nos efforts.</p>
+			<p>Nous sommes deux élèves du collège Rousseau. Il fut un temps où nous étions à votre place. En ces temps révolus, nous avions un unique démon... l’allemand. Pour le vaincre, il nous fallut acquérir de nouvelles compétences tel que le html, le css, le JavaScript et le PHP. Après une longue réflexion, nous avons réunis ces divers outils et notre expérience nouvellement acquise dans le but de terrasser ce vil ennemi au travers d’un site internet. Ce n’est qu’après de long efforts et de grands fichiers json que nous avons pu le vaincre. Aujourd’hui, nous coulons des jours heureux grâce à nos efforts.</p>
 		  </div>
+		</div>
+		<div id='credits'>
+			<h1>Un grand merci à:</h1>
+			<div id='actor-list'>
+				<div class='list-item'>
+					<div>Claude-Alain Mayor</div>
+					<div class='dots'></div>
+					<div>Vocabulaire d'allemand</div>
+				</div>
+				<div class='list-item'>
+					<div>Edith Slembek</div>
+					<div class='dots'></div>
+					<div>Vocabulaire d'allemand</div>
+				</div>
+				<div class='list-item'>
+					<div>Muriel Bovey</div>
+					<div class='dots'></div>
+					<div>Vocabulaire d'allemand</div>
+				</div>
+				<div class='list-item'>
+					<div class='character'>Ribeiro Leonardo</div>
+					<div class='dots'></div>
+					<div class='actor'>Vocabulaire d'anglais</div>
+				</div>
+				<div class='list-item'>
+					<div class='character'>Ysabella Carandang</div>
+					<div class='dots'></div>
+					<div class='actor'>Vocabulaire d'italien</div>
+				</div>
+
+			</div>
 		</div>
 	  </section>
 	  <!-- End About Section -->
@@ -426,9 +530,34 @@
 			  </div>
 			</div>
 		  </div>
+	<!-- leave Avis Section -->
+		  <?php
+			if (isset($_SESSION["email"])) {
+				echo '
+
+				<form id="leaveReview" action="backend/index.backend.php" method="post">
+					<p>Tu aimes ce site ? Tu veux nous aider à l’améliorer ? Si tu entres dans l’une de ces catégories, tu peux nous laisser, ici, un message pour nous transmettre ton avis.</p>
+					<div class="stars">
+						<i><img src="styles/img/star.png"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<input type="text" id="reviewMessage" name="reviewMessage">
+						<input style="display: none;" type="text" id="reviewStars" name="reviewStars">
+						<input id="submit_review" type="submit" name="submit_review" value="Envoyer">
+					</div>
+				</form>
+				';
+			
+			}
+		  ?>	
+	<!-- End leave Avis Section -->		  
 		</div>
 	  </section>
 	  <!-- End Contact Section -->
+	  
+		
 </body>
 
 <?php

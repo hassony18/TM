@@ -32,7 +32,20 @@ table {
 	padding: 10px;
 }
 
-#profile_picture {
+.profile_title {
+	background-color: white;
+	border-radius: 25px;
+	margin: auto;
+	margin-top: 10px;
+	color: crimson;
+	text-align: center;
+	width: 80%;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
+}
+
+#profile_picture_container, #profile_picture {
+	position: relative;
 	width: 150px;
 	height: 150px;	
 	border-radius: 50%;
@@ -40,11 +53,44 @@ table {
 	background-position: center center;
 	background-size: cover;
 	color: cornflowerblue;
-	box-shadow: 0 0 5px 3px darkred;	
+	box-shadow: 0 0 5px 3px red;	
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: -100px;
+}
+
+#badges_container {
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	margin-top: 10px;
+	color: crimson;
+	text-align: center;
+}
+
+.profile_badge{
+	width: 60px;
+	height: 50px;
+}
+
+.verified-avatar-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: deepskyblue;
+  width: 15px;
+  height: 15px;
+  
+  /*style for inner text*/
+  display: grid;
+  text-align: center;
+  line-height: 15px;
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
 }
 
 .have_container {

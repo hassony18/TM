@@ -11,11 +11,17 @@
 
 <script src="js/svg-pan-zoom.js"></script>
 <script src="js/hammer.js"></script>
-<link rel="stylesheet" href="./styles/carte.css" type="text/css" />
+<?
+	$filename = 'styles/carte.css';
+	$fileModified = substr(md5(filemtime($filename)), 0, 6);
+?>
+<link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 
 <body>
 	<div id="map_container">
-		<h1>Choix de mode d'apprentissage</h1>
+		<h1>Carte mondiale</h1>
+		<p>Vous souhaitez donc apprendre la position des pays du monde. Vous pourrez vous déplacer sur la carte en zoomant avec votre molette ou en écartant les doigts. Vous pouvez aussi cliquer à un endroit et déplacer la souris pour bouger. Le mode apprendre vous donnera le nom du pays sur lequel vous cliquer à droite de l’écran. Le mode test vous demandera de trouver un pays.</p>
+		<h2 style="text-align: center;">Choix de mode d'apprentissage</h2>
 		<form action="backend/carte.backend.php" method="post">
 			<label class="radio_style_container">Apprendre
 			  <input type="radio" name="apprendreOuTest" id="testmap" value="apprendre" required>
@@ -1463,8 +1469,9 @@
         window.panZoom = svgPanZoom('#mobile-svg', {
           zoomEnabled: true
         , controlIconsEnabled: true
-        , fit: 1
-        , center: 1
+        , fit: true
+        , center: true
+		, minZoom: 0.5
         , customEventsHandler: eventsHandler
         });
       };
@@ -1487,11 +1494,14 @@
 	}
 
 	function verifyAnswer($answer) {
-		$correctAnswer = preg_replace('/_/', ' ', $_SESSION["question"]);
-		if ($answer == $correctAnswer) {
-			addScore("carte", 10);
-		} else {
-			addScore("carte", -1);
+		if (isset($_SESSION["question"]) && $_SESSION["question"]) {
+			$correctAnswer = preg_replace('/_/', ' ', $_SESSION["question"]);
+			if ($answer == $correctAnswer) {
+				addScore("carte", 10);
+			} else {
+				addScore("carte", -1);
+			}
+			unset($_SESSION["question"]);
 		}
 	}
 	

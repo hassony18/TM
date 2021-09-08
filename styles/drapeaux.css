@@ -16,6 +16,218 @@ body {
     background-color: #29323c;
 }
 
+
+input[type=submit], button {
+	border-radius: 25px;
+	background-color: crimson;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+    margin: 0 auto;
+	display: block;
+}
+
+button:hover, input[type=submit]:hover {
+	background-color: transparent;
+	color: crimson;
+}
+
+
+#drapeaux_choisir_container, #drapeaux_learning_container, #countries-game {
+	background-color: white;
+	border-radius: 25px;
+	margin: 100px auto;
+	width: 80%;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
+}
+
+
+/* Learning */
+
+#drapeaux_learning_container {
+	height: 450px;
+}
+
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+.cardContainer{
+	position: relatve;
+	margin: auto;
+	width: 90%;
+	max-width: 500px;
+	height: 55%;
+	max-height: 150px;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.theCard:hover {
+	transform: rotateY(180deg);
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.theCard{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+	transition: all 0.8s ease;
+}
+
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .theFront{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	/* overflow: hidden; */
+	background: white;
+	color: crimson;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+#faceImg{ 
+	padding: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	
+}
+
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theBack{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	/* overflow: hidden; */
+	background: linear-gradient(to left, #c31432, #240b36);
+	color: white;
+	text-align: center;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+}
+
+
+.theFront h1, .theBack h1{
+	font-family: 'zilla slab', sans-serif;
+	padding: 30px;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+}
+
+.theFront p, .theBack p{
+	font-family: 'zilla slab', sans-serif;
+	padding: 30px;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+}
+
+#cardContainer h2 {
+	margin: 10px;
+}
+
+#cardContainer button {
+	margin-top: 10px;
+}
+
+/* RADIO STYLING */
+
+/* CARDS */
+
+
+@media (hover) {
+	#flipButton {
+		opacity: 0;
+	}
+	
+}
+
+
+/* The container */
+.radio_style_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio_style_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio_style_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio_style_container:hover input ~ .radio_style_checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio_style_container input:checked ~ .radio_style_checkmark {
+  background-color: crimson;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio_style_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio_style_container input:checked ~ .radio_style_checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio_style_container .radio_style_checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
 /* cool white background */
 #countries-game {
 	background-color: white;
@@ -46,11 +258,15 @@ input[type="submit"]:hover, input[type="submit"]:active {
 }
 
 #countryFlag {
+	background-color: white;
+	border-radius: 25px;
+	width: 80%;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
-	width: 40vw;
+	width: 50%;
 	height: auto;
 }
 #centered_options {

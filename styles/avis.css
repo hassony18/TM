@@ -1,0 +1,25 @@
+body {
+	height:100vh;
+	margin:0;
+	display:flex; 
+	flex-direction:column; 
+}
+#header .nav-list ul li a {
+    font-size: 15px !important;
+}
+
+.header {
+	position: relative;
+}
+  
+#header .header {
+    background-color: #29323c;
+}
+
+
+/* Avis */
+
+
+.testimonials{
+margin-top: 50px;
+}

@@ -378,8 +378,89 @@ p {
 	animation-delay: 2.5s;
 }
 
+#homepage p {
+	margin-top: 25px;
+	color: white;
+}
+
 /* End homepage Section */
 
+/* Avis */
+
+
+.testimonials{
+	padding: 40px 0;
+	color: #434343;
+	text-align: center;
+}
+.inner{
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 20px;
+}
+
+.border{
+	width: 160px;
+	height: 5px;
+	background: crimson;
+	margin: 26px auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.col{
+	flex: 33.33%;
+	max-width: 33.33%;
+	box-sizing: border-box;
+	padding: 15px;
+}
+.testimonial{
+	background: white;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 30px;
+}
+.testimonial img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.name{
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+.stars{
+	color: #6ab04c;
+	margin-bottom: 20px;
+}
+
+.stars img {
+	width: 20px;
+	height: 20px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
+}
 
 
 /* rankings Section */
@@ -592,8 +673,33 @@ thead {
 	border: 7px solid crimson;
 	z-index: -1;
 }
-/* End About Section */
 
+#credits {
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#credits h1 {
+	font-size: 25px;
+	margin: 10px 0;
+	text-align: center;
+	color: crimson;
+}
+
+.list-item {
+	display: flex;
+	font-size: 1.8rem;
+}
+
+.dots {
+	flex-grow: 1;
+	border-bottom: 3px dotted black;
+	margin: 0 5px 6px 5px;
+}
+
+/* End About Section */
 
 /* share Section */
 #share .share {
@@ -677,6 +783,59 @@ thead {
 	font-weight: 500;
 }
 /*End contact Section */
+
+#leaveReview {
+	background-color: white;
+	border-radius: 25px;
+	margin: auto;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
+}
+
+.stars{
+	color: #6ab04c;
+	margin-bottom: 20px;
+}
+
+.stars img {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit_review {
+	border-radius: 25px;
+	background-color: crimson;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	display: block;
+	margin-left: 50%;
+	margin-top: 10px;
+}
+
+#reviewMessage:focus {
+	border-bottom: 2px solid crimson;
+    outline: none !important;
+}
+
+#reviewMessage {
+	background: transparent;
+	color: crimson;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	width: 80%;
+	font-size: 25px;
+	margin-top: 10px;
+}
+
 
 /* Footer */
 #footer {

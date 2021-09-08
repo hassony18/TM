@@ -1,11 +1,11 @@
 <?php 
 	require 'header.php';
-	require_once 'backend/allemand.backend.php';
+	require_once 'backend/anglais.backend.php';
 
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
-	$_SESSION["user_page"] = "allemand.php";
+	$_SESSION["user_page"] = "anglais.php";
 
 	if (isset($_GET["error"])) {
 		$error = $_GET["error"];
@@ -22,7 +22,7 @@
 ?>
 
 <?
-	$filename = 'styles/allemand.css';
+	$filename = 'styles/anglais.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
 <link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
@@ -30,12 +30,12 @@
 <body>
 	<!-- Home page -->
 
-	<div id="allemand_apprentissage_container">
+	<div id="anglais_apprentissage_container">
 		
 		<div id="learningChoiceContainer">
-			<form action="backend/allemand.backend.php" method="post">
-				<h1>Le vocabulaire d’allemand</h1>
-				<p>Vous souhaitez donc apprendre l’allemand. Le vocabulaire se base sur le Vocabulaire allemand pour les études secondaires supérieures. Tous les chapitre de 1 à 16 sont disponibles. Vous n’avez qu’à cliquez sur tous ceux que vous souhaitez apprendre. Ensuite, vous pouvez y ajouter les phrases données en exemple ou la partie Ergänzungswortschatz que nous appelons « bleue ». Le rôle de la partie bleue est d’apporter des compléments sur le vocabulaire.</p>
+			<form action="backend/anglais.backend.php" method="post">
+				<h1>Le vocabulaire d’anglais</h1>
+				<p>Vous souhaitez donc apprendre le l’anglais. Pour cela, nous vous offrons le vocabulaire d’anglais du Gateway de niveau B1+. Ce vocabulaire est séparé par différentes unités. Chacune fait référence à un thème assez large. Il existe également des phrases accompagnant chaque mot pour donner un exemple de leur utilisation. Pour les voir, il vous suffit de sélectionner l’option « phrases ».</p>
 				<h1>Choix de mode d'apprentissage</h1>
 
 				<h2 style="color: crimson;">Choisis un ou plusieurs chapitres:</h2>
@@ -75,11 +75,11 @@
 					</label>
 					<div id="multipleChoicesOptionsContainer" style="margin-left: 5%;">
 						<label class="radio_style_container">Cherche le mot francais
-							<input type="radio" value="francais" name="francaisOuAllemand" id="radio_cherche_francais">
+							<input type="radio" value="francais" name="francaisOuAnglais" id="radio_cherche_francais">
 							<span class="radio_style_checkmark"></span>
 						</label>
-						<label class="radio_style_container">Cherche le mot allemand
-							<input type="radio" value="allemand" name="francaisOuAllemand" id="radio_cherche_allemand">
+						<label class="radio_style_container">Cherche le mot anglais
+							<input type="radio" value="anglais" name="francaisOuAnglais" id="radio_cherche_anglais">
 							<span class="radio_style_checkmark"></span>
 						</label>
 					</div>
@@ -89,36 +89,28 @@
 					</label>
 					<div id="ecrireOptionsContainer" style="margin-left: 5%;">
 						<label class="radio_style_container">Ecrire en francais
-							<input type="radio" value="francais" name="francaisOuAllemand" id="radio_ecrire_francais" onchange="onVocRadioValueChange()">
+							<input type="radio" value="francais" name="francaisOuAnglais" id="radio_ecrire_francais" onchange="onVocRadioValueChange()">
 							<span class="radio_style_checkmark"></span>
 						</label>
-						<label class="radio_style_container">Ecrire en allemand
-							<input type="radio" value="allemand" name="francaisOuAllemand" id="radio_ecrire_allemand" onchange="onVocRadioValueChange()">
+						<label class="radio_style_container">Ecrire en anglais
+							<input type="radio" value="anglais" name="francaisOuAnglais" id="radio_ecrire_anglais" onchange="onVocRadioValueChange()">
 							<span class="radio_style_checkmark"></span>
 						</label>
 					</div>	
 				</div>
-					
+				<!--
 				<h2 style="color: crimson;">Options:</h2>
 				<label class="checkbox_container_style">Avec les phrases normales
 					<input id="normalPhrasesOption" name="phrasesNormales" type="checkbox">
 					<span class="checkbox_checkmark"></span>
 				</label>
-				<label class="checkbox_container_style">Avec les bleues
-					<input id="blueOption" name="bleues" type="checkbox">
-					<span class="checkbox_checkmark"></span>
-				</label>
-				<label class="checkbox_container_style">Avec les phrases bleues
-					<input id="bluePhrasesOption" name="phrasesBleues" type="checkbox">
-					<span class="checkbox_checkmark"></span>
-				</label>
-					
+				-->
 				<input type="submit" name="submit_vocSession" value="On y va!">
 			</form>
 		</div>
 		
 		<div id="learningCardContainerBackground">
-			<form action="backend/allemand.backend.php" method="post"><input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←"></form>
+			<form action="backend/anglais.backend.php" method="post"><input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAnglais"  value="←"></form>
 			<div id="cardContainer" class="cardContainer">
 				<div class="theCard" id="flippingCard" onclick="">
 					<div class="theFront">
@@ -141,6 +133,7 @@
 				<button id="voirLaListe" onclick="showList()" type="button"> Voir la liste entière </button>
 			</div>
 			
+			
 			<!-- The Modal -->
 			<div id="previewContainer">
 				<img id="closePreview" src="styles/img/close.png"></span>
@@ -148,11 +141,10 @@
 					<table id="vocTableList"></table>
 				</div>
 			</div>
-			
 		</div>
 
-		<form action="backend/allemand.backend.php" method="post" id="multipleChoicesContainer">
-			<input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←">
+		<form action="backend/anglais.backend.php" method="post" id="multipleChoicesContainer">
+			<input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAnglais"  value="←">
 			<h1 id="shownVocText">WORD HERE</h1>
 			<h1 id="words_counter_multipleChoices">COUNTER</h1>
 			<input type="submit" name="submit_multipleChoices" id="choix_multiple_option0" value="">
@@ -161,72 +153,28 @@
 			<input type="submit" name="submit_multipleChoices" id="choix_multiple_option3" value="">
 		</form>
 		
-		<form action="backend/allemand.backend.php" method="post" id="writingContainer">
+		<form action="backend/anglais.backend.php" method="post" id="writingContainer">
 			<!-- ENTER BUG FIX -->
 			<input type="submit" name="submit_ecrire_test" value="Soumettre" style="opacity: 0; float: left;" />
-			<input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAllemand"  value="←">
+			<input type="submit" style="margin: 0; margin-bottom: 10px;" name="requestReturnToAnglais"  value="←">
 			<h1 id="shownVocText_ecrire">WORD HERE</h1>
 			<h1 id="words_counter_ecrire">COUNTER</h1>
 			<label for="textAEcrire">Traduction:</label>
 			<input type="text" class="input_text" id="textAEcrire" name="textAEcrire" autofocus>
 			<input type="submit" name="submit_ecrire_test" value="Soumettre">
-			<div id="keyboard_container">
-				<table style="width:80%; margin-left: 10%;">
-					<tr>
-						<td colspan="5"><button id="changeCaseButton" onclick="changeCase()" type="button">↑</button></td>
-					</tr>
-					<tr>
-						<td colspan="5"><h1 style="justify-content: center;">ALLEMAND</h1></td>
-					</tr>
-					<tr>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ä</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ö</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ü</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ß</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">¨</button></td>
-					</tr>
-					<tr>
-						<td colspan="5"><h1>FRANÇAIS</h1></td>
-					</tr>
-					<tr>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">à</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">â</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">æ</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ç</button></td>
-					</tr>
-					<tr>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">é</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ê</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ë</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">î</button></td>
-					</tr>
-					<tr>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ô</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">œ</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ù</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">û</button></td>
-					</tr>
-					<tr>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">è</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ï</button></td>
-						<td><button class="keyboard_button" onclick="insertText(this)" type="button">ü</button></td>
-					</tr>
-
-				</table>
-			</div>
 		</form>
 		
 		
 	</div>
 	
-	<script src="js/allemand.js"></script>
+	<script src="js/anglais.js"></script>
 
 	<?php
 		if (isset($_GET["success"])) {
 
 			$success = $_GET["success"];
 			if ($success == "apprendre" && !$_SESSION["learningTable"]) {
-				echo "<script>window.location.replace('allemand.php');</script>";
+				echo "<script>window.location.replace('anglais.php');</script>";
 				return true;
 			}
 			if ($success == "apprendre") {

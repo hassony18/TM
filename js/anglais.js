@@ -130,9 +130,9 @@ function nextVoc(type) {
 		}
 	}
 	else if (type == "done") {
-		window.location.replace('allemand.php');
+		window.location.replace('anglais.php');
 	}
-	document.getElementById("faceText").innerHTML = learningTable[currentNumberInQueue][0] // german text
+	document.getElementById("faceText").innerHTML = learningTable[currentNumberInQueue][0] // english text
 	document.getElementById("backText").innerHTML = learningTable[currentNumberInQueue][1] // french text
 	document.getElementById("words_counter_learning").innerHTML = (currentNumberInQueue+1)+"/"+ (learningTable.length) // french text
 }
@@ -146,7 +146,7 @@ function listenToWord() {
 	var card = document.getElementById("flippingCard")
 	if (card.style.transform == "none" || card.style.transform == "") {
 		var frontText = document.getElementById("faceText").innerHTML
-		msg.lang = 'de';
+		msg.lang = 'en';
 		var text = frontText.split(', ');
 		msg.text = text[0]
 	} else {

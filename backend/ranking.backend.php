@@ -11,6 +11,7 @@
     $topItalian = array();
     $topFlags = array();
     $topMap = array();
+	$topReviews = array();
 
     $cache = new Cache();
     $currentDT = new DateTime();
@@ -52,6 +53,7 @@
         global $topItalian;
         global $topFlags;
         global $topMap;
+		global $topReviews;
 		global $conn;
 
         $fetchedTopGerman = $cache->retrieve('topGerman');
@@ -68,6 +70,9 @@
 
         $fetchedTopMap = $cache->retrieve('topMap');
         $topMap = json_decode($fetchedTopMap, true);
+		
+        $fetchedTopReviews = $cache->retrieve('topReviews');
+        $topReviews = json_decode($fetchedTopReviews, true);
 		
         $fetchedTopTotal = $cache->retrieve('topTotal');
         $topTotal = json_decode($fetchedTopTotal, true);
@@ -87,6 +92,7 @@
         topItalian();
         topFlags();
         topMap();
+		topReviews();
     }
 	
     function topTotal() {
@@ -136,6 +142,39 @@
         $encodedTopMap = json_encode($topMap);
         $cache->store('topMap', $encodedTopMap);
     }
+	
+    function topReviews() {
+        global $conn;
+        connect();
+        global $topReviews;
+        global $cache;
+		
+		// moyenne d'avis
+		$sql = "SELECT AVG(stars) as average from reviews";
+		$result = $conn->query($sql);
+		array_push($topReviews, $result->fetch_array()["average"]);
+
+		$sql = "SELECT reviews.id, reviews.message, reviews.stars, users.user_image, users.first_name, users.last_name from reviews INNER JOIN users ON users.id = reviews.id WHERE displayed = 1";
+		
+        $result = $conn->query($sql);
+        while($row = $result->fetch_array())
+        {
+            $tempArray = [
+				"firstName" => $row['first_name'],
+                "lastName" => $row['last_name'],
+                "review" => $row['stars'],
+				"message" => $row['message'],
+                "image" => $row['user_image'],
+                "id" => $row['id'],
+            ];
+            array_push($topReviews, $tempArray);
+        }
+		
+        $encodedTopReviews = json_encode($topReviews);
+        $cache->store('topReviews', $encodedTopReviews);
+    }
+	
+	
 
     function topFlags() {
         global $conn;

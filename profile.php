@@ -12,7 +12,9 @@
 		global $conn;
 		$userID = $_GET["u"];
 		$_SESSION["user_page"] = "profile.php?u=".$_GET["u"];
-		$stmt = $conn->prepare('SELECT * FROM users INNER JOIN activity ON users.id = activity.id WHERE users.id = ?');
+		
+		
+		$stmt = $conn->prepare('SELECT * FROM users LEFT JOIN activity AS a ON users.id = a.id LEFT JOIN titles AS t on users.id = t.id LEFT JOIN badges AS b on b.id = users.id  WHERE users.id = ?');
 		if ($stmt === FALSE) {
 			die ("Mysql Error: " . $conn->error);
 		}
@@ -118,28 +120,95 @@
 		$stmt->bind_param('ss', $myID, $targetID);
 		$stmt->execute();
 	}
+	
+	if (!function_exists('str_contains')) {
+		function str_contains(string $haystack, string $needle): bool
+		{
+			return '' === $needle || false !== strpos($haystack, $needle);
+		}
+	}
 
 ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
 
-<link rel="stylesheet" href="styles/profile.css" />
+<?
+	$filename = 'styles/profile.css';
+	$fileModified = substr(md5(filemtime($filename)), 0, 6);
+?>
+<link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 
 <body>
 	<div id="profile_container">
-		<?php echo "<img src='".$data["user_image"]."' id='profile_picture'>" ?>
+		<?php echo "<div id='profile_picture_container'><img src='".$data["user_image"]."' id='profile_picture'></div>" ?>
+		<?php
+			// badges
+			echo '<div id="badges_container">';
+			if ($data["id"] <= 100) {
+				echo "<img src='styles/img/early.png' class='profile_badge'>";
+			}
+			if ($profileTotal >= 10000) {
+				echo "<img src='styles/img/10000points.png' class='profile_badge'>";
+			}
+			if ($profileTotal >= 1000) {
+				echo "<img src='styles/img/1000points.png' class='profile_badge'>";
+			}
+			echo '</div>';
+		
+			function placeBadge($badge) {
+				if ($badge == "verified") {
+					echo '<script>
+						var div = document.createElement("div");
+						var imgContainer = document.getElementById("profile_picture_container")
+						div.setAttribute("class", "verified-avatar-icon")
+						div.innerHTML = "✓"
+						imgContainer.append(div); 
+					</script>';
+					echo '
+						<style>
+							#profile_picture_container, #profile_picture {
+								box-shadow: 0 0 5px 3px deepskyblue !important;	
+
+							}
+						</style>
+					';
+				} 
+			}
+			
+			if (isset($data["title"])) {
+				echo '<h1 class="profile_title">'.$data["title"].'</h1>';
+			}
+			
+			if (isset($data["badge"])) {
+				$badges = $data["badge"];
+				if (str_contains($badges, ",")) {
+					$badgesTable = explode (",", $badges);
+					foreach($badgesTable as $value) {
+						placeBadge($value);
+					}
+				} else {
+					placeBadge($badges);
+				}
+
+			}
+			
+		?>
 		<h1 class="have_container">Bienvenue au profil de <?php echo $data["first_name"] ?>!</h1>
-			<h3>date de création du compte: <?php echo date("d-m-Y, H:i:s", strtotime($data["date"])); ?></h3>
-			<h3>dernière activité de <?php echo $data["first_name"] ?>: <?php echo date("d-m-Y, H:i:s", strtotime($data["last_activity"])); ?> à la page: <?php echo $data["page"]; ?></h3>
+			<div style="margin-left: 10px;">
+				<h2>date de création du compte: <?php echo date("d-m-Y, H:i:s", strtotime($data["date"])); ?></h2>
+				<h2>dernière activité de <?php echo $data["first_name"] ?>: <?php echo date("d-m-Y, H:i:s", strtotime($data["last_activity"])); ?> à la page: <?php echo $data["page"]; ?></h2>
+			</div>
 		<h1 class="have_container">Scores:</h1>
-		<h3>Allemand: <?php echo $data["scoreAllemand"]; ?></h3>
-		<h3>Anglais: <?php echo $data["scoreAnglais"]; ?></h3>
-		<h3>Italien: <?php echo $data["scoreItalien"]; ?></h3>
-		<h3>Drapeaux: <?php echo $data["scoreDrapeaux"]; ?></h3>
-		<h3>Carte: <?php echo $data["scoreCarte"]; ?></h3>
-		<h2>Score total: <?php echo $profileTotal; ?></h3>
-		<h1 class="have_container">Progrès au niveau du site:</h1>
+		<div style="margin-left: 10px;">
+			<h2>Allemand: <?php echo number_format($data["scoreAllemand"]); ?></h2>
+			<h2>Anglais: <?php echo number_format($data["scoreAnglais"]); ?></h2>
+			<h2>Italien: <?php echo number_format($data["scoreItalien"]); ?></h2>
+			<h2>Drapeaux: <?php echo number_format($data["scoreDrapeaux"]); ?></h2>
+			<h2>Carte: <?php echo number_format($data["scoreCarte"]); ?></h2>
+			<h2>Score total: <?php echo number_format($profileTotal); ?></h2>
+		</div>
+		<h1 class="have_container">Progression pour devenir le/la meilleur(e):</h1>
 		<div class="wrapper">
 
 			<div class="card allemand">
@@ -148,14 +217,32 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Allemand</div>
+				<div class="text"><?php echo $data["scoreAllemand"].'/'.$top1Allemand["scoreAllemand"] ?></div>
+				<?php
+					$stmt = $conn->prepare('SELECT u.id, u.scoreAllemand AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreAllemand < u2.scoreAllemand WHERE u.id = ?;');
+					$stmt->bind_param('s', $userID);
+					$stmt->execute();
+					$result = $stmt->get_result();
+					$myPlacementAllemand = $result->fetch_assoc();
+					echo '<div class="text">#'.$myPlacementAllemand["rank"].'</div>';
+				?>
 			</div>
-		
+			
 			<div class="card italien">
 				<div class="circle">
 					<div class="bar"></div>
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Italien</div>
+				<div class="text"><?php echo $data["scoreItalien"].'/'.$top1Italien["scoreItalien"] ?></div>
+				<?php
+					$stmt = $conn->prepare('SELECT u.id, u.scoreItalien AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreItalien < u2.scoreItalien WHERE u.id = ?;');
+					$stmt->bind_param('s', $userID);
+					$stmt->execute();
+					$result = $stmt->get_result();
+					$myPlacementItalien = $result->fetch_assoc();
+					echo '<div class="text">#'.$myPlacementItalien["rank"].'</div>';
+				?>
 			</div>
 		
 			<div class="card anglais">
@@ -164,6 +251,15 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Anglais</div>
+				<div class="text"><?php echo $data["scoreAnglais"].'/'.$top1Anglais["scoreAnglais"] ?></div>
+				<?php
+					$stmt = $conn->prepare('SELECT u.id, u.scoreAnglais AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreAnglais < u2.scoreAnglais WHERE u.id = ?;');
+					$stmt->bind_param('s', $userID);
+					$stmt->execute();
+					$result = $stmt->get_result();
+					$myPlacementAnglais = $result->fetch_assoc();
+					echo '<div class="text">#'.$myPlacementAnglais["rank"].'</div>';
+				?>
 			</div>
 
 			<div class="card drapeaux">
@@ -172,6 +268,15 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Drapeaux</div>
+				<div class="text"><?php echo $data["scoreDrapeaux"].'/'.$top1Drapeaux["scoreDrapeaux"] ?></div>
+				<?php
+					$stmt = $conn->prepare('SELECT u.id, u.scoreDrapeaux AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreDrapeaux < u2.scoreDrapeaux WHERE u.id = ?;');
+					$stmt->bind_param('s', $userID);
+					$stmt->execute();
+					$result = $stmt->get_result();
+					$myPlacementDrapeaux = $result->fetch_assoc();
+					echo '<div class="text">#'.$myPlacementDrapeaux["rank"].'</div>';
+				?>
 			</div>
 
 			<div class="card carte">
@@ -180,6 +285,15 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Carte</div>
+				<div class="text"><?php echo $data["scoreCarte"].'/'.$top1Carte["scoreCarte"] ?></div>
+				<?php
+					$stmt = $conn->prepare('SELECT u.id, u.scoreCarte AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreCarte < u2.scoreCarte WHERE u.id = ?;');
+					$stmt->bind_param('s', $userID);
+					$stmt->execute();
+					$result = $stmt->get_result();
+					$myPlacementCarte = $result->fetch_assoc();
+					echo '<div class="text">#'.$myPlacementCarte["rank"].'</div>';
+				?>
 			</div>
 
 			<div class="card overall">
@@ -188,6 +302,15 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Total</div>
+				<div class="text"><?php echo $profileTotal.'/'.$topPlayerInAll["amount"] ?></div>
+				<?php
+					$stmt = $conn->prepare('SELECT u.id, (u.scoreAllemand+u.scoreAnglais+u.scoreItalien+u.scoreCarte+u.scoreDrapeaux) AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreAllemand+u.scoreAnglais+u.scoreItalien+u.scoreCarte+u.scoreDrapeaux < u2.scoreAllemand+u2.scoreAnglais+u2.scoreItalien+u2.scoreCarte+u2.scoreDrapeaux WHERE u.id = ?;');
+					$stmt->bind_param('s', $userID);
+					$stmt->execute();
+					$result = $stmt->get_result();
+					$myPlacementTotal = $result->fetch_assoc();
+					echo '<div class="text">#'.$myPlacementTotal["rank"].'</div>';
+				?>
 			</div>
 
    		 </div>

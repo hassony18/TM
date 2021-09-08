@@ -3,13 +3,19 @@
 	session_start();
 ?>
 
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="google-signin-client_id" content="467170103073-1t65koimd2m4jd4npjtoopmdtrboec6u.apps.googleusercontent.com">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
 	<title>Swiss Learns</title>
-	<link rel="stylesheet" href="styles/homepage.css">
+	
+	<?
+		$filename = 'styles/homepage.css';
+		$fileModified = substr(md5(filemtime($filename)), 0, 6);
+	?>
+	<link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>

@@ -4,7 +4,11 @@
 	$_SESSION["user_page"] = "search.php";
 ?>
 
-<link rel="stylesheet" href="styles/search.css" />
+<?
+	$filename = 'styles/search.css';
+	$fileModified = substr(md5(filemtime($filename)), 0, 6);
+?>
+<link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 
 <body>
 	<form action="search.php" method="post" id="search_container">

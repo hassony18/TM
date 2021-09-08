@@ -52,4 +52,33 @@ menu_item.forEach((item) => {
 	});
 });
 
+// reviews 
 
+
+var interactiveStar = document.getElementsByClassName("interactiveStar")
+var requestClick = function() {
+	if (!preventSpam) {
+		showPicture(this)
+	}
+};
+
+for (var i = 0; i < interactiveStar.length; i++) {
+    interactiveStar[i].addEventListener('click', changeStar, false);
+}
+
+function changeStar() {
+	var path = this.src
+	console.log(path);
+	if (path.search("empty") != -1) {
+		this.src = "styles/img/star.png"
+	} else {
+		this.src = "styles/img/empty-star.png"
+	}
+	var stars = 5
+	for (var i = 0; i < interactiveStar.length; i++) {
+		if (interactiveStar[i].src.search("empty")) {
+			stars - 1
+		}
+		document.getElementById("reviewStars").value = stars
+	}
+}

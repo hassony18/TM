@@ -383,34 +383,31 @@ button:hover, input[type=submit]:hover {
 
 /* Media Query For Phone */
 @media only screen and (min-width: 200px) { /*768px*/
-	#allemand_apprentissage_container {
+	#anglais_apprentissage_container {
 		margin-top: 30%;
 	}
-	
 	#previewImage {
 		width: 90%;
 	}
-
 }
 /* E
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 600px) { /*768px*/
 
-	#allemand_apprentissage_container {
+	#anglais_apprentissage_container {
 		margin-top: 20%;
 	}
-	
 	#previewImage {
 		width: 80%;
-	}
+	}	
 
 }
 /* End Media Query For Tablet */
 
 /* Media Query For Desktop */
 @media only screen and (min-width: 1600px) {
-	#allemand_apprentissage_container {
+	#anglais_apprentissage_container {
 		margin-top: 10%;
 	}
 	

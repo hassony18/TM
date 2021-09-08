@@ -6,8 +6,12 @@
 		session_start();
 	}
 ?>
+<?
+	$filename = 'styles/chat.css';
+	$fileModified = substr(md5(filemtime($filename)), 0, 6);
+?>
+<link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 
-<link rel="stylesheet" href="styles/chat.css">
 <div id="everything_chatbox_container">
 	<div id="chatbox_container">
 	
