@@ -1,0 +1,422 @@
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: #525f7f;
+    background-color: #f8f9fe;
+	height:100vh;
+	margin:0;
+	display:flex; 
+	flex-direction:column; 
+}
+
+input[type=submit], button {
+	border-radius: 25px;
+	background-color: crimson;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+    margin: 0 auto;
+	display: block;
+}
+
+button:hover, input[type=submit]:hover {
+	background-color: transparent;
+	color: crimson;
+}
+
+/* cool white background */
+#learningChoiceContainer, #multipleChoicesContainer, #writingContainer, #learningCardContainerBackground {
+	background-color: white;
+	border-radius: 25px;
+	margin: auto;
+	width: 80%;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding: 10px;
+}
+
+#learningChoiceContainer h1, #cardContainer h2, #multipleChoicesContainer, #writingContainer {
+	justify-content: center;
+	text-align: center;
+}
+
+#multipleChoicesContainer input[type=submit], #writingContainer input[type=submit] {
+    margin: 10px auto;
+    display:block;
+}
+
+#listenTo {
+	margin-left: 10px;
+	margin: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50px;
+	height: 50px;
+}
+
+.input_text:focus {
+	border-bottom: 2px solid crimson;
+    outline: none !important;
+}
+
+.input_text {
+	background: transparent;
+	color: crimson;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	width: 50%;
+	font-size: 25px;
+	margin-top: 10px;
+}
+
+#vocCheckBoxesList {
+	overflow: auto;
+}
+
+#learningChoiceContainer h2, #learningChoiceContainer input {
+	margin: 10px;
+}
+
+  
+#header .nav-list ul li a {
+    font-size: 15px !important;
+}
+
+.header {
+	position: relative;
+}
+  
+#header .header {
+    background-color: #29323c;
+}
+
+/* INPUT STYLING */
+
+
+/* The container */
+.checkbox_container_style {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container_style input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container_style:hover input ~ .checkbox_checkmark {
+  background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container_style input:checked ~ .checkbox_checkmark {
+  background-color: crimson;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container_style input:checked ~ .checkbox_checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container_style .checkbox_checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* RADIO STYLING */
+
+/* The container */
+.radio_style_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio_style_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio_style_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio_style_container:hover input ~ .radio_style_checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio_style_container input:checked ~ .radio_style_checkmark {
+  background-color: crimson;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio_style_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio_style_container input:checked ~ .radio_style_checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio_style_container .radio_style_checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* CARDS */
+
+
+/* The Modal (background) */
+#previewContainer {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+#previewImage {
+	margin: auto;
+	width: 40%;
+	height: 90%;
+	padding: 10px;
+	background-color: white;
+	overflow: auto;
+}
+
+
+#vocTableList {
+    font-family: 'Saira Semi Condensed';
+	text-align: left;
+	margin-left: 5px;
+	width: 100%;
+    color: black;
+}
+
+#closePreview {
+	width: 50px;
+	height: 50px;
+}
+
+#keyboard_container {
+	opacity: 0;
+}
+
+@media (hover) {
+
+	
+	#keyboard_container {
+		opacity: 1;
+	}
+}
+
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+.cardContainer{
+	position: relatve;
+	margin: auto;
+	width: 90%;
+	max-width: 500px;
+	height: 55%;
+	max-height: 150px;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.theCard:hover {
+	transform: rotateY(180deg);
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.theCard{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+	transition: all 0.8s ease;
+}
+
+#learningCardContainerBackground {
+	height: 550px;
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .theFront{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	/* overflow: hidden; */
+	background: white;
+	color: crimson;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theBack{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	/* overflow: hidden; */
+	background: linear-gradient(to left, #c31432, #240b36);
+	color: white;
+	text-align: center;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+}
+
+
+.theFront h1, .theBack h1{
+	font-family: 'zilla slab', sans-serif;
+	padding: 30px;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+}
+
+.theFront p, .theBack p{
+	font-family: 'zilla slab', sans-serif;
+	padding: 30px;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+}
+
+#cardContainer h2 {
+	margin: 10px;
+}
+
+#cardContainer button {
+	margin-top: 10px;
+}
+
+/* Media Query For Phone */
+@media only screen and (min-width: 200px) { /*768px*/
+	#italien_apprentissage_container {
+		margin-top: 30%;
+	}
+	#previewImage {
+		width: 90%;
+	}
+}
+/* E
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 600px) { /*768px*/
+
+	#italien_apprentissage_container {
+		margin-top: 20%;
+	}
+	#previewImage {
+		width: 80%;
+	}	
+
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1600px) {
+	#italien_apprentissage_container {
+		margin-top: 10%;
+	}
+	
+	#previewImage {
+		width: 40%;
+	}
+
+}
+
+/* End  Media Query For Desktop */
+
+

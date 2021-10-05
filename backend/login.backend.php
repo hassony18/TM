@@ -44,9 +44,25 @@
 		$data = $result->fetch_assoc();
 		if (empty($data)) { 
 			$sql = "INSERT INTO users (first_name, last_name, user_image, email) VALUES (?, ?, ?, ?);";
+			// send email 
+			$to = $_SESSION['email'];
+			$subject = 'Bienvenue sur swisslearns, '.$_SESSION['userFirstName'].'!';
+			$message = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><title></title></head><body>
+            <div id='email-wrap'>
+				<p style='font-size: 20px;'>Salut, ".$_SESSION['userFirstName']."!</p><br>
+				<p style='font-size: 18px;'>Nous souhaitons vous applaudir pour le choix que vous venez de faire. Grâce à swisslearns, vous pourrez apprendre votre vocabulaire d’allemand, d’anglais et d’italien, sans parler de la position des pays et de leur drapeaux. Comme vous avez pu le voir, le site vous permet également de donner des avis en sélectionnant votre note et en écrivant votre avis juste en-dessous de la section avis sur le site. Nous serions heureux de recevoir votre avis, quel qu’il soit.</p><br>
+				<p style='font-size: 18px;'>Bravo pour votre inscription et merci de votre soutien,</p>
+				<p style='font-size: 18px;'>Administration</p>
+				</div></body></html>";
+			$headers = "From: Swisslearns <admin@swisslearns.ch>\r\n";
+			$headers .= "Reply-To: admin@swisslearns.ch\r\n";
+			$headers .= "Content-Type: text/html\r\n";
+			
+			mail($to, $subject, $message, $headers);
+
 		} else {
 			$sql = "UPDATE users SET first_name = ?, last_name = ?, user_image = ? WHERE email = ?;";
-		}
+		}		
 		//error_log( print_r($payload, true) );
 		$stmt = $conn->prepare($sql);
 		$stmt->bind_param('ssss', $payload["given_name"], $payload["family_name"], $payload["picture"], $payload["email"]);

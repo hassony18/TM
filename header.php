@@ -18,6 +18,10 @@
 	<link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<!-- Adsense -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2206500782067023"
+     crossorigin="anonymous"></script>
+
 </head>
 <body>
 	<header>

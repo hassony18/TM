@@ -142,7 +142,7 @@ function verifyMultipleChoicesAnswer($answer) {
         }
         array_push($tempArray, [$_SESSION["question"], $_SESSION["correctAnswer"]]);
         $_SESSION["errorTable"] = $tempArray;
-        setupMultipleChoices("&answer=incorrect");
+        setupMultipleChoices("&answer=incorrect&correctAnswer=".$_SESSION["correctAnswer"]);
     }
 }
 
@@ -181,7 +181,9 @@ function setupMultipleChoices($status = "") {
                     array_push($tempAnswerArray, $errorTable[$rand_keys[2]][1]);
                     array_push($tempAnswerArray, $answer); // correct answer
                 }
-                shuffle($tempAnswerArray);
+                shuffle($tempAnswerArray); // rendre la liste aleatoire
+				$tempAnswerArray = array_unique($tempAnswerArray); // enlever toutes repetitions
+				$tempAnswerArray = array_values($tempAnswerArray); // mettre dans l'ordre
                 $_SESSION["answersList"] = json_encode($tempAnswerArray);
                 $_SESSION["errorNumber"] = $_SESSION["errorNumber"] + 1;
                 header("Location: ../anglais.php?success=multipleChoices".$status);
@@ -216,7 +218,9 @@ function setupMultipleChoices($status = "") {
         array_push($tempAnswerArray, $localLearningTable[$rand_keys[2]][1]);
         array_push($tempAnswerArray, $frenchWord); // correct answer
 	}
-    shuffle($tempAnswerArray);
+	shuffle($tempAnswerArray); // rendre la liste aleatoire
+	$tempAnswerArray = array_unique($tempAnswerArray); // enlever toutes repetitions
+	$tempAnswerArray = array_values($tempAnswerArray); // mettre dans l'ordre
     $_SESSION["answersList"] = json_encode($tempAnswerArray);
     header("Location: ../anglais.php?success=multipleChoices".$status);
     exit();
@@ -266,7 +270,8 @@ function verifyWritingTestAnswer($answer) {
             }
         }
     }
-    if ($canPass || $answer == $correctAnswer) {
+	$similarities = similar_text($answer, $correctAnswer, $percentage);
+    if ($canPass || $percentage >= 90) { // was  $canPass || $answer == $correctAnswer
         addScore("anglais", 1);
         header("Location: ../anglais.php?success=correctAnswer");
         // remove from error list if the answer is correct
@@ -277,7 +282,7 @@ function verifyWritingTestAnswer($answer) {
                 }
             }
         }
-        startWritingTest("&answer=correct");
+       startWritingTest("&answer=correct&correctAnswer=".$_SESSION["correctAnswer"]."&percentage=".$percentage);
     } else {
         addScore("anglais", -1);
         header("Location: ../anglais.php?success=wrongAnswer");
@@ -297,7 +302,7 @@ function verifyWritingTestAnswer($answer) {
         }
         array_push($tempArray, [$_SESSION["question"], $_SESSION["correctAnswer"]]);
         $_SESSION["errorTable"] = $tempArray;
-        startWritingTest("&answer=incorrect");
+        startWritingTest("&answer=incorrect&correctAnswer=".$_SESSION["correctAnswer"]);
     }
 }
 

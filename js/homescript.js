@@ -76,8 +76,8 @@ function changeStar() {
 	}
 	var stars = 5
 	for (var i = 0; i < interactiveStar.length; i++) {
-		if (interactiveStar[i].src.search("empty")) {
-			stars - 1
+		if (interactiveStar[i].src.search("empty") != -1) {
+			stars--
 		}
 		document.getElementById("reviewStars").value = stars
 	}

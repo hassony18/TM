@@ -140,6 +140,16 @@
 <link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 
 <body>
+	<form id="upload_form" action="backend/upload.backend.php" method="post" enctype="multipart/form-data">
+		<?php
+			if (file_exists($_SERVER['DOCUMENT_ROOT']."/styles/img/banners/".$_GET["u"].".png")) {
+				echo '<img id="profile_banner" src="styles/img/banners/'.$_GET["u"].'.png?'.time().'">';
+			} else {
+				echo '<img id="profile_banner" src="styles/img/banners/placeholder.png">';
+			}
+		?>
+		<input id="fileToUpload" type="file" name="fileToUpload" style="display: none;"/>
+	</form>
 	<div id="profile_container">
 		<?php echo "<div id='profile_picture_container'><img src='".$data["user_image"]."' id='profile_picture'></div>" ?>
 		<?php
@@ -217,7 +227,7 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Allemand</div>
-				<div class="text"><?php echo $data["scoreAllemand"].'/'.$top1Allemand["scoreAllemand"] ?></div>
+				<div class="text"><?php echo $data["scoreAllemand"].'/'.$top1Allemand["scoreAllemand"] ?> pts</div>
 				<?php
 					$stmt = $conn->prepare('SELECT u.id, u.scoreAllemand AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreAllemand < u2.scoreAllemand WHERE u.id = ?;');
 					$stmt->bind_param('s', $userID);
@@ -234,7 +244,7 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Italien</div>
-				<div class="text"><?php echo $data["scoreItalien"].'/'.$top1Italien["scoreItalien"] ?></div>
+				<div class="text"><?php echo $data["scoreItalien"].'/'.$top1Italien["scoreItalien"] ?> pts</div>
 				<?php
 					$stmt = $conn->prepare('SELECT u.id, u.scoreItalien AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreItalien < u2.scoreItalien WHERE u.id = ?;');
 					$stmt->bind_param('s', $userID);
@@ -251,7 +261,7 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Anglais</div>
-				<div class="text"><?php echo $data["scoreAnglais"].'/'.$top1Anglais["scoreAnglais"] ?></div>
+				<div class="text"><?php echo $data["scoreAnglais"].'/'.$top1Anglais["scoreAnglais"] ?> pts</div>
 				<?php
 					$stmt = $conn->prepare('SELECT u.id, u.scoreAnglais AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreAnglais < u2.scoreAnglais WHERE u.id = ?;');
 					$stmt->bind_param('s', $userID);
@@ -268,7 +278,7 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Drapeaux</div>
-				<div class="text"><?php echo $data["scoreDrapeaux"].'/'.$top1Drapeaux["scoreDrapeaux"] ?></div>
+				<div class="text"><?php echo $data["scoreDrapeaux"].'/'.$top1Drapeaux["scoreDrapeaux"] ?> pts</div>
 				<?php
 					$stmt = $conn->prepare('SELECT u.id, u.scoreDrapeaux AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreDrapeaux < u2.scoreDrapeaux WHERE u.id = ?;');
 					$stmt->bind_param('s', $userID);
@@ -285,7 +295,7 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Carte</div>
-				<div class="text"><?php echo $data["scoreCarte"].'/'.$top1Carte["scoreCarte"] ?></div>
+				<div class="text"><?php echo $data["scoreCarte"].'/'.$top1Carte["scoreCarte"] ?> pts</div>
 				<?php
 					$stmt = $conn->prepare('SELECT u.id, u.scoreCarte AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreCarte < u2.scoreCarte WHERE u.id = ?;');
 					$stmt->bind_param('s', $userID);
@@ -302,7 +312,7 @@
 					<div class="box"><span></span></div>
 				</div>
 				<div class="text">Total</div>
-				<div class="text"><?php echo $profileTotal.'/'.$topPlayerInAll["amount"] ?></div>
+				<div class="text"><?php echo $profileTotal.'/'.$topPlayerInAll["amount"] ?> pts</div>
 				<?php
 					$stmt = $conn->prepare('SELECT u.id, (u.scoreAllemand+u.scoreAnglais+u.scoreItalien+u.scoreCarte+u.scoreDrapeaux) AS total, COUNT(*)+1 AS rank FROM users u INNER JOIN users u2 ON u.scoreAllemand+u.scoreAnglais+u.scoreItalien+u.scoreCarte+u.scoreDrapeaux < u2.scoreAllemand+u2.scoreAnglais+u2.scoreItalien+u2.scoreCarte+u2.scoreDrapeaux WHERE u.id = ?;');
 					$stmt->bind_param('s', $userID);
@@ -424,6 +434,52 @@
 
 			</script>
 		';
+		
+		if (isset($_SESSION["user_id"])) {
+			if ($_GET["u"] == $_SESSION["user_id"]) {
+				echo '
+					<script>
+					// upload button
+					var profile_banner = document.getElementById("profile_banner");
+					if (profile_banner) {
+						profile_banner.onclick = function() {
+							document.getElementById("fileToUpload").click()
+						}
+					}
+					
+					// auto submit images
+					if (document.getElementById("fileToUpload")) {
+						document.getElementById("fileToUpload").onchange = function() {
+							document.getElementById("upload_form").submit();
+						};
+					}
+
+					</script>
+				';
+			}
+		}
+	?>
+	
+	<!-- Catch errors -->
+	<?php
+		if (isset($_GET["error"])) {
+			$error = $_GET["error"];
+			if ($error == "notImage") {
+				echo "<script>showNotification('error', 'File is not an image.');</script>";
+			} elseif ($error == "exists") {
+				echo "<script>showNotification('error', 'File exists already.');</script>";
+			}  elseif ($error == "tooLarge") {
+				echo "<script>showNotification('error', 'File is too big.');</script>";
+			}  elseif ($error == "format") {
+				echo "<script>showNotification('error', 'Unacceptable file format.');</script>";
+			} elseif ($error == "unknown") {
+				echo "<script>showNotification('error', 'unknown error.');</script>";
+			} 
+		}
+		
+		if (isset($_GET["success"])) {
+			echo "<script>showNotification('success', 'Successfully changed banner.');</script>";
+		}
 	?>
 
 </body>

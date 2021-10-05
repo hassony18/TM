@@ -87,8 +87,14 @@ function showMultipleChoices(question, answersList, position, total) {
 	document.getElementById("multipleChoicesContainer").style.display = "block"
 	document.getElementById("shownVocText").innerHTML = question
 	document.getElementById("words_counter_multipleChoices").innerHTML = (position+1) +"/"+ total
+	// hide all buttons
+	for (var i = 0; i < 4; i++) {
+		document.getElementById("choix_multiple_option" + i).style.display = "none"
+	}
+	// show buttons that has values only
 	for (var i = 0; i < answersList.length; i++) {
 		document.getElementById("choix_multiple_option" + i).value = answersList[i]
+		document.getElementById("choix_multiple_option" + i).style.display = "block"
 	}
 }
 
@@ -175,7 +181,7 @@ var close = document.getElementById("closePreview");
 close.onclick = function() {
 	container.style.display = "none";
 }
-
+var tableToAppend = null;
 
 function showPicture() {
 	if (container.style.display == "block") {
@@ -186,7 +192,13 @@ function showPicture() {
 	if (!learningTable) {
 		return false;
 	}
-	var tableToAppend = document.getElementById("vocTableList")
+	if (tableToAppend) {
+		var parent = document.getElementById("vocTableList");
+		while(parent.hasChildNodes()) {
+		   parent.removeChild(parent.firstChild);
+		}
+	}
+	tableToAppend = document.getElementById("vocTableList")
 	for (var i = 0; i < learningTable.length; i++) {
 		var tr = document.createElement("tr")
 		var left = document.createElement("td")

@@ -1,34 +1,35 @@
 <?php
 
-include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php"; // inclure le fichier score où se trouve le code permettant de rajouter de score aux utilisateurs
 
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
     session_start();
 }
 
-if (!function_exists('str_contains')) {
+if (!function_exists('str_contains')) { // créer la fonction "str_contains" qui permet de verifier si certain string contient un string donné
     function str_contains(string $haystack, string $needle): bool
     {
         return '' === $needle || false !== strpos($haystack, $needle);
     }
 }
 
-$content = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data/allemand.json");
+$content = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data/allemand.json"); // chercher le contenu du fichier allemand.json où se trouve la liste du voc
 
-$baseVocTable = json_decode($content, true);
+$baseVocTable = json_decode($content, true); // convertir le string du voc en une liste php
     
-if (isset($_POST["submit_vocSession"])) { // on submit request learning or testing
+if (isset($_POST["submit_vocSession"])) { // Quand on soumet le requêt d'apprentissage ou de test
     prepareVocSession();
 }
 
-if (isset($_POST["requestReturnToAllemand"])) {
+if (isset($_POST["requestReturnToAllemand"])) { // Quand on clique sur le bouton 'retour' on va à la page allemand.php
     header("Location: ../allemand.php");
     exit();
 }
 
-function prepareVocSession() {
+function prepareVocSession() { // fonction permettant d'initer soit le test soit la session d'apprentissage
     global $baseVocTable;
-
+	
+	// voir et récuperer les parametres de l'utilisateur
     $learningChoice = isset($_POST["apprendreOuTest"]); // apprendre ou test
     if (!$learningChoice) {
         header("Location: ../allemand.php?error=chooseLearningOption");
@@ -51,24 +52,28 @@ function prepareVocSession() {
 		$testChoice = $_POST["choixMultiplesOuEcrire"]; // choixMultiples ou ecrire
 	}
 
+	// faire une liste des chapitres de voc selectionnes
     $selectedVocNums = array();
     foreach ($baseVocTable as $key => $value){
-        $key = str_replace(".", "_", $key);
+        $key = str_replace(".", "_", $key); // remplacer . par _ pour éviter des problèmes avec le côté HTML
         if (isset($_POST[$key])) {
             $key = str_replace("_", ".", $key);
             array_push($selectedVocNums, $key);
         }
     }
-	var_dump($selectedVocNums);
-    if (empty($selectedVocNums)) {
+	
+	//var_dump($selectedVocNums);
+    if (empty($selectedVocNums)) { // si on choisit aucun chapitre, on retourne à la page d'allemand en montrant un message d'erreur
         header("Location: ../allemand.php?error=chooseChapter");
         exit();
     }
-
+	
+	// récuprer les parametres du voc
     $includePhrases = isset($_POST["phrasesNormales"]);
     $includeBlue = isset($_POST["bleues"]);
     $includeBluePhrases = isset($_POST["phrasesBleues"]);
-
+	
+	// rajouter le voc bleu, phrase, bleuphrase sur demande
     $finalTable = array();
     foreach($selectedVocNums as $index => $vocNumber) {
         foreach ($baseVocTable[$vocNumber] as $vocType => $localVocTable) {
@@ -80,7 +85,7 @@ function prepareVocSession() {
                 foreach ($localVocTable as $german => $french) {
                     array_push($finalTable, [$german, $french]);
                 }
-            } elseif ($vocType == "bluePhrases" && $includeBluePhrases) {
+            } elseif ($vocType == "phrase-blue" && $includeBluePhrases) {
                 foreach ($localVocTable as $german => $french) {
                     array_push($finalTable, [$german, $french]);
                 }
@@ -91,6 +96,8 @@ function prepareVocSession() {
             }
         }
     }
+	
+	// si l'utilisateur a choisi d'apprendre ou de faire un test, on l'envoie a la page correcte.
     if ($learningChoice == "apprendre") {
         $_SESSION["learningTable"] = $finalTable;
         header("Location: ../allemand.php?success=apprendre");
@@ -104,6 +111,8 @@ function prepareVocSession() {
         $_SESSION["currentNumberInQueue"] = 0;
         $_SESSION["errorNumber"] = 0;
         $_SESSION["errorTable"] = array();
+		
+		// choix de test
         if ($_SESSION["test_choice"] == "choixMultiples") {
             setupMultipleChoices();
         } elseif ($_SESSION["test_choice"] == "ecrire") {
@@ -117,20 +126,21 @@ function prepareVocSession() {
 
 // MULTIPLE CHOICES CODE
 
-if (!isset($_SESSION["currentNumberInQueue"])) { 
+if (!isset($_SESSION["currentNumberInQueue"])) { // initer les paramètres s'ils ne sont pas la
     $_SESSION["currentNumberInQueue"] = 0;
 }
 
-if (isset($_POST["submit_multipleChoices"])) {
+if (isset($_POST["submit_multipleChoices"])) { // quand on soumet la réponse du test choix multiple
     verifyMultipleChoicesAnswer($_POST["submit_multipleChoices"]);
 }
 
+// on vérifie si la réponse est correcte ou pas.
 function verifyMultipleChoicesAnswer($answer) {
     $_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
 	if ($answer == $_SESSION["correctAnswer"]) {
 		addScore("allemand", 1);
         header("Location: ../allemand.php?success=correctAnswer");
-        // remove from error list if the answer is correct
+        // enlever la réponse de la liste d'erreur si la réponse est correcte
         if (isset( $_SESSION["errorTable"]) && !empty($_SESSION["errorTable"])) {
             foreach ($_SESSION["errorTable"] as $key => $value) {
                 if ($value[0] == $answer || $value[1] == $answer) {
@@ -151,7 +161,7 @@ function verifyMultipleChoicesAnswer($answer) {
         }
         array_push($tempArray, [$_SESSION["question"], $_SESSION["correctAnswer"]]);
         $_SESSION["errorTable"] = $tempArray;
-        setupMultipleChoices("&answer=incorrect");
+        setupMultipleChoices("&answer=incorrect&correctAnswer=".$_SESSION["correctAnswer"]);
     }
 }
 
@@ -190,7 +200,9 @@ function setupMultipleChoices($status = "") {
                     array_push($tempAnswerArray, $errorTable[$rand_keys[2]][1]);
                     array_push($tempAnswerArray, $answer); // correct answer
                 }
-                shuffle($tempAnswerArray);
+                shuffle($tempAnswerArray); // rendre la liste aleatoire
+				$tempAnswerArray = array_unique($tempAnswerArray); // enlever toutes repetitions
+				$tempAnswerArray = array_values($tempAnswerArray); // mettre dans l'ordre
                 $_SESSION["answersList"] = json_encode($tempAnswerArray);
                 $_SESSION["errorNumber"] = $_SESSION["errorNumber"] + 1;
                 header("Location: ../allemand.php?success=multipleChoices".$status);
@@ -225,7 +237,9 @@ function setupMultipleChoices($status = "") {
         array_push($tempAnswerArray, $localLearningTable[$rand_keys[2]][1]);
         array_push($tempAnswerArray, $frenchWord); // correct answer
 	}
-    shuffle($tempAnswerArray);
+	shuffle($tempAnswerArray); // rendre la liste aleatoire
+	$tempAnswerArray = array_unique($tempAnswerArray); // enlever toutes repetitions
+	$tempAnswerArray = array_values($tempAnswerArray); // mettre dans l'ordre
     $_SESSION["answersList"] = json_encode($tempAnswerArray);
     header("Location: ../allemand.php?success=multipleChoices".$status);
     exit();
@@ -275,7 +289,8 @@ function verifyWritingTestAnswer($answer) {
             }
         }
     }
-    if ($canPass || $answer == $correctAnswer) {
+	$similarities = similar_text($answer, $correctAnswer, $percentage);
+    if ($canPass || $percentage >= 90) { // was  $canPass || $answer == $correctAnswer
         addScore("allemand", 1);
         header("Location: ../allemand.php?success=correctAnswer");
         // remove from error list if the answer is correct
@@ -286,7 +301,7 @@ function verifyWritingTestAnswer($answer) {
                 }
             }
         }
-        startWritingTest("&answer=correct");
+        startWritingTest("&answer=correct&correctAnswer=".$_SESSION["correctAnswer"]."&percentage=".$percentage);
     } else {
         addScore("allemand", -1);
         header("Location: ../allemand.php?success=wrongAnswer");
@@ -306,7 +321,7 @@ function verifyWritingTestAnswer($answer) {
         }
         array_push($tempArray, [$_SESSION["question"], $_SESSION["correctAnswer"]]);
         $_SESSION["errorTable"] = $tempArray;
-        startWritingTest("&answer=incorrect");
+        startWritingTest("&answer=incorrect&correctAnswer=".$_SESSION["correctAnswer"]);
     }
 }
 

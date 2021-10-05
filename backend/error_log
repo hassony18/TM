@@ -1,0 +1,21 @@
+[03-Oct-2021 20:43:16 UTC] PHP Warning:  array_rand(): Second argument has to be between 1 and the number of elements in the array in /home/swisicfc/public_html/backend/allemand.backend.php on line 191
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 198
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Undefined index:  in /home/swisicfc/public_html/backend/allemand.backend.php on line 198
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 198
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 199
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Undefined index:  in /home/swisicfc/public_html/backend/allemand.backend.php on line 199
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 199
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 200
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Undefined index:  in /home/swisicfc/public_html/backend/allemand.backend.php on line 200
+[03-Oct-2021 20:43:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 200
+[03-Oct-2021 20:43:19 UTC] PHP Warning:  array_rand(): Second argument has to be between 1 and the number of elements in the array in /home/swisicfc/public_html/backend/allemand.backend.php on line 191
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 198
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Undefined index:  in /home/swisicfc/public_html/backend/allemand.backend.php on line 198
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 198
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 199
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Undefined index:  in /home/swisicfc/public_html/backend/allemand.backend.php on line 199
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 199
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 200
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Undefined index:  in /home/swisicfc/public_html/backend/allemand.backend.php on line 200
+[03-Oct-2021 20:43:19 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/swisicfc/public_html/backend/allemand.backend.php on line 200
+[04-Oct-2021 08:16:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/swisicfc/public_html/backend/allemand.backend.php:339) in /home/swisicfc/public_html/backend/allemand.backend.php on line 351

@@ -156,7 +156,29 @@
 				<a href="avis.php" style="color: black;" class="cta">Voir tous les avis</a>';
 			  </div>
 			</div>
+	<!-- leave Avis Section -->
+		  <?php
+			if (isset($_SESSION["email"])) {
+				echo '
+
+				<form id="leaveReview" action="backend/index.backend.php" method="post">
+					<p>Tu aimes ce site ? Tu veux nous aider à l’améliorer ? Si tu entres dans l’une de ces catégories, tu peux nous laisser, ici, un message pour nous transmettre ton avis.</p>
+					<div class="stars">
+						<i><img src="styles/img/star.png"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
+						<input type="text" id="reviewMessage" name="reviewMessage">
+						<input style="display: none;" type="text" id="reviewStars" name="reviewStars">
+						<input id="submit_review" type="submit" name="submit_review" value="Envoyer">
+					</div>
+				</form>
+				';
 			
+			}
+		  ?>	
+	<!-- End leave Avis Section -->		
 		</section>
 	 <!-- End Avis Section -->
 
@@ -392,7 +414,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="index.php?error=italien">
+						<a href="italien.php">
 							<div class="learn-item">
 								<div class="learn-info">
 									<h1>Vocabulaire d\'Italien</h1>
@@ -476,10 +498,21 @@
 					<div class='actor'>Vocabulaire d'anglais</div>
 				</div>
 				<div class='list-item'>
+					<div class='character'>Elisabeth Costa-Cecchetto</div>
+					<div class='dots'></div>
+					<div class='actor'>Vocabulaire d'italien</div>
+				</div>
+				<div class='list-item'>
 					<div class='character'>Ysabella Carandang</div>
 					<div class='dots'></div>
 					<div class='actor'>Vocabulaire d'italien</div>
 				</div>
+				<div class='list-item'>
+					<div class='character'>Cristina Haji</div>
+					<div class='dots'></div>
+					<div class='actor'>Publicité et marketing</div>
+				</div>
+			
 
 			</div>
 		</div>
@@ -529,30 +562,7 @@
 				<h2>Hultraman#8548</h2>
 			  </div>
 			</div>
-		  </div>
-	<!-- leave Avis Section -->
-		  <?php
-			if (isset($_SESSION["email"])) {
-				echo '
-
-				<form id="leaveReview" action="backend/index.backend.php" method="post">
-					<p>Tu aimes ce site ? Tu veux nous aider à l’améliorer ? Si tu entres dans l’une de ces catégories, tu peux nous laisser, ici, un message pour nous transmettre ton avis.</p>
-					<div class="stars">
-						<i><img src="styles/img/star.png"></img></i>
-						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
-						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
-						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
-						<i><img src="styles/img/empty-star.png" class="interactiveStar"></img></i>
-						<input type="text" id="reviewMessage" name="reviewMessage">
-						<input style="display: none;" type="text" id="reviewStars" name="reviewStars">
-						<input id="submit_review" type="submit" name="submit_review" value="Envoyer">
-					</div>
-				</form>
-				';
-			
-			}
-		  ?>	
-	<!-- End leave Avis Section -->		  
+		  </div>  
 		</div>
 	  </section>
 	  <!-- End Contact Section -->

@@ -1,7 +1,7 @@
 <?php 
 	require 'header.php';
 	include 'db/config.php';
-	$_SESSION["user_page"] = "online.php";
+	$_SESSION["user_page"] = "avis.php";
 ?>
 
 <?

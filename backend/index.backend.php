@@ -18,7 +18,7 @@ if (isset($_POST["submit_review"])) { // on submit request learning or testing
         header("Location: ../index.php");
         exit();
     }
-    $stars = $_POST["reviewStars"]; 
+    $stars = intval($_POST["reviewStars"]); 
 	$message = $_POST["reviewMessage"]; 
 	if ($stars > 5) {
 		$stars = 5;
@@ -29,5 +29,5 @@ if (isset($_POST["submit_review"])) { // on submit request learning or testing
 	$stmt = $conn->prepare($sql); 
 	$stmt->bind_param('sssss', $_SESSION['user_id'], $message, $stars, $message, $stars);
 	$stmt->execute();
-	header("Location: ../index.php?success=reviewed".$status);
+	header("Location: ../avis.php");
 }
