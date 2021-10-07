@@ -1,6 +1,22 @@
 <?php
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			chat.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page backend du chat
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+
     include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
-    if (session_status() === PHP_SESSION_NONE) {
+    if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
         session_start();
     }
     //action.php
@@ -8,6 +24,7 @@
 		exit();
 	}
 	if (isset($_POST["action"])) {
+		// envoyer un message
 		if ($_POST["action"] == "sendMessage") {
 			if (isset($_POST["id"]) && isset($_POST["message"])) {
 				$statement = $conn->prepare("INSERT into `messages` (sender_id, receiver_id, message) VALUES (?, ?, ?)");
@@ -17,7 +34,7 @@
 					die ("Mysql Error: " . $conn->error);
 				}
 			}
-		} elseif ($_POST["action"] == "fetch_messages") {
+		} elseif ($_POST["action"] == "fetch_messages") { // recuperer des messages
 			if (isset($_POST["id"])) {
                 $statement = $conn->prepare("SELECT sender_id, receiver_id, message from messages WHERE (sender_id = ? AND receiver_id = ?) OR (sender_id = ? AND receiver_id = ?) ORDER BY id DESC;");
 				$statement->bind_param('ssss', $_SESSION["user_id"], $_POST["id"], $_POST["id"], $_SESSION["user_id"]);
@@ -39,7 +56,7 @@
 
 
 			}
-		}  elseif ($_POST["action"] == "fetch_users") {
+		}  elseif ($_POST["action"] == "fetch_users") { // recuperer des utilisateurs
                 $statement = $conn->prepare("SELECT users.id, users.first_name, users.last_name, users.user_image, activity.last_activity FROM users INNER JOIN friends ON friends.user_2 = users.id INNER JOIN activity ON friends.user_2 = activity.id WHERE user_1 = ?;");
 				$statement->bind_param('s', $_SESSION["user_id"]);
                 $statement->execute();

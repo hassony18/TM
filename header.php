@@ -1,4 +1,20 @@
 <?php
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			header.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		Le header de toutes les pages
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+
 	require_once 'backend/notifications.backend.php';
 	session_start();
 ?>
@@ -12,6 +28,7 @@
 	<title>Swiss Learns</title>
 	
 	<?
+		// telecharger la dernière version du fichier css (éviter cache)
 		$filename = 'styles/homepage.css';
 		$fileModified = substr(md5(filemtime($filename)), 0, 6);
 	?>
@@ -40,6 +57,7 @@
 							<li><a href="online.php">En ligne</a></li>
 
 							<?php
+								// si connecté, afficher le choix d'apprentissage
 								if (isset($_SESSION["email"])) {
 									echo '<li><a href="index.php#learn">Apprendre</a></li>';
 								}
@@ -47,6 +65,7 @@
 								
 							<li><a href="index.php#about">Qui sommes-nous</a></li>
 							<?php
+								// si connecté, afficher les options d'utilisateurs
 								if (isset($_SESSION["email"])) {
 									// if logged in, show profile dropdown
 									echo '

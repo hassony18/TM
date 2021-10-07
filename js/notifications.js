@@ -1,6 +1,23 @@
-const showTime = 5000 
+/*
+	*	PROJECT:		swisslearns.ch
+	*	FILE:			notificaitons.js
+	*	DEVELOPERS:		Hassan & Jordan
+	* 	PURPOSE:		Gèrer les notifications
+			o    o     __ __
+			 \  /    '       `
+			  |/   /     __    \
+			(`  \ '    '    \   '
+			  \  \|   |   @_/   |
+			   \   \   \       /--/
+				` ___ ___ ___ __ '
+		
+		Written with ♥ for the The Republic of Geneva. 		
+*/
+	
 
+const showTime = 5000 // en ms
 
+// la fonction initiale des notificaitons
 function showNotification(type, message) { // "error", "success", "warning"
     var audio = document.getElementById("audio")
     audio.volume = 0.05;

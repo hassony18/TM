@@ -1,5 +1,20 @@
 <?php
-
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			allemand.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page backend de l'allemand
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+	
 include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php"; // inclure le fichier score où se trouve le code permettant de rajouter de score aux utilisateurs
 
 if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
@@ -165,7 +180,7 @@ function verifyMultipleChoicesAnswer($answer) {
     }
 }
 
-
+// créer le test choix multiples
 function setupMultipleChoices($status = "") {
 	$num = $_SESSION["currentNumberInQueue"];
     $localLearningTable = $_SESSION["learningTable"];
@@ -256,6 +271,7 @@ if (isset($_POST["submit_ecrire_test"])) {
     verifyWritingTestAnswer($answer);
 }
 
+// vérifier la réponse du test d'écriture
 function verifyWritingTestAnswer($answer) {
     $_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
     $answer = preg_replace("/\s+/", "", $answer); // remove all spaces from answer
@@ -325,6 +341,7 @@ function verifyWritingTestAnswer($answer) {
     }
 }
 
+// commencer le test d'écriture
 function startWritingTest($status = "") {
     $num = $_SESSION["currentNumberInQueue"];
     $localLearningTable = $_SESSION["learningTable"];

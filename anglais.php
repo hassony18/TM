@@ -1,12 +1,30 @@
 <?php 
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			anglais.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page principale de l'anglais
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+
 	require 'header.php';
 	require_once 'backend/anglais.backend.php';
-
+	// si l'utilisateur n'est pas connecté, l'envoyer à la page d'acceuil
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "anglais.php";
-
+	
+	// liste d'erreurs possibles et l'affichage de notifications
 	if (isset($_GET["error"])) {
 		$error = $_GET["error"];
 		if ($error == "chooseChapter") {
@@ -22,6 +40,7 @@
 ?>
 
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/anglais.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -42,6 +61,7 @@
 				<div id="vocCheckBoxesList"> 
 					<table>
 						<?php
+							// charger la liste de chapitres
 							foreach ($baseVocTable as $key => $value){
 								echo '
 								<td>
@@ -170,6 +190,7 @@
 	<script src="js/anglais.js"></script>
 
 	<?php
+		// Lorsque l'utilisateur choisit un programme d'étude
 		if (isset($_GET["success"])) {
 
 			$success = $_GET["success"];
@@ -216,7 +237,8 @@
 				//echo "<script>startCelebration();</script>";
 			} 
 		}
-
+		
+		// Lorsque l'utilisateur répond à une question 
 		if (isset($_GET["answer"])) {
 			$answer = $_GET["answer"];
 			if ($answer == "correct") {

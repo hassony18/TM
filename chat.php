@@ -1,12 +1,30 @@
 <?php
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			chat.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page de chat
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
 	if (!defined("showChatPHP")) {
 		 die(header("location: index.php"));
 	}
+	
+	// initer une session s'il n'y en a pas
 	if (session_status() === PHP_SESSION_NONE) {
 		session_start();
 	}
 ?>
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/chat.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -44,6 +62,7 @@
 		</div>
 	</div>
 	<?php
+		// si l'utilisateur est connecté, on lui montre le chat
 		if (isset($_SESSION["email"])) {
 			echo '<div class="chatbox__button" onclick="toggleChat()"><img id="toggleImage" src="styles/img/chat.png" alt="image"></div>';
 		}

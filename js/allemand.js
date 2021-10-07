@@ -1,8 +1,23 @@
-
+/*
+	*	PROJECT:		swisslearns.ch
+	*	FILE:			allemand.js
+	*	DEVELOPERS:		Hassan & Jordan
+	* 	PURPOSE:		Gèrer l'allemand
+			o    o     __ __
+			 \  /    '       `
+			  |/   /     __    \
+			(`  \ '    '    \   '
+			  \  \|   |   @_/   |
+			   \   \   \       /--/
+				` ___ ___ ___ __ '
+		
+		Written with ♥ for the The Republic of Geneva. 		
+*/
+	
 
 var currentNumberInQueue = 0; // for learning cards
 
-
+// cacher tous les divs sauf le div du choix du programme
 function loadPage() {
 	isLearning = false;
 	currentNumberInQueue = 0;
@@ -16,6 +31,7 @@ function loadPage() {
 }
 loadPage()
 
+// transformation des lettres en miniscule/majuscule
 function changeCase() {
 	var els = document.getElementsByClassName("keyboard_button");
 	var changeCaseButton = document.getElementById("changeCaseButton");
@@ -41,12 +57,14 @@ function changeCase() {
 	} 
 }
 
+// inserer du texte (clavier)
 function insertText(e) {
 	var text = document.getElementById("textAEcrire").value;
 	var letter = e.innerHTML
 	document.getElementById("textAEcrire").value = text + "" + letter
 }
 
+// changer la rotation de la carte en cliquant
 function flipCard() {
 	var card = document.getElementById("flippingCard")
 	if (card.style.transform == "none" || card.style.transform == "") {
@@ -56,6 +74,7 @@ function flipCard() {
 	}
 }
 
+// Afficher des sous-categories en cliquant sur un radio button
 function onVocRadioValueChange() {
 	var checkedTest = document.getElementById("testRadio").checked;	
 	var checkedChoixMultiple = document.getElementById("radio_choix_multiple").checked;	
@@ -77,10 +96,8 @@ function onVocRadioValueChange() {
 	}
 }; 
 
-// testing
 
-
-
+// afficher les choix multiples 
 function showMultipleChoices(question, answersList, position, total) {
 	var position = parseInt(position)
 	document.getElementById("learningChoiceContainer").style.display = "none"
@@ -98,7 +115,7 @@ function showMultipleChoices(question, answersList, position, total) {
 	}
 }
 
-
+// afficher le test d'écriture
 function showWritingTest(question, position, total) {
 	var position = parseInt(position)
 	document.getElementById("shownVocText_ecrire").innerHTML = question
@@ -109,7 +126,8 @@ function showWritingTest(question, position, total) {
 
 
 
-var learningTable = null;
+var learningTable = null; // Vider la table si l'utilisateur 
+// commencer la session d'apprentissage
 function startLearningSession(table) {
 	learningTable = table
 	document.getElementById("learningChoiceContainer").style.display = "none"
@@ -117,6 +135,7 @@ function startLearningSession(table) {
 	nextVoc("start")
 }
 
+// passer au mot suivant, à la phrase suivante 
 function nextVoc(type) {
 	if (type == "start") {
 		currentNumberInQueue = 0
@@ -143,10 +162,12 @@ function nextVoc(type) {
 	document.getElementById("words_counter_learning").innerHTML = (currentNumberInQueue+1)+"/"+ (learningTable.length) // french text
 }
 
+// remettre le scrollbar à 0
 $(document).ready(function(){
     $(this).scrollTop(0);
 });
 
+// écouter les mots/phrases
 function listenToWord() {
 	var msg = new SpeechSynthesisUtterance();	
 	var card = document.getElementById("flippingCard")
@@ -183,12 +204,12 @@ close.onclick = function() {
 }
 var tableToAppend = null;
 
+// afficher la liste entière du voc
 function showPicture() {
 	if (container.style.display == "block") {
 		return false;
 	}
 	container.style.display = "block";
-	// trucs 
 	if (!learningTable) {
 		return false;
 	}
@@ -212,10 +233,7 @@ function showPicture() {
 }
 
 
-
-
 // close on clickoutside preview image
-
 
 document.addEventListener('mouseup', function(e) {
 	var img = document.getElementById('previewImage');

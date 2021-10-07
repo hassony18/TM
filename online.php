@@ -1,10 +1,30 @@
 <?php 
+
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			online.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page des utilisateurs en ligne
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+	
 	require 'header.php';
 	include 'db/config.php';
+	
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "online.php";
 ?>
 
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/online.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -17,7 +37,7 @@
 </body>
 
 <script>
-	fetch_user_login_data();
+	fetch_user_login_data(); // récupérer les données des utilisateurs en ligne
 	setInterval(function(){ fetch_user_login_data(); }, 10000);
 	function fetch_user_login_data() {
 		var action = "fetch_data";
@@ -28,6 +48,8 @@
 			success:function(data){ showOnlineList(JSON.parse(data));}
 		});
 	}
+	
+	// afficher la liste des utilisateurs en ligne
 	function showOnlineList(data) {
 		var num = data[0]
 		var table = data[1]

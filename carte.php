@@ -1,10 +1,29 @@
 <?php 
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			carte.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page principale de la carte
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+
 	require 'header.php';
 	require 'backend/carte.backend.php';
 	
+	// si l'utilisateur n'est pas connecté, l'envoyer à la page d'acceuil
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
+	
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "carte.php";
 
 ?>
@@ -12,6 +31,7 @@
 <script src="js/svg-pan-zoom.js"></script>
 <script src="js/hammer.js"></script>
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/carte.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -1479,7 +1499,7 @@
 
 	<?php
 	
-	
+	// commencer apprentissage ou test
 	if (isset($_GET["success"])) {
 		$success = $_GET["success"];
 		if ($success == "learn") {
@@ -1489,10 +1509,12 @@
 		}
 	}
 	
+	// lorsque une réponse est soumise
 	if (isset($_POST["userAnswer"])) {
 		verifyAnswer($_POST["userAnswer"]);
 	}
-
+	
+	// vérifier si la réponse est correcte
 	function verifyAnswer($answer) {
 		if (isset($_SESSION["question"]) && $_SESSION["question"]) {
 			$correctAnswer = preg_replace('/_/', ' ', $_SESSION["question"]);
@@ -1505,6 +1527,7 @@
 		}
 	}
 	
+	// commencer un nouveau test
 	function startNewQuiz() {
 		global $baseCountriesTable;
 		$rand_keys = array_rand($baseCountriesTable, 2);

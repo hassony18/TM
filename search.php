@@ -1,10 +1,28 @@
 <?php 
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			search.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		Recherche d'utilisateurs
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
 	require 'header.php';
 	include 'db/config.php';
+	
+	// permet de savoir sur quelle page l'utilisateur est.
 	$_SESSION["user_page"] = "search.php";
 ?>
 
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/search.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -20,6 +38,7 @@
 </body>
 
 <?php
+	// soumettre la requête de recherche
 	if (isset($_POST["submit_search"])) { 
 		if (!isset($_POST["search_text"]) || empty($_POST["search_text"])) {
 			echo "<script>showNotification('error', 'Écris l\'email de la personne souhaitée')</script>";

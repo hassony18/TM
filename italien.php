@@ -1,12 +1,32 @@
 <?php 
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			italien.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page principale de l'italien
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+
 	require 'header.php';
 	require_once 'backend/italien.backend.php';
-
+	
+	// si l'utilisateur n'est pas connecté, l'envoyer à la page d'acceuil
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
+	
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "italien.php";
-
+	
+	// liste d'erreurs possibles et l'affichage de notifications
 	if (isset($_GET["error"])) {
 		$error = $_GET["error"];
 		if ($error == "chooseChapter") {
@@ -22,6 +42,7 @@
 ?>
 
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/italien.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -35,13 +56,14 @@
 		<div id="learningChoiceContainer">
 			<form action="backend/italien.backend.php" method="post">
 				<h1>Le vocabulaire d’italien</h1>
-				<p>Vous souhaitez donc apprendre l’italien. Pour cela, nous vous offrons le vocabulaire d’italien progetto italiano 1 et 2. Ce vocabulaire est séparé par différentes unités. Les unités du premier livre sont notées 1.X et celle du deuxième, 2.X. Il existe également des phrases accompagnant ces unités, même si ces phrases restent rares. Pour les voir, il vous suffit de sélectionner l’option « phrases ».</p>
+				<p>Vous souhaitez donc apprendre l’italien. Pour cela, nous vous offrons le vocabulaire d’italien Nuovissimo Progetto Italiano 1 et 2. Ce vocabulaire est séparé par différentes unités. Les unités du premier livre sont notées 1.X et celle du deuxième, 2.X. Il existe également des phrases accompagnant ces unités, même si ces phrases restent rares. Pour les voir, il vous suffit de sélectionner l’option « phrases ».</p>
 				<h1>Choix de mode d'apprentissage</h1>
 
 				<h2 style="color: crimson;">Choisis un ou plusieurs chapitres:</h2>
 				<div id="vocCheckBoxesList"> 
 					<table>
 						<?php
+							// charger la liste de chapitres
 							foreach ($baseVocTable as $key => $value){
 								echo '
 								<td>
@@ -98,13 +120,13 @@
 						</label>
 					</div>	
 				</div>
-				<!--
+
 				<h2 style="color: crimson;">Options:</h2>
 				<label class="checkbox_container_style">Avec les phrases normales
 					<input id="normalPhrasesOption" name="phrasesNormales" type="checkbox">
 					<span class="checkbox_checkmark"></span>
 				</label>
-				-->
+
 				<input type="submit" name="submit_vocSession" value="On y va!">
 			</form>
 		</div>
@@ -170,6 +192,7 @@
 	<script src="js/italien.js"></script>
 
 	<?php
+		// Lorsque l'utilisateur choisit un programme d'étude
 		if (isset($_GET["success"])) {
 
 			$success = $_GET["success"];
@@ -216,7 +239,8 @@
 				//echo "<script>startCelebration();</script>";
 			} 
 		}
-
+		
+		// Lorsque l'utilisateur répond à une question 
 		if (isset($_GET["answer"])) {
 			$answer = $_GET["answer"];
 			if ($answer == "correct") {

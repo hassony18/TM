@@ -1,11 +1,26 @@
 <?php
-
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			login.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		Gèrer le proccessus de la connexion
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
 	require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
 	include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
 
 	//$jwt = new \Firebase\JWT\JWT;
 	//$jwt::$leeway = 10;
 	
+	// pour limiter l'accès aux developpeurs 
 	$verifiyAccess = array(
 		"hassonyalobaidy01@gmail.com" => true,
 		"scarpettajordan@gmail.com" => true,
@@ -16,7 +31,7 @@
 		exit();
 	}
 	$id_token = $_POST["idtoken"];
-	$CLIENT_ID = '467170103073-1t65koimd2m4jd4npjtoopmdtrboec6u.apps.googleusercontent.com';
+	$CLIENT_ID = '467170103073-1t65koimd2m4jd4npjtoopmdtrboec6u.apps.googleusercontent.com'; // code google
 
 	$client = new Google_Client(['client_id' => $CLIENT_ID]); 
 	$payload = $client->verifyIdToken($id_token);
@@ -24,6 +39,8 @@
 		if (empty($payload["family_name"]) || !isset($payload["family_name"])) {
 			$payload["family_name"] = "";
 		}
+		
+		// accès limité aux comptes ci-dessus
 		//if (!$verifiyAccess[$payload["email"]]) {
 			//die();
 		//}

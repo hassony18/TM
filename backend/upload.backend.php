@@ -1,10 +1,24 @@
 <?php
-
-if (session_status() === PHP_SESSION_NONE) {
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			upload.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		Upload the banners
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
 	session_start();
 }
 
-if (!isset($_SESSION["email"])) {
+if (!isset($_SESSION["email"])) { // si pas connecté, virer.
 	die(header("Location: ../index.php"));
 }
 

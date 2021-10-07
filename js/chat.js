@@ -1,3 +1,21 @@
+/*
+	*	PROJECT:		swisslearns.ch
+	*	FILE:			chat.js
+	*	DEVELOPERS:		Hassan & Jordan
+	* 	PURPOSE:		Gèrer le chat
+			o    o     __ __
+			 \  /    '       `
+			  |/   /     __    \
+			(`  \ '    '    \   '
+			  \  \|   |   @_/   |
+			   \   \   \       /--/
+				` ___ ___ ___ __ '
+		
+		Written with ♥ for the The Republic of Geneva. 		
+*/
+	
+	
+// cacher tous les divs pas necessaires
 document.getElementById("chatbox_container").style.display = "none"
 document.getElementById("chatbox_searchUserPanel").style.display = "none"
 document.getElementById("chatbox_chatPanel").style.display = "none"
@@ -5,6 +23,7 @@ var shownChat = false
 var chattingWithUser = false
 var usersTable = {};
 
+// cacher le chat en cliquant en dehors du chat
 document.addEventListener('mouseup', function(e) {
     var container = document.getElementById('chatbox_container');
     if (!container.contains(e.target)) {
@@ -21,6 +40,7 @@ document.addEventListener('touchstart', function(e) {
     }
 });
 
+// afficher/cacher le chat
 function toggleChat() {
 	shownChat = !shownChat
 	if (shownChat) {
@@ -34,6 +54,7 @@ function toggleChat() {
 	}
 }
 
+// afficher le chat
 function showChat(id) {
 	document.getElementById("chatbox_searchUserPanel").style.display = "none"
 	document.getElementById("chatbox_chatPanel").style.display = "block"
@@ -42,12 +63,14 @@ function showChat(id) {
 	document.getElementById("userChatName").innerHTML = usersTable[id]["name"]
 }
 
+// retourner à la page, recherche d'utilisateurs dans le chat
 function returnToSearchUsers() {
 	document.getElementById("chatbox_searchUserPanel").style.display = "block"
 	document.getElementById("chatbox_chatPanel").style.display = "none"
 	
 }
 
+// on 'enter' envoyer message
 document.getElementById("chatbox_chat_place").addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
 	if (!chattingWithUser) {
@@ -58,6 +81,7 @@ document.getElementById("chatbox_chat_place").addEventListener("keyup", function
 	}
 });
 
+// envoyer un message
 function sendMessage() {
 	if (!chattingWithUser) {
 		return false;

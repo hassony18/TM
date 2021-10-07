@@ -1,10 +1,27 @@
 <?php
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			score.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		Gèrer les scores
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+	
 //log in
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
     session_start();
 }
 include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
 
+// modifie le score des utilisateurs
 function addScore($type, $score) {
 	global $conn;
 	$email = mysqli_real_escape_string($conn, $_SESSION["email"]);

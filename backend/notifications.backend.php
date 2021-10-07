@@ -1,3 +1,20 @@
+<?php
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			notifications.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page backend des notifications
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+?>
 <html>
 	<head>
 		<link rel="stylesheet" href="./styles/notifications.css">

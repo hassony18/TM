@@ -1,5 +1,21 @@
 <?
-	define("showChatPHP", TRUE);
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			footer.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		Le footer de toutes les pages
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+	
+	define("showChatPHP", TRUE); // définit la variable showChatPHP
 	require_once "chat.php"
 ?>
 

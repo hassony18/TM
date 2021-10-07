@@ -1,16 +1,34 @@
 <?php 
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			avis.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page principale des avis
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
 	require 'header.php';
 	include 'db/config.php';
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "avis.php";
 ?>
 
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/avis.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
 <link rel="stylesheet" href="<?php echo $filename."?v=".$fileModified;?>">
 
 <?php
+	// sélectionner tous les avis et les mettre dans un array PHP.
 	$sql = "SELECT reviews.id, reviews.message, reviews.stars, users.user_image, users.first_name, users.last_name from reviews INNER JOIN users ON users.id = reviews.id";
 	$result = $conn->query($sql);
 	$allReviews = array();
@@ -39,6 +57,7 @@
 				<div class="row">
 				
 				<?php
+					// afficher tous les avis dans un div individuel
 					for ($i = 0; $i < count($allReviews); $i++) {
 						if (isset($allReviews) && isset($allReviews[$i])) {
 							echo '<div class="col">

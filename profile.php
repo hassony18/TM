@@ -1,13 +1,32 @@
 <?php 
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			profile.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page de profil
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+	
 	require 'header.php';
 	include 'db/config.php';
 	
+	// initer une session s'il n'y en a pas
 	if (session_status() === PHP_SESSION_NONE) {
 		session_start();
 	}
-
+	
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "profile.php";
 
+	// verifier si une lien est valide ou pas, si oui récupérer l'information complète de l'utilisateur
 	if (isset($_GET["u"]) && !empty($_GET["u"])) {
 		global $conn;
 		$userID = $_GET["u"];
@@ -93,11 +112,11 @@
 			}
 		}
 
-
 	} else {
 		die(header("location: index.php"));
 	}
 	
+	// soumettre une requête d'amitié
 	if (isset($_POST["submit_friendship"])) {
 		$action = $_POST["submit_friendship"];
 		$targetID = $_GET["u"]; // target
@@ -121,6 +140,7 @@
 		$stmt->execute();
 	}
 	
+	// définir la fonction str_contains si elle n'est psa définie
 	if (!function_exists('str_contains')) {
 		function str_contains(string $haystack, string $needle): bool
 		{
@@ -134,6 +154,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
 
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/profile.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -142,6 +163,7 @@
 <body>
 	<form id="upload_form" action="backend/upload.backend.php" method="post" enctype="multipart/form-data">
 		<?php
+			// afficher le banner de chaque profil
 			if (file_exists($_SERVER['DOCUMENT_ROOT']."/styles/img/banners/".$_GET["u"].".png")) {
 				echo '<img id="profile_banner" src="styles/img/banners/'.$_GET["u"].'.png?'.time().'">';
 			} else {
@@ -185,11 +207,12 @@
 					';
 				} 
 			}
-			
+			// afficher le titre s'il en existe un
 			if (isset($data["title"])) {
 				echo '<h1 class="profile_title">'.$data["title"].'</h1>';
 			}
 			
+			// afficher le badge s'il en existe un
 			if (isset($data["badge"])) {
 				$badges = $data["badge"];
 				if (str_contains($badges, ",")) {
@@ -329,6 +352,8 @@
 		 
 		<?php 
 				$targetID = $_GET["u"]; // target
+				
+				// rajouter l'option de supprimer/ajouter un ami
 				if (isset($_SESSION["user_id"])) {
 					$myID = $_SESSION["user_id"]; // me
 					if ($myID != $targetID) {
@@ -435,6 +460,7 @@
 			</script>
 		';
 		
+		// rendre le banner clickable afin de permettre les utilisateurs de changer leurs banners 
 		if (isset($_SESSION["user_id"])) {
 			if ($_GET["u"] == $_SESSION["user_id"]) {
 				echo '

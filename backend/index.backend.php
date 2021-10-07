@@ -1,12 +1,27 @@
 <?php
-
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			index.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page backend de l'index
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+	
 include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
 
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
     session_start();
 }
 
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['email'])) { // si pas connecté, virer.
 	die(header("location: index.php"));
 }
 

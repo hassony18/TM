@@ -1,34 +1,50 @@
 <?php
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			anglais.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page backend de l'anglais
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
 
-include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php"; // inclure le fichier score où se trouve le code permettant de rajouter de score aux utilisateurs
 
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
     session_start();
 }
 
-if (!function_exists('str_contains')) {
+if (!function_exists('str_contains')) { // créer la fonction "str_contains" qui permet de verifier si certain string contient un string donné
     function str_contains(string $haystack, string $needle): bool
     {
         return '' === $needle || false !== strpos($haystack, $needle);
     }
 }
 
-$content = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data/anglais.json");
+$content = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data/anglais.json"); // chercher le contenu du fichier allemand.json où se trouve la liste du voc
 
-$baseVocTable = json_decode($content, true);
+$baseVocTable = json_decode($content, true); // convertir le string du voc en une liste php
     
-if (isset($_POST["submit_vocSession"])) { // on submit request learning or testing
+if (isset($_POST["submit_vocSession"])) { // Quand on soumet le requêt d'apprentissage ou de test
     prepareVocSession();
 }
 
-if (isset($_POST["requestReturnToAnglais"])) {
+if (isset($_POST["requestReturnToAnglais"])) {  // Quand on clique sur le bouton 'retour' on va à la page anglais.php
     header("Location: ../anglais.php");
     exit();
 }
 
-function prepareVocSession() {
+function prepareVocSession() { // fonction permettant d'initer soit le test soit la session d'apprentissage
     global $baseVocTable;
 
+	// voir et récuperer les parametres de l'utilisateur
     $learningChoice = isset($_POST["apprendreOuTest"]); // apprendre ou test
     if (!$learningChoice) {
         header("Location: ../anglais.php?error=chooseLearningOption");
@@ -50,23 +66,26 @@ function prepareVocSession() {
 		$language = $_POST["francaisOuAnglais"]; // francais ou anglais
 		$testChoice = $_POST["choixMultiplesOuEcrire"]; // choixMultiples ou ecrire
 	}
-
+	
+	// faire une liste des chapitres de voc selectionnes
     $selectedVocNums = array();
     foreach ($baseVocTable as $key => $value){
-        $key = str_replace(".", "_", $key);
+        $key = str_replace(".", "_", $key); // remplacer . par _ pour éviter des problèmes avec le côté HTML
         if (isset($_POST[$key])) {
             $key = str_replace("_", ".", $key);
             array_push($selectedVocNums, $key);
         }
     }
-	var_dump($selectedVocNums);
-    if (empty($selectedVocNums)) {
+	//var_dump($selectedVocNums);
+    if (empty($selectedVocNums)) { // si on choisit aucun chapitre, on retourne à la page d'allemand en montrant un message d'erreur
         header("Location: ../anglais.php?error=chooseChapter");
         exit();
     }
-
+	
+	// récuprer les parametres du voc
     $includePhrases = isset($_POST["phrasesNormales"]);
-
+	
+	// rajouter  phrase sur demande
     $finalTable = array();
     foreach($selectedVocNums as $index => $vocNumber) {
         foreach ($baseVocTable[$vocNumber] as $vocType => $localVocTable) {
@@ -82,6 +101,8 @@ function prepareVocSession() {
             }
         }
     }
+	
+	// si l'utilisateur a choisi d'apprendre ou de faire un test, on l'envoie a la page correcte.
     if ($learningChoice == "apprendre") {
         $_SESSION["learningTable"] = $finalTable;
         header("Location: ../anglais.php?success=apprendre");
@@ -108,20 +129,21 @@ function prepareVocSession() {
 
 // MULTIPLE CHOICES CODE
 
-if (!isset($_SESSION["currentNumberInQueue"])) { 
+if (!isset($_SESSION["currentNumberInQueue"])) {  // initer les paramètres s'ils ne sont pas la
     $_SESSION["currentNumberInQueue"] = 0;
 }
-
-if (isset($_POST["submit_multipleChoices"])) {
+ 
+if (isset($_POST["submit_multipleChoices"])) { // quand on soumet la réponse du test choix multiple
     verifyMultipleChoicesAnswer($_POST["submit_multipleChoices"]);
 }
 
+// on vérifie si la réponse est correcte ou pas.
 function verifyMultipleChoicesAnswer($answer) {
     $_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
 	if ($answer == $_SESSION["correctAnswer"]) {
 		addScore("anglais", 1);
         header("Location: ../anglais.php?success=correctAnswer");
-        // remove from error list if the answer is correct
+        // enlever la réponse de la liste d'erreur si la réponse est correcte
         if (isset( $_SESSION["errorTable"]) && !empty($_SESSION["errorTable"])) {
             foreach ($_SESSION["errorTable"] as $key => $value) {
                 if ($value[0] == $answer || $value[1] == $answer) {
@@ -146,7 +168,7 @@ function verifyMultipleChoicesAnswer($answer) {
     }
 }
 
-
+// créer le test choix multiples
 function setupMultipleChoices($status = "") {
 	$num = $_SESSION["currentNumberInQueue"];
     $localLearningTable = $_SESSION["learningTable"];
@@ -237,6 +259,7 @@ if (isset($_POST["submit_ecrire_test"])) {
     verifyWritingTestAnswer($answer);
 }
 
+// vérifier la réponse du test d'écriture
 function verifyWritingTestAnswer($answer) {
     $_SESSION["currentNumberInQueue"] = $_SESSION["currentNumberInQueue"] + 1;
     $answer = preg_replace("/\s+/", "", $answer); // remove all spaces from answer
@@ -306,6 +329,7 @@ function verifyWritingTestAnswer($answer) {
     }
 }
 
+// commencer le test d'écriture
 function startWritingTest($status = "") {
     $num = $_SESSION["currentNumberInQueue"];
     $localLearningTable = $_SESSION["learningTable"];

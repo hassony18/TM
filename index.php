@@ -1,11 +1,32 @@
 <?php
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			index.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page d'accueil
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+
 	require "header.php";
 	require "backend/ranking.backend.php";
+	
+	// initer une session s'il n'y en a pas
 	if (session_status() === PHP_SESSION_NONE) {
 		session_start();
 	}
+	
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "index.php";
 	
+	// CATCH ERRORS
 	if (isset($_GET["error"])) {
 		$error = $_GET["error"];
 		if ($error == "anglais") {
@@ -97,6 +118,7 @@
 				<div class="row">
 				
 				<?php
+					// afficher les tops 3 avis
 					if (isset($topReviews) && isset($topReviews[1])) {
 						echo '<div class="col">
 								<div class="testimonial">
@@ -158,6 +180,7 @@
 			</div>
 	<!-- leave Avis Section -->
 		  <?php
+			// si utilisateur connecté, lui laisser le choix d'écrire un avis.
 			if (isset($_SESSION["email"])) {
 				echo '
 
@@ -201,7 +224,7 @@
 							<td>Score</td>
 						</thead>
 						<?php
-
+							// afficher top total
 							for ($i = 0; $i <= 2; $i++) { 
 								if (array_key_exists($i, $topTotal)) {
 									$fullName = $topTotal[$i]["firstName"]." ".$topTotal[$i]["lastName"];
@@ -233,7 +256,7 @@
 								<td>Score</td>
 							</thead>
 							<?php
-
+								// afficher top allemand
 								for ($i = 0; $i <= 4; $i++) { 
 									if (array_key_exists($i, $topGerman)) {
 										$fullName = $topGerman[$i]["firstName"]." ".$topGerman[$i]["lastName"];
@@ -263,7 +286,7 @@
 								<td>Score</td>
 							</thead>
 							<?php
-
+								// afficher top anglais
 								for ($i = 0; $i <= 4; $i++) { 
 									if (array_key_exists($i, $topEnglish)) {
 										$fullName = $topEnglish[$i]["firstName"]." ".$topEnglish[$i]["lastName"];
@@ -293,7 +316,7 @@
 								<td>Score</td>
 							</thead>
 							<?php
-
+								// afficher top italien
 								for ($i = 0; $i <= 4; $i++) { 
 									if (array_key_exists($i, $topItalian)) {
 										$fullName = $topItalian[$i]["firstName"]." ".$topItalian[$i]["lastName"];
@@ -323,7 +346,7 @@
 								<td>Score</td>
 							</thead>
 							<?php
-
+								// afficher top drapeaux
 								for ($i = 0; $i <= 4; $i++) { 
 									if (array_key_exists($i, $topFlags)) {
 										$fullName = $topFlags[$i]["firstName"]." ".$topFlags[$i]["lastName"];
@@ -353,7 +376,7 @@
 								<td>Score</td>
 							</thead>
 							<?php
-
+								// afficher top carte
 								for ($i = 0; $i <= 4; $i++) { 
 									if (array_key_exists($i, $topMap)) {
 										$fullName = $topMap[$i]["firstName"]." ".$topMap[$i]["lastName"];
@@ -379,6 +402,7 @@
 
 	<!-- learn Section -->
 	<?php
+	// si connecté, afficher l'apprentissage
 	if (isset($_SESSION["email"])) {
 		echo '
 			<section id="learn">

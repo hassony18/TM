@@ -1,3 +1,20 @@
+/*
+	*	PROJECT:		swisslearns.ch
+	*	FILE:			homescript.js
+	*	DEVELOPERS:		Hassan & Jordan
+	* 	PURPOSE:		Gèrer la page d'accueil
+			o    o     __ __
+			 \  /    '       `
+			  |/   /     __    \
+			(`  \ '    '    \   '
+			  \  \|   |   @_/   |
+			   \   \   \       /--/
+				` ___ ___ ___ __ '
+		
+		Written with ♥ for the The Republic of Geneva. 		
+*/
+	
+
 var headerList = document.querySelector('.header .nav-bar .nav-list .headerList');
 var mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 var menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
@@ -10,6 +27,7 @@ if (headerList) {
 	});
 }
 
+// modifier la couleur du header en fonction de la position du scrollbar
 window.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
 	var path = window.location.pathname;
@@ -23,12 +41,13 @@ window.addEventListener('scroll', () => {
 	}
 });
 
+// verifier si 2 strings ce ressemblent
 function matchExact(r, str) {
    var match = str.match(r);
    return match && str === match[0];
 }
 
-
+// afficher dropdown menu
 function dropdownprofile(event) {  document.getElementById("myDropdown").classList.add("show"); }
 
 // Close the dropdown menu if the user clicks outside of it
@@ -66,9 +85,9 @@ for (var i = 0; i < interactiveStar.length; i++) {
     interactiveStar[i].addEventListener('click', changeStar, false);
 }
 
+// changer les étoiles en cliquant
 function changeStar() {
 	var path = this.src
-	console.log(path);
 	if (path.search("empty") != -1) {
 		this.src = "styles/img/star.png"
 	} else {

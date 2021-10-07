@@ -1,13 +1,34 @@
 <?php 
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			drapeaux.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		La page principale des drapeaux
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+
 	require 'header.php';
 	include_once $_SERVER['DOCUMENT_ROOT']."/backend/score.backend.php";
+	
+	// si l'utilisateur n'est pas connecté, l'envoyer à la page d'acceuil
     if (!isset($_SESSION['email'])) {
         die(header("location: index.php"));
     }
+	
+	// permet de savoir sur quelle page l'utilisteur est.
 	$_SESSION["user_page"] = "drapeaux.php";
 ?>
 
 <?
+	// telecharger la dernière version du fichier css (éviter cache)
 	$filename = 'styles/drapeaux.css';
 	$fileModified = substr(md5(filemtime($filename)), 0, 6);
 ?>
@@ -71,10 +92,10 @@
 </body>
 
 <?php
-	$content = file_get_contents("data/pays.json");
-	$baseCountriesTable = json_decode($content, true);
+	$content = file_get_contents("data/pays.json"); // récupérer la liste de pays
+	$baseCountriesTable = json_decode($content, true);  // transformer json en array PHP
 	
-	
+	// lancer le test ou l'apprentissage
 	if (isset($_GET["success"])) {
 		$success = $_GET["success"];
 		if ($success == "learn") {
@@ -84,10 +105,12 @@
 		}
 	}
 	
+	// soumettre une réponse
 	if (isset($_POST["submit_country"])) {
 		verifyMultipleChoicesAnswer($_POST["submit_country"]);
 	}
-
+	
+	// verifier si la réponse est correcte
 	function verifyMultipleChoicesAnswer($answer) {
 		if ($answer == $_SESSION["correctAnswer"]) {
 			addScore("drapeaux", 1);
@@ -100,10 +123,11 @@
 		}
 	}
 	
+	// lancer une nouvelle session de choix multiple
 	function setupMultipleChoices() {
 		global $baseCountriesTable;
 		$tempAnswerArray = array();
-		$rand_keys = array_rand($baseCountriesTable, 4);
+		$rand_keys = array_rand($baseCountriesTable, 4); // prendre 4 valeurs random 
 		$_SESSION["correctAnswer"] = $baseCountriesTable[$rand_keys[0]]["name"];
 		array_push($tempAnswerArray, $_SESSION["correctAnswer"]);
 		array_push($tempAnswerArray, $baseCountriesTable[$rand_keys[1]]["name"]);

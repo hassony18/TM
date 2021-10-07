@@ -1,5 +1,20 @@
 <?php
-
+	/*
+		*	PROJECT:		swisslearns.ch
+		*	FILE:			ranking.backend.php
+		*	DEVELOPERS:		Hassan & Jordan
+		* 	PURPOSE:		Gèrer les données du cache
+				o    o     __ __
+				 \  /    '       `
+				  |/   /     __    \
+				(`  \ '    '    \   '
+				  \  \|   |   @_/   |
+				   \   \   \       /--/
+					` ___ ___ ___ __ '
+			
+			Written with ♥ for the The Republic of Geneva. 		
+	*/
+	
     include_once $_SERVER['DOCUMENT_ROOT']."/db/config.php";
     ob_start(); 
     date_default_timezone_set("Europe/Zurich");
@@ -37,14 +52,14 @@
 
 
     $conn;
-
+	// connection à la base de données
     function connect() {
         global $conn;
         if ($conn->connect_error) {
             header('Location: '+mysqli_connect_error());
          }
     }
-
+	// recuperer des données du cache 
     function populateWebsite() {
         global $cache;
 		global $topTotal;
@@ -84,7 +99,7 @@
     }
 
     
-
+	// mise à jour du cache 
     function updateWebsite() {
 		topTotal();
         topGerman();
@@ -95,6 +110,7 @@
 		topReviews();
     }
 	
+	// recuperer top total
     function topTotal() {
         global $conn;
         connect();
@@ -118,7 +134,8 @@
         $encodedTopTotal = json_encode($topTotal);
         $cache->store('topTotal', $encodedTopTotal);
     }
-
+	
+	// recuperer top carte
     function topMap() {
         global $conn;
         connect();
@@ -143,6 +160,7 @@
         $cache->store('topMap', $encodedTopMap);
     }
 	
+	// recuperer top avis
     function topReviews() {
         global $conn;
         connect();
@@ -175,7 +193,7 @@
     }
 	
 	
-
+	// recuperer top drapeaux
     function topFlags() {
         global $conn;
         connect();
@@ -199,6 +217,8 @@
         $encodedTopFlags = json_encode($topFlags);
         $cache->store('topFlags', $encodedTopFlags);
     }
+	
+	// recuperer top italian
 
     function topItalian() {
         global $conn;
@@ -223,7 +243,8 @@
         $encodedTopItalian = json_encode($topItalian);
         $cache->store('topItalian', $encodedTopItalian);
     }
-
+	
+	// recuperer top anglais
     function topEnglish() {
         global $conn;
         connect();
@@ -247,6 +268,8 @@
         $encodedTopEnglish = json_encode($topEnglish);
         $cache->store('topEnglish', $encodedTopEnglish);
     }
+	
+	// recuperer top allemand
 
     function topGerman() {
         global $conn;

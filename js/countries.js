@@ -1,8 +1,26 @@
+/*
+	*	PROJECT:		swisslearns.ch
+	*	FILE:			countries.js
+	*	DEVELOPERS:		Hassan & Jordan
+	* 	PURPOSE:		Gèrer les drapeaux
+			o    o     __ __
+			 \  /    '       `
+			  |/   /     __    \
+			(`  \ '    '    \   '
+			  \  \|   |   @_/   |
+			   \   \   \       /--/
+				` ___ ___ ___ __ '
+		
+		Written with ♥ for the The Republic of Geneva. 		
+*/
+	
+
 learningTable = []
 
 document.getElementById("countries-game").style.display = "none" 
 document.getElementById("drapeaux_learning_container").style.display = "none" 
 
+// montrer le drapeau
 function showGame(question, list) {
 	document.getElementById("countryFlag").src = "styles/img/countries/"+question+".png"
 	for (var i = 0; i < list.length; i++) {
@@ -12,6 +30,7 @@ function showGame(question, list) {
 	document.getElementById("drapeaux_choisir_container").style.display = "none" 
 }
 
+// commencer le programme d'apprentissage
 function startLearning(table) {
 	learningTable = table
 	nextVoc("start")
@@ -19,6 +38,7 @@ function startLearning(table) {
 	document.getElementById("drapeaux_choisir_container").style.display = "none" 
 }
 
+// tourner la carte
 function flipCard() {
 	var card = document.getElementById("flippingCard")
 	console.log(card.style.transform)
@@ -29,7 +49,7 @@ function flipCard() {
 	}
 }
 
-
+// passer au pays suivant
 function nextVoc(type) {
 	if (type == "start") {
 		currentNumberInQueue = 0
