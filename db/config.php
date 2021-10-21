@@ -1,8 +1,8 @@
 <?php
-	$dbServerName = "localhost";
-	$dbServerUsername = "swisicfc_tm";
-	$dbPassword = "#Nv]&GxqSL[x";
-	$dbName = "swisicfc_tm";
+	$dbServerName = "";
+	$dbServerUsername = "";
+	$dbPassword = "";
+	$dbName = "";
 	
 	//$conn = mysqli_connect($dbServerName, $dbServerUsername, $dbPassword, $dbName);
 	$conn = new mysqli($dbServerName, $dbServerUsername, $dbPassword, $dbName);
