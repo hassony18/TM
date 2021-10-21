@@ -54,7 +54,7 @@
 		<div id="learningChoiceContainer">
 			<form action="backend/anglais.backend.php" method="post">
 				<h1>Le vocabulaire d’anglais</h1>
-				<p>Vous souhaitez donc apprendre l’anglais. Pour cela, nous vous offrons le vocabulaire d’anglais du Gateway de niveau B1+. Ce vocabulaire est séparé par différentes unités. Chacune fait référence à un thème assez large. Il existe également des phrases accompagnant chaque mot pour donner un exemple de leur utilisation. Pour les voir, il vous suffit de sélectionner l’option « phrases ».</p>
+				<p>Vous souhaitez donc apprendre l’anglais. Pour cela, nous vous offrons le vocabulaire d’anglais du Gateway de niveau B1+. Ce vocabulaire est séparé par différentes unités. Chacune fait référence à un thème assez large.</p>
 				<h1>Choix de mode d'apprentissage</h1>
 
 				<h2 style="color: crimson;">Choisis un ou plusieurs chapitres:</h2>
@@ -242,7 +242,11 @@
 		if (isset($_GET["answer"])) {
 			$answer = $_GET["answer"];
 			if ($answer == "correct") {
-				echo "<script>showNotification('success', 'Bien joué! Tu étais à ".round($_GET["percentage"])."% de la bonne réponse, La bonne réponse était: ".$_GET["correctAnswer"]."');</script>";
+				if (isset($_GET["percentage"])) {
+					echo "<script>showNotification('success', 'Bien joué! Tu étais à ".round($_GET["percentage"])."% de la bonne réponse, La bonne réponse était: ".$_GET["correctAnswer"]."');</script>";
+				} else {
+					echo "<script>showNotification('success', 'Bien joué!');</script>";
+				}
 			} elseif ($answer == "incorrect") {
 				echo "<script>showNotification('error', 'Aïe aïe! La bonne réponse était: ".$_GET["correctAnswer"]." ');</script>";
 

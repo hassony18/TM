@@ -295,7 +295,11 @@
 		if (isset($_GET["answer"])) {
 			$answer = $_GET["answer"];
 			if ($answer == "correct") {
-				echo "<script>showNotification('success', 'Bien joué! Tu étais à ".round($_GET["percentage"])."% de la bonne réponse, La bonne réponse était: ".$_GET["correctAnswer"]."');</script>";
+				if (isset($_GET["percentage"])) {
+					echo "<script>showNotification('success', 'Bien joué! Tu étais à ".round($_GET["percentage"])."% de la bonne réponse, La bonne réponse était: ".$_GET["correctAnswer"]."');</script>";
+				} else {
+					echo "<script>showNotification('success', 'Bien joué!');</script>";
+				}
 			} elseif ($answer == "incorrect") {
 				echo "<script>showNotification('error', 'Aïe aïe! La bonne réponse était: ".$_GET["correctAnswer"]." ');</script>";
 

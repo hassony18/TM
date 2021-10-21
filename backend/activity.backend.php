@@ -19,13 +19,13 @@
     if (session_status() === PHP_SESSION_NONE) { // verifier s'il y a une session, sinon, en initier une.
         session_start();
     }
-    //action.php
-	if (!isset($_SESSION["user_id"])) {
-		exit();
-	}
     if(isset($_POST["action"])) {
 		// modifier l'activité de l'utilisateur
       if ($_POST["action"] == "update_time") {
+			//action.php
+			if (!isset($_SESSION["user_id"])) {
+				exit();
+			}
             $statement = $conn->prepare("INSERT into `activity` (id, last_activity, `page`) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE last_activity= ?, `page`=?");
             $time = date("Y-m-d H:i:s", STRTOTIME(date('h:i:sa')));
             $statement->bind_param('sssss', $_SESSION["user_id"], $time, $_SESSION["user_page"], $time, $_SESSION["user_page"]);

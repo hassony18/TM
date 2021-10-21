@@ -227,7 +227,7 @@
 			}
 			
 		?>
-		<h1 class="have_container">Bienvenue au profil de <?php echo $data["first_name"] ?>!</h1>
+		<h1 class="have_container">Bienvenue sur le profil de <?php echo $data["first_name"] ?>!</h1>
 			<div style="margin-left: 10px;">
 				<h2>date de création du compte: <?php echo date("d-m-Y, H:i:s", strtotime($data["date"])); ?></h2>
 				<h2>dernière activité de <?php echo $data["first_name"] ?>: <?php echo date("d-m-Y, H:i:s", strtotime($data["last_activity"])); ?> à la page: <?php echo $data["page"]; ?></h2>

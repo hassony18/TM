@@ -522,6 +522,11 @@
 					<div class='actor'>Vocabulaire d'anglais</div>
 				</div>
 				<div class='list-item'>
+					<div class='character'>Tuan Nguyen</div>
+					<div class='dots'></div>
+					<div class='actor'>Vocabulaire d'anglais</div>
+				</div>
+				<div class='list-item'>
 					<div class='character'>Elisabeth Costa-Cecchetto</div>
 					<div class='dots'></div>
 					<div class='actor'>Vocabulaire d'italien</div>
